@@ -1,0 +1,10 @@
+﻿/*This file holds the css styling for the webpage*/ 
+html, body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+#map {
+   height: 100%;
+}
