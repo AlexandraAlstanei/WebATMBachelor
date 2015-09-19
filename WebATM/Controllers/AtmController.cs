@@ -26,14 +26,14 @@ namespace WebATM.Controllers
       {
          var flights = s_XmlReader.ReadFromFile();
 
-         //make a small change to one of the flights (testing purposes only)
-         var affectedFlight = flights.LastOrDefault();
+            //make a small change to one of the flights (testing purposes only)
+            var affectedFlight = flights.LastOrDefault();
 
-         if ( affectedFlight != null )
-         {
-            affectedFlight.Plots[ affectedFlight.Plots.Count() - 1 ].latitude += s_Random.Next( 0, 10 );
-         }
-
+            if ( affectedFlight != null )
+            {
+                //  affectedFlight.Plots[ affectedFlight.Plots.Count() - 1 ].latitude += s_Random.Next( 0, 10 );
+                affectedFlight.Plots[affectedFlight.Plots.Count() - 1].latitude += 1;
+            }
          return flights;
       }
 

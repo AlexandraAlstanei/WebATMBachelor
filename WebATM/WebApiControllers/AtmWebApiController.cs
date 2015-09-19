@@ -21,13 +21,5 @@ namespace WebATM.WebApiControllers
       {
          return AtmController.GetAllFlights();
       }
-
-      [Route( "GetFlightById" )] //browser usage example: http://localhost:59624/api/webatm/GetFlightById?flightId=3
-      public Flight GetFlightById( int flightId )
-      {
-         //this is just a test to demonstrate that it is possible to send
-         //a query including an argument from the client
-         return AtmController.GetFlightById( flightId );
-      }
    }
 }
