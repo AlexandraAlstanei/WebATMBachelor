@@ -25,21 +25,7 @@ namespace WebATM.Controllers
       public static IEnumerable<Flight> GetAllFlights()
       {
          var flights = s_XmlReader.ReadFromFile();
-
-            //make a small change to one of the flights (testing purposes only)
-            var affectedFlight = flights.LastOrDefault();
-
-            if ( affectedFlight != null )
-            {
-                //  affectedFlight.Plots[ affectedFlight.Plots.Count() - 1 ].latitude += s_Random.Next( 0, 10 );
-                affectedFlight.Plots[affectedFlight.Plots.Count() - 1].latitude += 1;
-            }
          return flights;
-      }
-
-      public static Flight GetFlightById( int flightId )
-      {
-         return null;
       }
    }
 }

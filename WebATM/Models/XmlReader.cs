@@ -6,15 +6,18 @@ using System.Xml.Linq;
 
 namespace WebATM.Models
 {
-   public class XmlReader
+    /// <summary>
+    /// The flights are being read from file in this class.
+    /// The class uses Linq technology for reading all the files in the class.
+    /// </summary>
+    public class XmlReader
    {
+      //the method returns a list of flights.
       public List<Flight> ReadFromFile()
       {
          List<Flight> flightList;
 
-         //changed the absolute path to a relative path  @"~/Flights.xml".
-         //The file Flights.xml needs to be included in the project for
-         //the relative path to work
+         //sses a relative path  @"~/Flights.xml".
          flightList = ( from e in XDocument.Load( System.Web.HttpContext.Current.Server.MapPath( @"~/Flights.xml" ) ).
                             Root.DescendantsAndSelf( "flight" )
                         select new Flight

@@ -17,7 +17,7 @@ function initMap() {
 }
 
 function updateMap() {
-    //this will repeat every 5 seconds
+    //this will repeat every 4 seconds
     getDataAndDisplayOnMap();
 }
 
@@ -34,12 +34,25 @@ function getDataAndDisplayOnMap() {
 
                //for each flight, draw the last plot on the map
                for (var i = 0; i < data.length; i++) {
-               //    var markerLatLng = { lat: data[i].Plots[data[i].Plots.length - 1].latitude, lng: data[i].Plots[data[i].Plots.length - 1].longitude };
-              //     var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 2].latitude, data[i].Plots[data[i].Plots.length - 2].longitude, data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude);
-                   var markerLatLng = { lat: generateCoordinate (data[i].Plots[data[i].Plots.length - 1].latitude), lng: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude) };
-                   var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, generateCoordinate (data[i].Plots[data[i].Plots.length - 1].latitude), generateCoordinate (data[i].Plots[data[i].Plots.length - 1].longitude));
-                   var iconImage = chooseIcon(direction);
-                   //display the marker on the map
+
+                   //get the coordinates for drawing the marker
+                   var markerLatLng = { lat: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), lng: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude) };
+
+                   //calculate the direction of the plane
+                   var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude));
+
+                   //display the marker on the map by using an svg image of a plane
+                   var iconImage = {
+                       path: 'M438.8,320.6c-3.6-3.1-147.2-107.2-147.2-107.2c-0.2-0.2-0.4-0.4-0.5-0.5c-5.5-5.6-5.2-10.4-5.6-18.8c0,0-0.9-69-2.2-92  S270,64,256,64c0,0,0,0,0,0s0,0,0,0c-14,0-25.9,15-27.2,38s-2.2,92-2.2,92c-0.4,8.4-0.1,13.2-5.6,18.8c-0.2,0.2-0.4,0.4-0.5,0.5  c0,0-143.5,104.1-147.2,107.2s-9.2,7.8-9.2,18.2c0,12.2,3.6,13.7,10.6,11.6c0,0,140.2-39.5,145.4-40.8s7.9,0.6,8.3,7.5  s0.8,46.4,0.9,51s-0.6,4.7-2.9,7.4l-32,40.8c-1.7,2-2.7,4.5-2.7,7.3c0,0,0,6.1,0,12.4s2.8,7.3,8.2,4.9s32.6-17.4,32.6-17.4  c0.7-0.3,4.6-1.9,6.4-1.9c4.2,0,8-0.1,8.8,6.2c1.3,11.4,4.9,20.3,8.5,20.3c0,0,0,0,0,0s0,0,0,0c3.6,0,7.2-8.9,8.5-20.3  c0.7-6.3,4.6-6.2,8.8-6.2c1.8,0,5.7,1.6,6.4,1.9c0,0,27.2,15,32.6,17.4s8.2,1.4,8.2-4.9s0-12.4,0-12.4c0-2.8-1-5.4-2.7-7.3l-32-40.8  c-2.3-2.7-2.9-2.9-2.9-7.4s0.5-44.1,0.9-51s3.1-8.8,8.3-7.5s145.4,40.8,145.4,40.8c7.1,2.1,10.6,0.6,10.6-11.6  C448,328.4,442.5,323.7,438.8,320.6z',
+                       fillColor: '#800000',
+                       strokeColor: '#FFFF99',
+                       strokeOpacity: 0.8,
+                       strokeWeight: 2,
+                       scale: 0.09,
+                       fillOpacity: 1,
+                       rotation: direction
+                   }
+                   //draw the marker 
                    var marker = new google.maps.Marker({
                        position: markerLatLng,
                        map: map,
@@ -51,20 +64,15 @@ function getDataAndDisplayOnMap() {
            });
 }
 
+//generate coordinates for testing purposes
 function generateCoordinate(coordinate) {
-    var r = 100 / 111300 // = 100 meters
-      , y0 = coordinate
-      , u = Math.random()
-      , v = Math.random()
-      , w = r * Math.sqrt(u)
-      , t = 2 * Math.PI * v
-      , y1 = w * Math.sin(t)
+    var u = Math.random();
+    newCoordinate = coordinate + u;
 
-    newY = y0 + y1
-    return newY;
+    return newCoordinate;
 }
 
-
+//clear all the markers on the map
 function clearAllMarkers() {
     for (var i = 0; i < currentlyDisplayedMarkers.length; i++) {
         currentlyDisplayedMarkers[i].setMap(null);
@@ -73,29 +81,7 @@ function clearAllMarkers() {
     currentlyDisplayedMarkers = []; //empty array
 }
 
-function chooseIcon(direction) {
-    switch (direction) {
-        case 'N':
-            return 'https://dl.dropboxusercontent.com/u/1936953/N.png';
-        case 'N - E':
-            return 'https://dl.dropboxusercontent.com/u/1936953/NE.png';
-        case 'S - E':
-            return 'https://dl.dropboxusercontent.com/u/1936953/SE.png';
-        case 'S':
-            return 'https://dl.dropboxusercontent.com/u/1936953/S.png';
-        case 'S - W':
-            return 'https://dl.dropboxusercontent.com/u/1936953/SW.png';
-        case 'E':
-            return 'https://dl.dropboxusercontent.com/u/1936953/E.png';
-        case 'W':
-            return 'https://dl.dropboxusercontent.com/u/1936953/W.png';
-        case 'N - W':
-            return 'https://dl.dropboxusercontent.com/u/1936953/NW.png';
-        default:
-            return 'https://dl.dropboxusercontent.com/u/1936953/N.png';
-    }
-}
-
+//calculate the bearing using two pairs of coordinates
 function calculateDirection(latitudeA, longitudeA, latitudeB, longitudeB) {
     var x, y, direction;
     x = Math.cos(latitudeB) * Math.sin(longitudeA - longitudeB);
@@ -108,29 +94,5 @@ function calculateDirection(latitudeA, longitudeA, latitudeB, longitudeB) {
     else {
         directionAngle = 360 + (direction * (180 / Math.PI));
     }
-    if ((directionAngle > 22.5) && (directionAngle < 67.5)) {
-        return 'N - E';
-    }
-    else if ((directionAngle > 112.5) && (directionAngle < 157.5)) {
-        return 'S - E';
-    }
-    else if ((directionAngle > 202.5) && (directionAngle < 247.5)) {
-        return 'S - W';
-    }
-    else if ((directionAngle > 292.5) && (directionAngle < 337.5)) {
-        return 'N - W';
-    }
-    else if ((directionAngle < 22.5) || (directionAngle > 337.5)) {
-        return 'N';
-    }
-    else if ((directionAngle > 67.5) || (directionAngle < 112.5)) {
-        return 'E';
-    }
-    else if ((directionAngle > 157.5) || (directionAngle < 202.5)) {
-        return 'S';
-    }
-    else if ((directionAngle > 247.5) || (directionAngle < 292.5)) {
-        return 'W';
-    }
-    return 'N';
+    return directionAngle;
 }
