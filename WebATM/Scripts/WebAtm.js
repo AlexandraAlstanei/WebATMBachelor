@@ -3,15 +3,26 @@ var currentlyDisplayedMarkers = [];
 
 function initMap() {
     //Initialize google maps component
+    //Create a dropdown menu with different map types
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 55.2, lng: 9.5 },
-        zoom: 7
+        zoom: 7,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+            mapTypeIds: [
+              google.maps.MapTypeId.ROADMAP,
+              google.maps.MapTypeId.TERRAIN,
+              google.maps.MapTypeId.SATELLITE,
+              google.maps.MapTypeId.HYBRID
+            ]
+        }
     });
 
     //get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
 
-    //start a javascript timer that starts every 5 seconds
+    //start a javascript timer that starts every 4 seconds
     //on each iteration, get data and redraw it on the map
     setInterval(updateMap, 4000);
 }
@@ -48,7 +59,7 @@ function getDataAndDisplayOnMap() {
                        strokeColor: '#FFFF99',
                        strokeOpacity: 0.8,
                        strokeWeight: 2,
-                       scale: 0.09,
+                       scale: 0.07,
                        fillOpacity: 1,
                        rotation: direction
                    }

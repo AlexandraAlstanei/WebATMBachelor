@@ -9,11 +9,11 @@ namespace WebATM.Models
     /// This class is public, so it can be accesible for the XmlReader class.
     /// </summary>
     public class Plot
-   {
-      public double latitude;
-      public double longitude;
-      public double altitude;
-      public double speed;
-      public String ModeS;
-   }
+    {
+        public double latitude;
+        public double longitude;
+        public double altitude;
+        public double speed;
+        public String ModeS;
+    }
 }

@@ -16,7 +16,7 @@ namespace WebATM.WebApiControllers
    [RoutePrefix( "api/webatm" )]
    public class AtmWebApiController : ApiController
    {
-      [Route( "GetAllFlights" )] //browser usage example: http://localhost:59624/api/webatm/GetAllFlights
+      [Route( "GetAllFlights" )] 
       public IEnumerable<Flight> GetAllFlights()
       {
          return AtmController.GetAllFlights();
