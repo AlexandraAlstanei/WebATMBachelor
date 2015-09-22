@@ -45,7 +45,6 @@ function getDataAndDisplayOnMap() {
 
                //for each flight, draw the last plot on the map
                for (var i = 0; i < data.length; i++) {
-
                    //get the coordinates for drawing the marker
                    var markerLatLng = { lat: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), lng: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude) };
 
@@ -63,13 +62,13 @@ function getDataAndDisplayOnMap() {
                        fillOpacity: 1,
                        rotation: direction
                    }
-                   //draw the marker 
+
+                   //draw the marker
                    var marker = new google.maps.Marker({
                        position: markerLatLng,
                        map: map,
                        icon: iconImage
                    });
-
                    currentlyDisplayedMarkers.push(marker);
                }
            });
@@ -107,3 +106,4 @@ function calculateDirection(latitudeA, longitudeA, latitudeB, longitudeB) {
     }
     return directionAngle;
 }
+

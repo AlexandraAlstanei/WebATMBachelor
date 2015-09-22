@@ -2,9 +2,9 @@
 <flights>
    <flight>
       <id>001</id>
-      <callsign>SAS123</callsign>
-      <adep>GOT</adep>
-      <ades>BRU</ades>
+      <callsign>SAS</callsign>
+      <adep>ESGG</adep>
+      <ades>EBBR</ades>
       <actype>ABA319</actype>
       <wtc>M</wtc>
       <plots>
@@ -13,7 +13,7 @@
             <speed>488</speed>
             <latitude>54.43171286</latitude>
             <longitude>12.26623535</longitude>
-            <ssrcode>X345</ssrcode>
+            <ssrcode>0100</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -21,7 +21,7 @@
             <speed>480</speed>
             <latitude>55.40095077</latitude>
             <longitude>13.13140869</longitude>
-            <ssrcode>X345</ssrcode>
+            <ssrcode>0100</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -29,7 +29,7 @@
             <speed>470</speed>
             <latitude>56</latitude>
             <longitude>11</longitude>
-            <ssrcode>X345</ssrcode>
+            <ssrcode>0100</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -37,16 +37,16 @@
             <speed>488</speed>
             <latitude>57</latitude>
             <longitude>12</longitude>
-            <ssrcode>X345</ssrcode>
+            <ssrcode>0100</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
    <flight>
       <id>002</id>
-      <callsign>ROT391</callsign>
-      <adep>OTP</adep>
-      <ades>LHR</ades>
+      <callsign>ROT</callsign>
+      <adep>LROP</adep>
+      <ades>EGLL</ades>
       <actype>A-318</actype>
       <wtc>M</wtc>
       <plots>
@@ -55,7 +55,7 @@
             <speed>420</speed>
             <latitude>47.10004469</latitude>
             <longitude>21.94519043</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>0301</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -63,7 +63,7 @@
             <speed>420</speed>
             <latitude>46.5286347</latitude>
             <longitude>23.82385254</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>0301</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -71,7 +71,7 @@
             <speed>420</speed>
             <latitude>45.75219336</latitude>
             <longitude>24.62036133</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>0301</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -79,7 +79,7 @@
             <speed>420</speed>
             <latitude>44.96479793</latitude>
             <longitude>25.52124023</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>0301</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -94,9 +94,9 @@
    </flight>
    <flight>
       <id>003</id>
-      <callsign>KLM15E</callsign>
-      <adep>AMS</adep>
-      <ades>CPH</ades>
+      <callsign>KLM</callsign>
+      <adep>EHAM</adep>
+      <ades>EKCH</ades>
       <actype>Boeing 737800</actype>
       <wtc>M</wtc>
       <plots>
@@ -105,7 +105,7 @@
             <speed>364</speed>
             <latitude>53.27835302</latitude>
             <longitude>7.06970215</longitude>
-            <ssrcode>A768</ssrcode>
+            <ssrcode>0702</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -113,16 +113,16 @@
             <speed>364</speed>
             <latitude>52.65639394</latitude>
             <longitude>6.15783691</longitude>
-            <ssrcode>A768</ssrcode>
+            <ssrcode>0702</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
    <flight>
       <id>004</id>
-      <callsign>JTG564</callsign>
-      <adep>TFS</adep>
-      <ades>BLL</ades>
+      <callsign>JTG</callsign>
+      <adep>GCTS</adep>
+      <ades>EKBI</ades>
       <actype>Boeing 737300</actype>
       <wtc>M</wtc>
       <plots>
@@ -131,7 +131,7 @@
             <speed>366</speed>
             <latitude>53.6055441</latitude>
             <longitude>9.04174805</longitude>
-            <ssrcode>M457</ssrcode>
+            <ssrcode>0402</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -139,16 +139,16 @@
             <speed>366</speed>
             <latitude>52.93539666</latitude>
             <longitude>8.62426758</longitude>
-            <ssrcode>M457</ssrcode>
+            <ssrcode>0402</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
    <flight>
       <id>005</id>
-      <callsign>TUI2511</callsign>
-      <adep>PMI</adep>
-      <ades>HAJ</ades>
+      <callsign>TUI</callsign>
+      <adep>LEPA</adep>
+      <ades>EDDV</ades>
       <actype>Boeing 737800</actype>
       <wtc>M</wtc>
       <plots>
@@ -157,7 +157,7 @@
             <speed>178</speed>
             <latitude>55.51619216</latitude>
             <longitude>8.95385742</longitude>
-            <ssrcode>M406</ssrcode>
+            <ssrcode>0551</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -165,16 +165,16 @@
             <speed>178</speed>
             <latitude>54.81334842</latitude>
             <longitude>9.0637207</longitude>
-            <ssrcode>M406</ssrcode>
+            <ssrcode>0551</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
    <flight>
       <id>006</id>
-      <callsign>EZS51BG</callsign>
-      <adep>ARN</adep>
-      <ades>GVA</ades>
+      <callsign>EZS</callsign>
+      <adep>ESSA</adep>
+      <ades>LSGG</ades>
       <actype>A319</actype>
       <wtc>M</wtc>
       <plots>
@@ -198,9 +198,9 @@
    </flight>
    <flight>
       <id>007</id>
-      <callsign>BEL6YR</callsign>
-      <adep>BRU</adep>
-      <ades>CPH</ades>
+      <callsign>BEL</callsign>
+      <adep>EBBR</adep>
+      <ades>EKCH</ades>
       <actype>A-318</actype>
       <wtc>M</wtc>
       <plots>
@@ -209,7 +209,7 @@
             <speed>430</speed>
             <latitude>52.20087372</latitude>
             <longitude>6.71264648</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>0601</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -217,16 +217,16 @@
             <speed>430</speed>
             <latitude>51.38549507</latitude>
             <longitude>5.87768555</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>0601</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
    <flight>
       <id>008</id>
-      <callsign>AFR260T</callsign>
-      <adep>CDG</adep>
-      <ades>ARN</ades>
+      <callsign>AFR</callsign>
+      <adep>LFPG</adep>
+      <ades>ESSA</ades>
       <actype>A-320</actype>
       <wtc>M</wtc>
       <plots>
@@ -235,7 +235,7 @@
             <speed>452</speed>
             <latitude>50.87531114</latitude>
             <longitude>8.32763672</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>3501</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -243,16 +243,16 @@
             <speed>420</speed>
             <latitude>49.4109732</latitude>
             <longitude>4.59228516</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>3501</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
    <flight>
       <id>009</id>
-      <callsign>KLM1159</callsign>
-      <adep>OTP</adep>
-      <ades>LHR</ades>
+      <callsign>KLM</callsign>
+      <adep>LROP</adep>
+      <ades>EGLL</ades>
       <actype>A-318</actype>
       <wtc>M</wtc>
       <plots>
@@ -261,7 +261,7 @@
             <speed>463</speed>
             <latitude>49.32512199</latitude>
             <longitude>11.57958984</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>0643</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -269,16 +269,16 @@
             <speed>420</speed>
             <latitude>47.18971246</latitude>
             <longitude>16.85302734</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>0643</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
    <flight>
       <id>010</id>
-      <callsign>NAX3503</callsign>
-      <adep>EDI</adep>
-      <ades>CPH</ades>
+      <callsign>NAX</callsign>
+      <adep>EGPH</adep>
+      <ades>EKCH</ades>
       <actype>Boeing 737800</actype>
       <wtc>M</wtc>
       <plots>
@@ -287,7 +287,7 @@
             <speed>463</speed>
             <latitude>56.09961969</latitude>
             <longitude>8.26446533</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>5001</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -295,16 +295,16 @@
             <speed>420</speed>
             <latitude>55.67758441</latitude>
             <longitude>3.66943359</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>5001</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
    <flight>
       <id>011</id>
-      <callsign>AFR260T</callsign>
-      <adep>ARN</adep>
-      <ades>CDG</ades>
+      <callsign>AFR</callsign>
+      <adep>ESSA</adep>
+      <ades>LFPG</ades>
       <actype>A-320</actype>
       <wtc>M</wtc>
       <plots>
@@ -313,7 +313,7 @@
             <speed>452</speed>
             <latitude>55.35179308</latitude>
             <longitude>12.86979675</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>6001</ssrcode>
             <modescode>ADS</modescode>
          </plot>
          <plot>
@@ -321,9 +321,243 @@
             <speed>420</speed>
             <latitude>54.35179308</latitude>
             <longitude>12.86979675</longitude>
-            <ssrcode>M456</ssrcode>
+            <ssrcode>6001</ssrcode>
             <modescode>ADS</modescode>
          </plot>
       </plots>
    </flight>
+  <flight>
+    <id>012</id>
+    <callsign>AUS</callsign>
+    <adep>LOWW</adep>
+    <ades>EBAW</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>49.86631673</latitude>
+        <longitude>7.19604492</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>48.71996122</latitude>
+        <longitude>12.23876953</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
+  <flight>
+    <id>013</id>
+    <callsign>BER</callsign>
+    <adep>EDDL</adep>
+    <ades>EDDT</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>52.03897658</latitude>
+        <longitude>11.5246582</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>51.52241608</latitude>
+        <longitude>8.88793945</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
+  <flight>
+    <id>014</id>
+    <callsign>SAS</callsign>
+    <adep>EHAM</adep>
+    <ades>ENGM</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>56.9928828</latitude>
+        <longitude>8.15185547</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>55.27911529</latitude>
+        <longitude>7.75634766</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
+  <flight>
+    <id>015</id>
+    <callsign>NAX</callsign>
+    <adep>EGLL</adep>
+    <ades>ESSA</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>53.22576844</latitude>
+        <longitude>3.29589844</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>54.92714186</latitude>
+        <longitude>7.25097656</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
+  <flight>
+    <id>016</id>
+    <callsign>FIN</callsign>
+    <adep>LFPG</adep>
+    <ades>EFHK</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>56.9928828</latitude>
+        <longitude>17.09472656</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>55.32914441</latitude>
+        <longitude>13.84277344</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
+  <flight>
+    <id>017</id>
+    <callsign>LSA</callsign>
+    <adep>LFPG</adep>
+    <ades>EFHK</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>54.38055737</latitude>
+        <longitude>9.61303711</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>53.72271667</latitude>
+        <longitude>10.16235352</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
+  <flight>
+    <id>018</id>
+    <callsign>DLH</callsign>
+    <adep>ENGM</adep>
+    <ades>EDDM</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>57.79794388</latitude>
+        <longitude>10.57983398</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>58.33256713</latitude>
+        <longitude>11.06323242</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
+  <flight>
+    <id>018</id>
+    <callsign>SAS</callsign>
+    <adep>ESSA</adep>
+    <ades>EHAM</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>56.27996083</latitude>
+        <longitude>10.66772461</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>56.61997653</latitude>
+        <longitude>11.56860352</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
+  <flight>
+    <id>019</id>
+    <callsign>SAS</callsign>
+    <adep>EKCH</adep>
+    <ades>LIRF</ades>
+    <actype>A-320</actype>
+    <wtc>M</wtc>
+    <plots>
+      <plot>
+        <altitude>35000</altitude>
+        <speed>452</speed>
+        <latitude>54.23955053</latitude>
+        <longitude>13.37036133</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+      <plot>
+        <altitude>36025</altitude>
+        <speed>420</speed>
+        <latitude>54.81334842</latitude>
+        <longitude>12.20581055</longitude>
+        <ssrcode>6021</ssrcode>
+        <modescode>ADS</modescode>
+      </plot>
+    </plots>
+  </flight>
 </flights>
