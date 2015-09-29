@@ -33,8 +33,8 @@ function initMap() {
     var planeControlDiv = document.createElement('div');
     var planeControl = new PlaneControl(planeControlDiv, map);
 
-    planeControlDiv.index = 1;
-    map.controls[google.maps.ControlPosition.LEFT_CENTER].push(planeControlDiv);
+    planeControlDiv.index = 2;
+    map.controls[google.maps.ControlPosition.LEFT_TOP].push(planeControlDiv);
 
     //get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
@@ -131,7 +131,8 @@ function CenterControl(controlDiv, map) {
     controlUI.style.borderRadius = '3px';
     controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
     controlUI.style.cursor = 'pointer';
-    controlUI.style.marginBottom = '22px';
+    controlUI.style.marginBottom = '18px';
+    controlUI.style.marginBottom = '18px';
     controlUI.style.textAlign = 'center';
     controlUI.title = 'Click to switch to aviation mode';
     controlDiv.appendChild(controlUI);
@@ -140,8 +141,8 @@ function CenterControl(controlDiv, map) {
     var controlText = document.createElement('div');
     controlText.style.color = 'rgb(25,25,25)';
     controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-    controlText.style.fontSize = '16px';
-    controlText.style.lineHeight = '38px';
+    controlText.style.fontSize = '12px';
+    controlText.style.lineHeight = '30px';
     controlText.style.paddingLeft = '5px';
     controlText.style.paddingRight = '5px';
     controlText.innerHTML = 'Aviation mode';
@@ -150,6 +151,7 @@ function CenterControl(controlDiv, map) {
     controlUI.addEventListener('click', function () {
         aviationMode = true;
         planeMode = false;
+        updateMap();
     });
 }
 
@@ -162,7 +164,7 @@ function PlaneControl(planeControlDiv, map) {
     planeControlUI.style.borderRadius = '3px';
     planeControlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
     planeControlUI.style.cursor = 'pointer';
-    planeControlUI.style.marginBottom = '22px';
+//    planeControlUI.style.marginBottom = '22px';
     planeControlUI.style.textAlign = 'center';
     planeControlUI.title = 'Click to switch to plane mode';
     planeControlDiv.appendChild(planeControlUI);
@@ -171,8 +173,8 @@ function PlaneControl(planeControlDiv, map) {
     var planeControlText = document.createElement('div');
     planeControlText.style.color = 'rgb(25,25,25)';
     planeControlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-    planeControlText.style.fontSize = '16px';
-    planeControlText.style.lineHeight = '38px';
+    planeControlText.style.fontSize = '12px';
+    planeControlText.style.lineHeight = '30px';
     planeControlText.style.paddingLeft = '5px';
     planeControlText.style.paddingRight = '5px';
     planeControlText.innerHTML = 'Plane mode';
@@ -181,6 +183,7 @@ function PlaneControl(planeControlDiv, map) {
     planeControlUI.addEventListener('click', function () {
         planeMode = true;
         aviationMode = false;
+        updateMap();
     });
 }
 
