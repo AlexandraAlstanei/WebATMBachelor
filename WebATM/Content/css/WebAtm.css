@@ -7,4 +7,13 @@ html, body {
 
 #map {
    height: 100%;
-}/* Settings styles */#settings {    position: absolute;    top: 0px;    right: 0;    height: 40px;    border-bottom: 1px solid grey;}
+}
+
+/* Settings styles */
+#settings {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 40px;
+    border-bottom: 1px solid grey;
+}

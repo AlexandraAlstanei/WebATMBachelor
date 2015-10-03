@@ -509,7 +509,7 @@
     </plots>
   </flight>
   <flight>
-    <id>018</id>
+    <id>019</id>
     <callsign>SAS</callsign>
     <adep>ESSA</adep>
     <ades>EHAM</ades>
@@ -535,7 +535,7 @@
     </plots>
   </flight>
   <flight>
-    <id>019</id>
+    <id>020</id>
     <callsign>SAS</callsign>
     <adep>EKCH</adep>
     <ades>LIRF</ades>
