@@ -4,7 +4,7 @@ var currentlyDisplayedMarkersObjectList = [];
 var aviationMode = false;
 var planeMode = false;
 var marker;
-
+var found = false;
 
 function initMap() {
     //Initialize google maps component
@@ -49,8 +49,9 @@ function initMap() {
 
 function updateMap() {
     //this will repeat every 4 seconds
-    //  updateMarker();
-    getDataAndDisplayOnMap();
+    found = false;
+      updateMarker();
+  //  getDataAndDisplayOnMap();
 }
 
 function getDataAndDisplayOnMap() {
@@ -82,21 +83,22 @@ function updateMarker() {
                // On success, 'data' contains a list of flights.
 
                //for each flight, draw the last plot on the map
-               for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
-                   for (var i = 0; i < data.length; i++) {
+               for (var i = 0; i < data.length; i++) {
+                   for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
+                   
                        //find the corresponding marker
-
                        if (currentlyDisplayedMarkers[m].metadata.id == data[i].TrackNumber) {
 
                            //create the new coordinates and change the position of the markers
-                        //   var updatedMarkerLatLng = { lat: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), lng: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude) };
                             var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
 
-                           currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
-                       }else{
-                           var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
-                           createMarker(LatLng, 120, data[i].TrackNumber);
+                            currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
+                            found = true;
                        }
+                   }
+                   if (!found) {
+                       var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
+                       createMarker(LatLng, 120, data[i].TrackNumber);
                    }
                }
            });

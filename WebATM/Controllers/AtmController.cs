@@ -44,37 +44,37 @@ namespace WebATM.Controllers
             List<CAT62Data> list = GetExtractedDataFromBroadCast();
             foreach (var item in list)
             {
-                Flight flight1 = new Flight();
+                Flight flight = new Flight();
                 Plot plot = new Plot();
-                flight1.Plots = new List<Plot>();
+                flight.Plots = new List<Plot>();
                 foreach (var element in item.CAT62DataItems)
                 {
                     if (element.ID == "040")
                     {
                         if (element.value != null)
                         {
-                            flight1.TrackNumber = Convert.ToInt32(element.value);
+                            flight.TrackNumber = Convert.ToInt32(element.value);
                         }
                     }
                     if (element.ID == "070")
                     {
                         if (element.value != null)
                         {
-                            flight1.TimeOfTrack = ((AsterixExtractor.categories.CAT062.CAT62070ElapsedTimeSinceMidnight)element.value).ElapsedTimeSinceMidnight;
+                            flight.TimeOfTrack = ((AsterixExtractor.categories.CAT062.CAT62070ElapsedTimeSinceMidnight)element.value).ElapsedTimeSinceMidnight;
                         }
                     }
                     if (element.ID == "060")
                     {
                         if (element.value != null)
                         {
-                            flight1.SSRCode = ((CAT62060Mode3UserData)element.value).Mode3A_Code;
+                            flight.SSRCode = ((CAT62060Mode3UserData)element.value).Mode3A_Code;
                         }
                     }
                     if (element.ID == "136")
                     {
                         if (element.value != null)
                         {
-                            flight1.MeasuredFlightLevel = Convert.ToInt32(element.value);
+                            flight.MeasuredFlightLevel = Convert.ToInt32(element.value);
                         }
                     }
                     if (element.ID == "105")
@@ -91,16 +91,16 @@ namespace WebATM.Controllers
 
                         if (element.value != null)
                         {
-                            //flight1.AircraftType = ((CAT62I390Types.Type_Of_AirCraft_Type)element.value).Aircraft_Type.ToString();
-                            //flight1.CallSign = ((CAT62I390Types.CAT62CallSign_Type)element.value).callSign_String.ToString();
-                            //flight1.ADEP = ((CAT62I390Types.CAT62Departure_Airport_Type)element.value).ADEP;
-                            //flight1.ADES = ((CAT62I390Types.CAT62Destination_Airport_Type)element.value).ADES;
-                            //flight1.WTC = ((CAT62I390Types.CAT62Wake_Turbulence_Category_Type)element.value).WTC;
+                            flight.AircraftType = ((CAT62I390Data)element.value).AirCraftType.Aircraft_Type;
+                            flight.CallSign = ((CAT62I390Data)element.value).CallSign.callSign_String;
+                            flight.ADEP = ((CAT62I390Data)element.value).Departure_Airport.ADEP;
+                            flight.ADES = ((CAT62I390Data)element.value).Destination_Airport.ADES;
+                            flight.WTC = ((CAT62I390Data)element.value).Wake_Turbulence_Category.WTC;
                         }
                     }
                 }
-                flight1.Plots.Add(plot);
-                flightList.Add(flight1);
+                flight.Plots.Add(plot);
+                flightList.Add(flight);
             }
             return flightList;
         }
