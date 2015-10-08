@@ -49,7 +49,8 @@ function initMap() {
 
 function updateMap() {
     //this will repeat every 4 seconds
-    updateMarker();
+    //  updateMarker();
+    getDataAndDisplayOnMap();
 }
 
 function getDataAndDisplayOnMap() {
@@ -63,11 +64,11 @@ function getDataAndDisplayOnMap() {
                //for each flight, draw the last plot on the map
                for (var i = 0; i < data.length; i++) {
                    //get the coordinates for drawing the marker
-                   var markerLatLng = { lat: data[i].Plots[data[i].Plots.length - 1].latitude, lng: data[i].Plots[data[i].Plots.length - 1].longitude };
+                   var markerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
 
                    //calculate the direction of the plane
-                   var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude));
-                   createMarker(markerLatLng, direction, data[i].ID);
+               //    var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude));
+                   createMarker(markerLatLng, 20, data[i].TrackNumber);
                }
            });
 }
@@ -83,13 +84,18 @@ function updateMarker() {
                //for each flight, draw the last plot on the map
                for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
                    for (var i = 0; i < data.length; i++) {
-                       //find the correct marker
-                       if (currentlyDisplayedMarkers[m].metadata.id == data[i].ID) {
+                       //find the corresponding marker
+
+                       if (currentlyDisplayedMarkers[m].metadata.id == data[i].TrackNumber) {
+
                            //create the new coordinates and change the position of the markers
-                           var markerLatLng = { lat: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), lng: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude) };
-                           var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, markerLatLng.lat, markerLatLng.lng);
-                           currentlyDisplayedMarkers[m].setPosition(markerLatLng);
-                         //  currentlyDisplayedMarkers[m].metadata.rotation = direction;
+                        //   var updatedMarkerLatLng = { lat: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), lng: generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude) };
+                            var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
+
+                           currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
+                       }else{
+                           var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
+                           createMarker(LatLng, 120, data[i].TrackNumber);
                        }
                    }
                }
@@ -145,20 +151,13 @@ function createMarker(markerLatLng, direction, id) {
         position: markerLatLng,
         map: map,
         icon: iconImage,
-        draggable: false,
+        draggable: false
     });
     //add aditional properties to the marker
-    marker.metadata = { id: id };
-
-    //create info window 
-    var contentString = id
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
-    //when a marker is clicked an info window appears
-    marker.addListener('click', function () {
-        infowindow.open(map, marker);
-    });
+    marker.metadata = {
+        id: id
+       // rotation:direction
+        };
 
     //add the marker to the markers array
     currentlyDisplayedMarkers.push(marker);

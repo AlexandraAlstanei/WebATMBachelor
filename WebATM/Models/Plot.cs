@@ -10,10 +10,9 @@ namespace WebATM.Models
     /// </summary>
     public class Plot
     {
-        public double latitude;
-        public double longitude;
-        public double altitude;
-        public double speed;
-        public String ModeS;
+        public double Latitude;
+        public double Longitude;
+        public double CurrentFlightLevel;
+        public double Velocity;
     }
 }

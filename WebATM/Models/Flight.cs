@@ -12,12 +12,16 @@ namespace WebATM.Models
 {
     public class Flight
    {
-      public Plot[] Plots;
-      public String callSign;
-      public String ADEP;
-      public String ADES;
-      public String ACType;
-      public String WTC;
-      public String ID;
-   }
+        public List<Plot> Plots;
+        public String SSRCode;
+        public String CallSign;
+        public String ADEP;
+        public String ADES;
+        public String ACType;
+        public String WTC;
+        public int TrackNumber;
+        public double TimeOfTrack;
+        public String AircraftType;
+        public int MeasuredFlightLevel;
+    }
 }
