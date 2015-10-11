@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using WebATM.Models;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using AsterixExtractor.model;
@@ -21,6 +19,8 @@ namespace WebATM.Controllers
     public class AtmController
     {
         private static AtmController atmControllerInstance;
+        private static List<Flight> flightList = new List<Flight>();
+        private static List<Flight> flightListCopy = flightList;
 
         private AtmController()
         {
@@ -40,7 +40,7 @@ namespace WebATM.Controllers
 
         public static List<Flight> GetAllFlights()
         {
-            List<Flight> flightList = new List<Flight>();
+            
             List<CAT62Data> list = GetExtractedDataFromBroadCast();
             foreach (var item in list)
             {
@@ -102,6 +102,32 @@ namespace WebATM.Controllers
                 flight.Plots.Add(plot);
                 flightList.Add(flight);
             }
+            return flightList;
+        }
+
+        public static List<Flight> GetUpdatedFlights()
+        {
+            List<Flight> updatedFlightList = new List<Flight>();
+            updatedFlightList = GetAllFlights();
+            var found = false;
+            
+            foreach (var item in updatedFlightList.ToList())
+            {
+                foreach (var flight in flightListCopy.ToList())
+                {
+                    if (item.TrackNumber == flight.TrackNumber)
+                    {
+                        var queue = new Queue<Plot>(flight.Plots);
+                        queue.Enqueue(item.Plots[0]);
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    flightList.Add(item);
+                }
+            }
+            flightList = flightListCopy;
             return flightList;
         }
 

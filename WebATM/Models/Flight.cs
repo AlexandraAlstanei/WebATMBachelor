@@ -17,7 +17,6 @@ namespace WebATM.Models
         public String CallSign;
         public String ADEP;
         public String ADES;
-        public String ACType;
         public String WTC;
         public int TrackNumber;
         public double TimeOfTrack;

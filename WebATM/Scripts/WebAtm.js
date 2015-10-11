@@ -5,6 +5,8 @@ var aviationMode = false;
 var planeMode = false;
 var marker;
 var found = false;
+var markerLatLng;
+var pastPositions = 1;
 
 function initMap() {
     //Initialize google maps component
@@ -51,7 +53,6 @@ function updateMap() {
     //this will repeat every 4 seconds
     found = false;
       updateMarker();
-  //  getDataAndDisplayOnMap();
 }
 
 function getDataAndDisplayOnMap() {
@@ -65,7 +66,7 @@ function getDataAndDisplayOnMap() {
                //for each flight, draw the last plot on the map
                for (var i = 0; i < data.length; i++) {
                    //get the coordinates for drawing the marker
-                   var markerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
+                   markerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
 
                    //calculate the direction of the plane
                //    var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude));
@@ -75,7 +76,7 @@ function getDataAndDisplayOnMap() {
 }
 
 function updateMarker() {
-    var uri = 'api/webatm/GetAllFlights';
+    var uri = 'api/webatm/GetUpdatedFlights';
 
     //make AJAX call that returns the data in JSON format
     $.getJSON(uri)
@@ -91,13 +92,17 @@ function updateMarker() {
 
                            //create the new coordinates and change the position of the markers
                             var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
-
+                            var direction = calculateDirection(updatedMarkerLatLng.lat, updatedMarkerLatLng.lng, markerLatLng.lat, markerLatLng.lng);
+                            
                             currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
+                           //  currentlyDisplayedMarkers[m].iconImage.setRotation(direction);
+
                             found = true;
                        }
                    }
                    if (!found) {
                        var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
+                       
                        createMarker(LatLng, 120, data[i].TrackNumber);
                    }
                }
@@ -115,7 +120,7 @@ function createMarker(markerLatLng, direction, id) {
             strokeWeight: 2,
             scale: 0.07,
             fillOpacity: 1,
-            rotation: direction
+            rotation:direction
         }
 
     } else {
@@ -124,7 +129,7 @@ function createMarker(markerLatLng, direction, id) {
             strokeColor: '#800000',
             scale: 0.05,
             fillOpacity: 1,
-            strokeWeight: 1,
+            strokeWeight: 1,     
         }
         if (aviationMode) {
             var iconImage = {
@@ -158,7 +163,6 @@ function createMarker(markerLatLng, direction, id) {
     //add aditional properties to the marker
     marker.metadata = {
         id: id
-       // rotation:direction
         };
 
     //add the marker to the markers array
@@ -248,8 +252,6 @@ function clearAllMarkers() {
     }
 
     currentlyDisplayedMarkers = []; //empty array
-
-
 }
 
 //calculate the bearing using two pairs of coordinates
