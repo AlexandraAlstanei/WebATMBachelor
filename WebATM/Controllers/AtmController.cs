@@ -40,7 +40,7 @@ namespace WebATM.Controllers
 
         public static List<Flight> GetAllFlights()
         {
-            
+
             List<CAT62Data> list = GetExtractedDataFromBroadCast();
             foreach (var item in list)
             {
@@ -109,22 +109,20 @@ namespace WebATM.Controllers
         {
             List<Flight> updatedFlightList = new List<Flight>();
             updatedFlightList = GetAllFlights();
-            var found = false;
-            
+
             foreach (var item in updatedFlightList.ToList())
             {
-                foreach (var flight in flightListCopy.ToList())
+                if (flightListCopy.Contains(item))
                 {
-                    if (item.TrackNumber == flight.TrackNumber)
+                    Flight foundFlight = flightListCopy.Find(x => x.TrackNumber == item.TrackNumber);
+                    if (!foundFlight.Plots.Contains(item.Plots[0]))
                     {
-                        var queue = new Queue<Plot>(flight.Plots);
-                        queue.Enqueue(item.Plots[0]);
-                        found = true;
+                        foundFlight.Plots.Insert(0, item.Plots[0]);
                     }
                 }
-                if (!found)
+                else
                 {
-                    flightList.Add(item);
+                    flightListCopy.Add(item);
                 }
             }
             flightList = flightListCopy;

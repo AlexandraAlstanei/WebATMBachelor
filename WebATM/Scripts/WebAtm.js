@@ -1,12 +1,10 @@
 ﻿var map;
 var currentlyDisplayedMarkers = [];
-var currentlyDisplayedMarkersObjectList = [];
 var aviationMode = false;
 var planeMode = false;
 var marker;
 var found = false;
 var markerLatLng;
-var pastPositions = 1;
 
 function initMap() {
     //Initialize google maps component
@@ -50,9 +48,8 @@ function initMap() {
 }
 
 function updateMap() {
-    //this will repeat every 4 seconds
-    found = false;
-      updateMarker();
+    //this will repeat every 4 seconds    
+    updateMarker();
 }
 
 function getDataAndDisplayOnMap() {
@@ -69,7 +66,7 @@ function getDataAndDisplayOnMap() {
                    markerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
 
                    //calculate the direction of the plane
-               //    var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude));
+                   //    var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude));
                    createMarker(markerLatLng, 20, data[i].TrackNumber);
                }
            });
@@ -82,32 +79,31 @@ function updateMarker() {
     $.getJSON(uri)
            .done(function (data) {
                // On success, 'data' contains a list of flights.
-
                //for each flight, draw the last plot on the map
                for (var i = 0; i < data.length; i++) {
-                   for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
                    
+                   for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
+                       found = false;
                        //find the corresponding marker
                        if (currentlyDisplayedMarkers[m].metadata.id == data[i].TrackNumber) {
 
                            //create the new coordinates and change the position of the markers
-                            var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
-                            var direction = calculateDirection(updatedMarkerLatLng.lat, updatedMarkerLatLng.lng, markerLatLng.lat, markerLatLng.lng);
-                            
-                            currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
-                           //  currentlyDisplayedMarkers[m].iconImage.setRotation(direction);
+                           var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
 
-                            found = true;
+                           currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
+                           //  currentlyDisplayedMarkers[m].iconImage.setRotation(direction);
+                           found = true;
+                       }                       
+                   }
+                    if (!found)
+                       {
+                           var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
+                           createMarker(LatLng, 120, data[i].TrackNumber);
                        }
                    }
-                   if (!found) {
-                       var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
-                       
-                       createMarker(LatLng, 120, data[i].TrackNumber);
-                   }
-               }
            });
-}
+       }
+
 
 function createMarker(markerLatLng, direction, id) {
     if (planeMode) {
@@ -120,7 +116,7 @@ function createMarker(markerLatLng, direction, id) {
             strokeWeight: 2,
             scale: 0.07,
             fillOpacity: 1,
-            rotation:direction
+            rotation: direction
         }
 
     } else {
@@ -129,7 +125,7 @@ function createMarker(markerLatLng, direction, id) {
             strokeColor: '#800000',
             scale: 0.05,
             fillOpacity: 1,
-            strokeWeight: 1,     
+            strokeWeight: 1,
         }
         if (aviationMode) {
             var iconImage = {
@@ -163,11 +159,31 @@ function createMarker(markerLatLng, direction, id) {
     //add aditional properties to the marker
     marker.metadata = {
         id: id
-        };
+    };
 
     //add the marker to the markers array
     currentlyDisplayedMarkers.push(marker);
+
 }
+
+//function getDisplayedMarkers(n) {
+//    var temp = [];
+//    for (var i = 0; i < n; i++) {
+//        temp = currentlyDisplayedMarkers[i];
+//    }
+//    return temp;
+//}
+
+//function setupMarkerManager() {
+//    markerManager = new MarkerManager(map);
+//    google.maps.event.addListener(markerManager, 'loaded', function () {
+//        markerManager.addMarkers(getDisplayedMarkers(50), 3);
+//        markerManager.addMarkers(getDisplayedMarkers(200), 6);
+//        markerManager.addMarkers(getDisplayedMarkers(1000), 8);
+
+//        markerManager.refresh();
+//    });
+//}
 
 //create the button to change the marker from a plane image to a square image
 function AviationControl(controlDiv, map) {
