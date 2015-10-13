@@ -20,7 +20,7 @@ namespace WebATM.Controllers
     {
         private static AtmController atmControllerInstance;
         private static List<Flight> flightList = new List<Flight>();
-        private static List<Flight> flightListCopy = flightList;
+      //  private static List<Flight> flightListCopy = flightList;
 
         private AtmController()
         {
@@ -40,7 +40,6 @@ namespace WebATM.Controllers
 
         public static List<Flight> GetAllFlights()
         {
-
             List<CAT62Data> list = GetExtractedDataFromBroadCast();
             foreach (var item in list)
             {
@@ -88,7 +87,6 @@ namespace WebATM.Controllers
                     }
                     if (element.ID == "390")
                     {
-
                         if (element.value != null)
                         {
                             flight.AircraftType = ((CAT62I390Data)element.value).AirCraftType.Aircraft_Type;
@@ -99,35 +97,58 @@ namespace WebATM.Controllers
                         }
                     }
                 }
-                flight.Plots.Add(plot);
-                flightList.Add(flight);
-            }
-            return flightList;
-        }
-
-        public static List<Flight> GetUpdatedFlights()
-        {
-            List<Flight> updatedFlightList = new List<Flight>();
-            updatedFlightList = GetAllFlights();
-
-            foreach (var item in updatedFlightList.ToList())
-            {
-                if (flightListCopy.Contains(item))
+                if (flightList.Contains(flight))
                 {
-                    Flight foundFlight = flightListCopy.Find(x => x.TrackNumber == item.TrackNumber);
-                    if (!foundFlight.Plots.Contains(item.Plots[0]))
-                    {
-                        foundFlight.Plots.Insert(0, item.Plots[0]);
-                    }
+                    Flight foundFlight = flightList.Find(x => x.TrackNumber == flight.TrackNumber);
+                    foundFlight.Plots.Add(plot);
                 }
                 else
                 {
-                    flightListCopy.Add(item);
+                    flight.Plots.Add(plot);
+                    flightList.Add(flight);
                 }
             }
-            flightList = flightListCopy;
             return flightList;
         }
+
+        //private static bool isTrackId(CAT62Data item, int v)
+        //{
+        //    foreach (var element in item.CAT62DataItems)
+        //    {
+        //        if (element.ID == "040")
+        //        {
+        //            if (element.value != null)
+        //            {
+        //                return v == Convert.ToInt32(element.value);
+        //            }
+        //        }
+        //    }
+        //    return false;
+        //}
+
+        //public static List<Flight> GetUpdatedFlights()
+        //{
+        //    List<Flight> updatedFlightList = new List<Flight>();
+        //    updatedFlightList = GetAllFlights();
+
+        //    foreach (var item in updatedFlightList.ToList())
+        //    {
+        //        if (flightListCopy.Contains(item))
+        //        {
+        //            Flight foundFlight = flightListCopy.Find(x => x.TrackNumber == item.TrackNumber);
+        //        if (!foundFlight.Plots.Contains(item.Plots[0]))
+        //            {
+        //                foundFlight.Plots.Insert(0, item.Plots[0]);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            flightListCopy.Add(item);
+        //        }
+        //    }
+        //    flightList = flightListCopy;
+        //    return flightList;
+        //}
 
         //public static IEnumerable<Flight> GetAllFlights()
         //{
