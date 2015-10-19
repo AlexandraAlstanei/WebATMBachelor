@@ -17,3 +17,22 @@ html, body {
     height: 40px;
     border-bottom: 1px solid grey;
 }
+/*#debugwindow {
+    position:absolute;
+    top:30px;  
+    left: 10px;
+    z-index: 99; 
+    background: white;
+}*/
+#debugwindow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: #232323;
+    color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,.4);
+    z-index: 1;
+}

@@ -20,7 +20,7 @@ namespace WebATM.Controllers
     {
         private static AtmController atmControllerInstance;
         private static List<Flight> flightList = new List<Flight>();
-      //  private static List<Flight> flightListCopy = flightList;
+        //  private static List<Flight> flightListCopy = flightList;
 
         private AtmController()
         {
@@ -97,17 +97,17 @@ namespace WebATM.Controllers
                         }
                     }
                 }
-                if (flightList.Contains(flight))
-                {
-                    Flight foundFlight = flightList.Find(x => x.TrackNumber == flight.TrackNumber);
-                    foundFlight.Plots.Add(plot);
+                  if (flightList.Exists(x => x.TrackNumber == flight.TrackNumber))
+                    {
+                         Flight foundFlight = flightList.Find(x => x.TrackNumber == flight.TrackNumber);
+                         foundFlight.Plots.Add(plot);
+                    }
+                    else
+                    {
+                        flight.Plots.Add(plot);
+                        flightList.Add(flight);
+                    }
                 }
-                else
-                {
-                    flight.Plots.Add(plot);
-                    flightList.Add(flight);
-                }
-            }
             return flightList;
         }
 
@@ -160,7 +160,8 @@ namespace WebATM.Controllers
         public static List<CAT62Data> GetExtractedDataFromBroadCast()
         {
             UdpClient receiver = new UdpClient(2222);
-            IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.229.131"), 2222);
+            IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.0.0.27"), 2222);
+            // IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.228.14"), 2222);
 
             byte[] data = null;
             data = receiver.Receive(ref endPoint);

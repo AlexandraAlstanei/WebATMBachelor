@@ -5,14 +5,15 @@ var planeMode = false;
 var marker;
 var found = false;
 var markerLatLng;
-var markerManager;
+var markerCluster;
+
 
 function initMap() {
     //Initialize google maps component
     //Create a dropdown menu with different map types
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 55.2, lng: 9.5 },
-        zoom: 7,
+        zoom: 8,
         mapTypeControl: true,
         mapTypeControlOptions: {
             style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
@@ -25,7 +26,7 @@ function initMap() {
             ]
         }
     });
-
+    
     //Button control for Aviation mode
     var centerControlDiv = document.createElement('div');
     var centerControl = new AviationControl(centerControlDiv, map);
@@ -40,17 +41,33 @@ function initMap() {
     planeControlDiv.index = 2;
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(planeControlDiv);
 
+    //map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(
+    //document.getElementById('debugwindow'));
+
+    //var debugwindow = document.getElementById('debugwindow');
+    //var div = document.createElement('div');
+    //var content = currentlyDisplayedMarkers.length;
+    //div.innerHTML =  content;
+    //legend.appendChild(div);
+
     //get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
-
+    
     //start a javascript timer that starts every 4 seconds
     //on each iteration, get data and change the position of the markers
     setInterval(updateMap, 4000);
+   // setInterval(refreshPage, 60000);
+}
+
+function refreshPage() {
+    clearAllMarkers();
+    updateMarker();
 }
 
 function updateMap() {
     //this will repeat every 4 seconds    
     updateMarker();
+    document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
 }
 
 function getDataAndDisplayOnMap() {
@@ -82,9 +99,9 @@ function updateMarker() {
                // On success, 'data' contains a list of flights.
              //  for each flight, draw the last plot on the map
                for (var i = 0; i < data.length; i++) {
-                   
+                   found = false;
                    for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
-                       found = false;
+                       
                        //find the corresponding marker
                        if (currentlyDisplayedMarkers[m].metadata.id == data[i].TrackNumber) {
 
@@ -93,13 +110,14 @@ function updateMarker() {
 
                            currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
                            //  currentlyDisplayedMarkers[m].iconImage.setRotation(direction);
-                           found = true;
-                       }                       
-                   }
+                          found = true;
+                       }
+                       
+                   } 
                     if (!found)
                        {
                            var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
-                        //   createMarker(LatLng, data[i].TrackNumber);
+                           createMarker(LatLng, data[i].TrackNumber);
                        }
                    }
            });
@@ -109,16 +127,16 @@ function updateMarker() {
 function createMarker(markerLatLng, id) {
     //if (planeMode) {
     //    //display the marker on the map by using an svg image of a plane
-    //    var iconImage = {
-    //        path: 'M438.8,320.6c-3.6-3.1-147.2-107.2-147.2-107.2c-0.2-0.2-0.4-0.4-0.5-0.5c-5.5-5.6-5.2-10.4-5.6-18.8c0,0-0.9-69-2.2-92  S270,64,256,64c0,0,0,0,0,0s0,0,0,0c-14,0-25.9,15-27.2,38s-2.2,92-2.2,92c-0.4,8.4-0.1,13.2-5.6,18.8c-0.2,0.2-0.4,0.4-0.5,0.5  c0,0-143.5,104.1-147.2,107.2s-9.2,7.8-9.2,18.2c0,12.2,3.6,13.7,10.6,11.6c0,0,140.2-39.5,145.4-40.8s7.9,0.6,8.3,7.5  s0.8,46.4,0.9,51s-0.6,4.7-2.9,7.4l-32,40.8c-1.7,2-2.7,4.5-2.7,7.3c0,0,0,6.1,0,12.4s2.8,7.3,8.2,4.9s32.6-17.4,32.6-17.4  c0.7-0.3,4.6-1.9,6.4-1.9c4.2,0,8-0.1,8.8,6.2c1.3,11.4,4.9,20.3,8.5,20.3c0,0,0,0,0,0s0,0,0,0c3.6,0,7.2-8.9,8.5-20.3  c0.7-6.3,4.6-6.2,8.8-6.2c1.8,0,5.7,1.6,6.4,1.9c0,0,27.2,15,32.6,17.4s8.2,1.4,8.2-4.9s0-12.4,0-12.4c0-2.8-1-5.4-2.7-7.3l-32-40.8  c-2.3-2.7-2.9-2.9-2.9-7.4s0.5-44.1,0.9-51s3.1-8.8,8.3-7.5s145.4,40.8,145.4,40.8c7.1,2.1,10.6,0.6,10.6-11.6  C448,328.4,442.5,323.7,438.8,320.6z',
-    //        fillColor: '#800000',
-    //        strokeColor: '#FFFF99',
-    //        strokeOpacity: 0.8,
-    //        strokeWeight: 2,
-    //        scale: 0.07,
-    //        fillOpacity: 1,
-    //       // rotation: direction
-    //    }
+        //var iconImage = {
+        //    path: 'M438.8,320.6c-3.6-3.1-147.2-107.2-147.2-107.2c-0.2-0.2-0.4-0.4-0.5-0.5c-5.5-5.6-5.2-10.4-5.6-18.8c0,0-0.9-69-2.2-92  S270,64,256,64c0,0,0,0,0,0s0,0,0,0c-14,0-25.9,15-27.2,38s-2.2,92-2.2,92c-0.4,8.4-0.1,13.2-5.6,18.8c-0.2,0.2-0.4,0.4-0.5,0.5  c0,0-143.5,104.1-147.2,107.2s-9.2,7.8-9.2,18.2c0,12.2,3.6,13.7,10.6,11.6c0,0,140.2-39.5,145.4-40.8s7.9,0.6,8.3,7.5  s0.8,46.4,0.9,51s-0.6,4.7-2.9,7.4l-32,40.8c-1.7,2-2.7,4.5-2.7,7.3c0,0,0,6.1,0,12.4s2.8,7.3,8.2,4.9s32.6-17.4,32.6-17.4  c0.7-0.3,4.6-1.9,6.4-1.9c4.2,0,8-0.1,8.8,6.2c1.3,11.4,4.9,20.3,8.5,20.3c0,0,0,0,0,0s0,0,0,0c3.6,0,7.2-8.9,8.5-20.3  c0.7-6.3,4.6-6.2,8.8-6.2c1.8,0,5.7,1.6,6.4,1.9c0,0,27.2,15,32.6,17.4s8.2,1.4,8.2-4.9s0-12.4,0-12.4c0-2.8-1-5.4-2.7-7.3l-32-40.8  c-2.3-2.7-2.9-2.9-2.9-7.4s0.5-44.1,0.9-51s3.1-8.8,8.3-7.5s145.4,40.8,145.4,40.8c7.1,2.1,10.6,0.6,10.6-11.6  C448,328.4,442.5,323.7,438.8,320.6z',
+        //    fillColor: '#800000',
+        //    strokeColor: '#FFFF99',
+        //    strokeOpacity: 0.8,
+        //    strokeWeight: 2,
+        //    scale: 0.07,
+        //    fillOpacity: 1,
+        //   // rotation: direction
+        //}
 
     //} else {
     //    var iconImage = {
@@ -138,31 +156,31 @@ function createMarker(markerLatLng, id) {
     //        }
     //    } else {
     //       // display the marker on the map by using an svg image of a plane
-    //        var iconImage = {
-    //            path: 'M438.8,320.6c-3.6-3.1-147.2-107.2-147.2-107.2c-0.2-0.2-0.4-0.4-0.5-0.5c-5.5-5.6-5.2-10.4-5.6-18.8c0,0-0.9-69-2.2-92  S270,64,256,64c0,0,0,0,0,0s0,0,0,0c-14,0-25.9,15-27.2,38s-2.2,92-2.2,92c-0.4,8.4-0.1,13.2-5.6,18.8c-0.2,0.2-0.4,0.4-0.5,0.5  c0,0-143.5,104.1-147.2,107.2s-9.2,7.8-9.2,18.2c0,12.2,3.6,13.7,10.6,11.6c0,0,140.2-39.5,145.4-40.8s7.9,0.6,8.3,7.5  s0.8,46.4,0.9,51s-0.6,4.7-2.9,7.4l-32,40.8c-1.7,2-2.7,4.5-2.7,7.3c0,0,0,6.1,0,12.4s2.8,7.3,8.2,4.9s32.6-17.4,32.6-17.4  c0.7-0.3,4.6-1.9,6.4-1.9c4.2,0,8-0.1,8.8,6.2c1.3,11.4,4.9,20.3,8.5,20.3c0,0,0,0,0,0s0,0,0,0c3.6,0,7.2-8.9,8.5-20.3  c0.7-6.3,4.6-6.2,8.8-6.2c1.8,0,5.7,1.6,6.4,1.9c0,0,27.2,15,32.6,17.4s8.2,1.4,8.2-4.9s0-12.4,0-12.4c0-2.8-1-5.4-2.7-7.3l-32-40.8  c-2.3-2.7-2.9-2.9-2.9-7.4s0.5-44.1,0.9-51s3.1-8.8,8.3-7.5s145.4,40.8,145.4,40.8c7.1,2.1,10.6,0.6,10.6-11.6  C448,328.4,442.5,323.7,438.8,320.6z',
-    //            fillColor: '#800000',
-    //            strokeColor: '#FFFF99',
-    //            strokeOpacity: 0.8,
-    //            strokeWeight: 2,
-    //            scale: 0.07,
-    //            fillOpacity: 1,
-    //          //  rotation: direction
-    //        }
+            var iconImage = {
+                path: 'M438.8,320.6c-3.6-3.1-147.2-107.2-147.2-107.2c-0.2-0.2-0.4-0.4-0.5-0.5c-5.5-5.6-5.2-10.4-5.6-18.8c0,0-0.9-69-2.2-92  S270,64,256,64c0,0,0,0,0,0s0,0,0,0c-14,0-25.9,15-27.2,38s-2.2,92-2.2,92c-0.4,8.4-0.1,13.2-5.6,18.8c-0.2,0.2-0.4,0.4-0.5,0.5  c0,0-143.5,104.1-147.2,107.2s-9.2,7.8-9.2,18.2c0,12.2,3.6,13.7,10.6,11.6c0,0,140.2-39.5,145.4-40.8s7.9,0.6,8.3,7.5  s0.8,46.4,0.9,51s-0.6,4.7-2.9,7.4l-32,40.8c-1.7,2-2.7,4.5-2.7,7.3c0,0,0,6.1,0,12.4s2.8,7.3,8.2,4.9s32.6-17.4,32.6-17.4  c0.7-0.3,4.6-1.9,6.4-1.9c4.2,0,8-0.1,8.8,6.2c1.3,11.4,4.9,20.3,8.5,20.3c0,0,0,0,0,0s0,0,0,0c3.6,0,7.2-8.9,8.5-20.3  c0.7-6.3,4.6-6.2,8.8-6.2c1.8,0,5.7,1.6,6.4,1.9c0,0,27.2,15,32.6,17.4s8.2,1.4,8.2-4.9s0-12.4,0-12.4c0-2.8-1-5.4-2.7-7.3l-32-40.8  c-2.3-2.7-2.9-2.9-2.9-7.4s0.5-44.1,0.9-51s3.1-8.8,8.3-7.5s145.4,40.8,145.4,40.8c7.1,2.1,10.6,0.6,10.6-11.6  C448,328.4,442.5,323.7,438.8,320.6z',
+                fillColor: '#800000',
+                strokeColor: '#FFFF99',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                scale: 0.07,
+                fillOpacity: 1,
+              //  rotation: direction
+            }
     //    }
     //}
 
-    var iconImage = {
-                path: 'M265.54,0H13.259C5.939,0,0.003,5.936,0.003,13.256v252.287c0,7.32,5.936,13.256,13.256,13.256H265.54c7.318,0,13.256-5.936,13.256-13.256V13.255C278.796,5.935,272.86,0,265.54,0z M252.284,252.287H26.515V26.511h225.769V252.287z',
-                strokeColor: '#800000',
-                scale: 0.05,
-              //  fillOpacity: 1,
-              //  strokeWeight: 1
-            }
+    //var iconImage = {
+    //            path: 'M265.54,0H13.259C5.939,0,0.003,5.936,0.003,13.256v252.287c0,7.32,5.936,13.256,13.256,13.256H265.54c7.318,0,13.256-5.936,13.256-13.256V13.255C278.796,5.935,272.86,0,265.54,0z M252.284,252.287H26.515V26.511h225.769V252.287z',
+    //            strokeColor: '#800000',
+    //            scale: 0.05,
+    //            fillOpacity: 1
+    //          //  strokeWeight: 1
+    //        }
     //draw the marker
     marker = new google.maps.Marker({
         position: markerLatLng,
         map: map,
-       // icon: iconImage,
+        icon: iconImage,
         draggable: false
     });
     //add aditional properties to the marker
@@ -172,27 +190,10 @@ function createMarker(markerLatLng, id) {
 
     //add the marker to the markers array
     currentlyDisplayedMarkers.push(marker);
-
+ //   markerCluster = new MarkerClusterer(map, currentlyDisplayedMarkers);
 }
 
-function getDisplayedMarkers(n) {
-    var temp = [];
-    for (var i = 0; i < n; i++) {
-        temp = currentlyDisplayedMarkers[i];
-    }
-    return temp;
-}
 
-function setupMarkerManager() {
-    markerManager = new MarkerManager(map);
-    google.maps.event.addListener(markerManager, 'loaded', function () {
-        markerManager.addMarkers(getDisplayedMarkers(50), 3);
-        markerManager.addMarkers(getDisplayedMarkers(200), 6);
-        markerManager.addMarkers(getDisplayedMarkers(1000), 8);
-
-        markerManager.refresh();
-    });
-}
 
 //create the button to change the marker from a plane image to a square image
 function AviationControl(controlDiv, map) {
