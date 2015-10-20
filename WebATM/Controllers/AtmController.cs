@@ -9,6 +9,8 @@ using AsterixExtractor.model;
 using System.IO;
 using AsterixExtractor.categories.CAT062;
 using AsterixExtractor.geoCalculations;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace WebATM.Controllers
 {
@@ -100,7 +102,7 @@ namespace WebATM.Controllers
                   if (flightList.Exists(x => x.TrackNumber == flight.TrackNumber))
                     {
                          Flight foundFlight = flightList.Find(x => x.TrackNumber == flight.TrackNumber);
-                         foundFlight.Plots.Add(plot);
+                         foundFlight.Plots.Insert(0, plot);
                     }
                     else
                     {
@@ -108,7 +110,30 @@ namespace WebATM.Controllers
                         flightList.Add(flight);
                     }
                 }
-            return flightList;
+            return flightList;           
+        }
+
+        public static void writeToFile<Flight>(Flight serializableObject, string fileName)
+        {
+            if (serializableObject == null) { return; }
+
+            try
+            {
+                XmlDocument xmlDocument = new XmlDocument();
+                XmlSerializer serializer = new XmlSerializer(serializableObject.GetType());
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    serializer.Serialize(stream, serializableObject);
+                    stream.Position = 0;
+                    xmlDocument.Load(stream);
+                    xmlDocument.Save(fileName);
+                    stream.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                
+            }
         }
 
         //private static bool isTrackId(CAT62Data item, int v)
