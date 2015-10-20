@@ -22,7 +22,6 @@ namespace WebATM.Controllers
     {
         private static AtmController atmControllerInstance;
         private static List<Flight> flightList = new List<Flight>();
-        //  private static List<Flight> flightListCopy = flightList;
 
         private AtmController()
         {
@@ -113,28 +112,6 @@ namespace WebATM.Controllers
             return flightList;           
         }
 
-        public static void writeToFile<Flight>(Flight serializableObject, string fileName)
-        {
-            if (serializableObject == null) { return; }
-
-            try
-            {
-                XmlDocument xmlDocument = new XmlDocument();
-                XmlSerializer serializer = new XmlSerializer(serializableObject.GetType());
-                using (MemoryStream stream = new MemoryStream())
-                {
-                    serializer.Serialize(stream, serializableObject);
-                    stream.Position = 0;
-                    xmlDocument.Load(stream);
-                    xmlDocument.Save(fileName);
-                    stream.Close();
-                }
-            }
-            catch (Exception e)
-            {
-                
-            }
-        }
 
         //private static bool isTrackId(CAT62Data item, int v)
         //{
@@ -149,30 +126,6 @@ namespace WebATM.Controllers
         //        }
         //    }
         //    return false;
-        //}
-
-        //public static List<Flight> GetUpdatedFlights()
-        //{
-        //    List<Flight> updatedFlightList = new List<Flight>();
-        //    updatedFlightList = GetAllFlights();
-
-        //    foreach (var item in updatedFlightList.ToList())
-        //    {
-        //        if (flightListCopy.Contains(item))
-        //        {
-        //            Flight foundFlight = flightListCopy.Find(x => x.TrackNumber == item.TrackNumber);
-        //        if (!foundFlight.Plots.Contains(item.Plots[0]))
-        //            {
-        //                foundFlight.Plots.Insert(0, item.Plots[0]);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            flightListCopy.Add(item);
-        //        }
-        //    }
-        //    flightList = flightListCopy;
-        //    return flightList;
         //}
 
         //public static IEnumerable<Flight> GetAllFlights()
