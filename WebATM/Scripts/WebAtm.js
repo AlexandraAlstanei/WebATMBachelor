@@ -69,8 +69,7 @@ function getDataAndDisplayOnMap() {
                    markerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
 
                    //calculate the direction of the plane
-                   //    var direction = calculateDirection(data[i].Plots[data[i].Plots.length - 1].latitude, data[i].Plots[data[i].Plots.length - 1].longitude, generateCoordinate(data[i].Plots[data[i].Plots.length - 1].latitude), generateCoordinate(data[i].Plots[data[i].Plots.length - 1].longitude));
-                   createMarker(markerLatLng, data[i].TrackNumber);
+                   createMarker(markerLatLng, 90, data[i].TrackNumber);
                }
            });
 }
@@ -93,23 +92,25 @@ function updateMarker() {
                            //create the new coordinates and change the position of the markers
                            var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
 
+                         //  rotation = calculateDirection(data[i].Plots[0].Latitude, data[i].Plots[0].Longitude, data[i].Plots[1].Latitude, data[i].Plots[1].Longitude);
                            currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
-                           //  currentlyDisplayedMarkers[m].iconImage.setRotation(direction);
+                        //   currentlyDisplayedMarkers[m].iconImage.rotate(rotation);
                            found = true;
+                         //  currentlyDisplayedMarkers[m].addEventListener(data[i].Plots);
                        }
                    }
                    //if the marker is not shown already, show it
                     if (!found)
                        {
                            var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
-                           createMarker(LatLng, data[i].TrackNumber);
+                           createMarker(LatLng, 90, data[i].TrackNumber);
                        }
                    }
            });
        }
 
 
-function createMarker(markerLatLng, id) {
+function createMarker(markerLatLng, direction, id) {
     if (planeMode) {
         //display the marker on the map by using an svg image of a plane
         var iconImage = {
@@ -120,7 +121,7 @@ function createMarker(markerLatLng, id) {
             strokeWeight: 2,
             scale: 0.07,
             fillOpacity: 1,
-           // rotation: direction
+          //  transform: rotate(direction)
         }
 
     } else {
@@ -129,7 +130,7 @@ function createMarker(markerLatLng, id) {
             strokeColor: '#800000',
             scale: 0.05,
             fillOpacity: 1,
-            strokeWeight: 1,
+            strokeWeight: 1
         }
         if (aviationMode) {
             var iconImage = {
@@ -149,33 +150,47 @@ function createMarker(markerLatLng, id) {
                 strokeWeight: 2,
                 scale: 0.07,
                 fillOpacity: 1,
-                rotation: direction
+              //  transform: rotate(direction)
             }
         }
     }
-    //var iconImage = {
-    //            path: 'M265.54,0H13.259C5.939,0,0.003,5.936,0.003,13.256v252.287c0,7.32,5.936,13.256,13.256,13.256H265.54c7.318,0,13.256-5.936,13.256-13.256V13.255C278.796,5.935,272.86,0,265.54,0z M252.284,252.287H26.515V26.511h225.769V252.287z',
-    //            strokeColor: '#800000',
-    //            scale: 0.05,
-    //            fillOpacity: 1
-    //          //  strokeWeight: 1
-    //        }
-    //draw the marker
+
+    //draw the marker and attach it to the map
     marker = new google.maps.Marker({
         position: markerLatLng,
         map: map,
         icon: iconImage,
         draggable: false
-       
     });
     //add aditional properties to the marker
     marker.metadata = {
         id: id
     };
 
+    google.maps.event.addListener(marker, 'click', function () {
+        drawPolyline(markerLatLng);
+    });
+   
     //add the marker to the markers array
     currentlyDisplayedMarkers.push(marker);
- //   markerCluster = new MarkerClusterer(map, currentlyDisplayedMarkers);
+    
+}
+
+function drawPolyline(pastPlots) {
+    var flightCoordinates = [];
+    var pastPlot;
+    for (var i = 0; i < pastPlots.length; i++) {
+        pastPlot = { lat: pastPlots[i].Latitude, lng: pastPlots[i].Longitude };
+        flightCoordinates.push(pastPlot);
+    }
+    var flightPath = new google.maps.Polyline({
+        path: flightCoordinates,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+    });
+    flightPath.setMap(map);
 }
 
 

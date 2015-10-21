@@ -139,7 +139,7 @@ namespace WebATM.Controllers
         {
             UdpClient receiver = new UdpClient(2222);
             IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.0.0.27"), 2222);
-            // IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.228.14"), 2222);
+            // IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.228.64"), 2222);
 
             byte[] data = null;
             data = receiver.Receive(ref endPoint);
