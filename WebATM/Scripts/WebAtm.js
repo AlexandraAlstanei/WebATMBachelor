@@ -5,8 +5,7 @@ var planeMode = true;
 var marker;
 var found = false;
 var markerLatLng;
-var markerCluster;
-
+var flightPath;
 
 function initMap() {
     //Initialize google maps component
@@ -51,7 +50,7 @@ function initMap() {
 
 function updateMap() {
     //this will repeat every 4 seconds    
-    updateMarker();
+    getDataAndDisplayOnMap();
     document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
 }
 
@@ -62,41 +61,19 @@ function getDataAndDisplayOnMap() {
     $.getJSON(uri)
            .done(function (data) {
                // On success, 'data' contains a list of flights.
-
-               //for each flight, draw the last plot on the map
-               for (var i = 0; i < data.length; i++) {
-                   //get the coordinates for drawing the marker
-                   markerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
-
-                   //calculate the direction of the plane
-                   createMarker(markerLatLng, 90, data[i].TrackNumber);
-               }
-           });
-}
-
-function updateMarker() {
-    var uri = 'api/webatm/GetAllFlights';
-
-    //make AJAX call that returns the data in JSON format
-    $.getJSON(uri)
-           .done(function (data) {
-               // On success, 'data' contains a list of flights.
              //  for each flight, draw the last plot on the map
                for (var i = 0; i < data.length; i++) {
                    found = false;
-                   for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
-                       
+                   for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {                      
                        //find the corresponding marker
                        if (currentlyDisplayedMarkers[m].metadata.id == data[i].TrackNumber) {
-
                            //create the new coordinates and change the position of the markers
                            var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
 
-                         //  rotation = calculateDirection(data[i].Plots[0].Latitude, data[i].Plots[0].Longitude, data[i].Plots[1].Latitude, data[i].Plots[1].Longitude);
+                           //  rotation = calculateDirection(data[i].Plots[0].Latitude, data[i].Plots[0].Longitude, data[i].Plots[1].Latitude, data[i].Plots[1].Longitude);
                            currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
                         //   currentlyDisplayedMarkers[m].iconImage.rotate(rotation);
                            found = true;
-                         //  currentlyDisplayedMarkers[m].addEventListener(data[i].Plots);
                        }
                    }
                    //if the marker is not shown already, show it
@@ -104,6 +81,7 @@ function updateMarker() {
                        {
                            var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
                            createMarker(LatLng, 90, data[i].TrackNumber);
+                           drawPolyline(data[i].Plots);
                        }
                    }
            });
@@ -154,7 +132,6 @@ function createMarker(markerLatLng, direction, id) {
             }
         }
     }
-
     //draw the marker and attach it to the map
     marker = new google.maps.Marker({
         position: markerLatLng,
@@ -167,13 +144,18 @@ function createMarker(markerLatLng, direction, id) {
         id: id
     };
 
-    google.maps.event.addListener(marker, 'click', function () {
-        drawPolyline(markerLatLng);
-    });
-   
     //add the marker to the markers array
     currentlyDisplayedMarkers.push(marker);
-    
+    for (var j = 0; j < currentlyDisplayedMarkers.length; j++) {
+        var pathMarker = currentlyDisplayedMarkers[j];
+        addClickHandler(pathMarker);
+    }
+}
+
+function addClickHandler(pathMarker) {
+    google.maps.event.addListener(pathMarker, 'click', function () {
+        flightPath.setMap(map);
+    });
 }
 
 function drawPolyline(pastPlots) {
@@ -183,14 +165,13 @@ function drawPolyline(pastPlots) {
         pastPlot = { lat: pastPlots[i].Latitude, lng: pastPlots[i].Longitude };
         flightCoordinates.push(pastPlot);
     }
-    var flightPath = new google.maps.Polyline({
+    flightPath = new google.maps.Polyline({
         path: flightCoordinates,
         geodesic: true,
         strokeColor: '#FF0000',
         strokeOpacity: 1.0,
         strokeWeight: 2
     });
-    flightPath.setMap(map);
 }
 
 

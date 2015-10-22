@@ -138,7 +138,7 @@ namespace WebATM.Controllers
         public static List<CAT62Data> GetExtractedDataFromBroadCast()
         {
             UdpClient receiver = new UdpClient(2222);
-            IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.0.0.27"), 2222);
+            IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("192.168.87.101"), 2222);
             // IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.228.64"), 2222);
 
             byte[] data = null;
