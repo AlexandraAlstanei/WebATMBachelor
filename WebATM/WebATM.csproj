@@ -91,7 +91,6 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Home.html" />
-    <Content Include="Scripts\markerclusterer.js" />
     <Content Include="Scripts\WebAtm.js" />
     <Content Include="Web.config" />
   </ItemGroup>

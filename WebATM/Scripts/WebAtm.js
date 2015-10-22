@@ -1,11 +1,12 @@
 ﻿var map;
 var currentlyDisplayedMarkers = [];
+var flightPaths = [];
 var aviationMode = false;
 var planeMode = true;
 var marker;
 var found = false;
 var markerLatLng;
-var flightPath;
+
 
 function initMap() {
     //Initialize google maps component
@@ -81,7 +82,7 @@ function getDataAndDisplayOnMap() {
                        {
                            var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
                            createMarker(LatLng, 90, data[i].TrackNumber);
-                           drawPolyline(data[i].Plots);
+                           drawPolyline(data[i].Plots, data[i].TrackNumber);
                        }
                    }
            });
@@ -143,38 +144,41 @@ function createMarker(markerLatLng, direction, id) {
     marker.metadata = {
         id: id
     };
-
+    addClickHandler(marker);
     //add the marker to the markers array
     currentlyDisplayedMarkers.push(marker);
-    for (var j = 0; j < currentlyDisplayedMarkers.length; j++) {
-        var pathMarker = currentlyDisplayedMarkers[j];
-        addClickHandler(pathMarker);
-    }
+        
 }
 
 function addClickHandler(pathMarker) {
     google.maps.event.addListener(pathMarker, 'click', function () {
-        flightPath.setMap(map);
+        for (var i = 0; i <= flightPaths.length; i++) {
+            if (flightPaths[i].metadata.id == pathMarker.metadata.id) {
+                flightPaths[i].setMap(map);
+            }
+        }
     });
 }
 
-function drawPolyline(pastPlots) {
+function drawPolyline(pastPlots, id) {
     var flightCoordinates = [];
     var pastPlot;
     for (var i = 0; i < pastPlots.length; i++) {
         pastPlot = { lat: pastPlots[i].Latitude, lng: pastPlots[i].Longitude };
         flightCoordinates.push(pastPlot);
     }
-    flightPath = new google.maps.Polyline({
+    var flightPath = new google.maps.Polyline({
         path: flightCoordinates,
         geodesic: true,
         strokeColor: '#FF0000',
         strokeOpacity: 1.0,
         strokeWeight: 2
     });
+    flightPath.metadata = {
+        id: id
+    };
+    flightPaths.push(flightPath);
 }
-
-
 
 //create the button to change the marker from a plane image to a square image
 function AviationControl(controlDiv, map) {
