@@ -152,7 +152,7 @@ function createMarker(markerLatLng, direction, id) {
 
 function addClickHandler(pathMarker) {
     google.maps.event.addListener(pathMarker, 'click', function () {
-        for (var i = 0; i <= flightPaths.length; i++) {
+        for (var i = 0; i <flightPaths.length; i++) {
             if (flightPaths[i].metadata.id == pathMarker.metadata.id) {
                 flightPaths[i].setMap(map);
             }
