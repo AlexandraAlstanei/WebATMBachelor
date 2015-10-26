@@ -99,6 +99,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AtmController.cs" />
     <Compile Include="Insero Map\Circle.cs" />
+    <Compile Include="Insero Map\Coordinates.cs" />
     <Compile Include="Insero Map\FillStyle.cs" />
     <Compile Include="Insero Map\ImageAdapter.cs" />
     <Compile Include="Insero Map\Map.cs" />

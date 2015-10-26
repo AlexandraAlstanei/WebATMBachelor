@@ -7,5 +7,11 @@ namespace WebATM.Insero_Map
 {
     public class Polyline : Shape
     {
+        List<Coordinates> coordinates { get; set; }
+
+        public Polyline()
+        {
+            coordinates = new List<Coordinates>();
+        }
     }
 }

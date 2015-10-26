@@ -5,8 +5,9 @@ using System.Web;
 
 namespace WebATM.Insero_Map
 {
-    public class Circle : Shape
+    public class Coordinates
     {
-        public double Radius { get; set; }
+        public double Latitude;
+        public double Longitude;
     }
 }

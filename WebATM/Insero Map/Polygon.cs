@@ -7,6 +7,11 @@ namespace WebATM.Insero_Map
 {
     public class Polygon : Shape
     {
-        
+       List<Coordinates> coordinates { get; set; }
+
+        public Polygon()
+        {
+            coordinates = new List<Coordinates>();
+        } 
     }
 }
