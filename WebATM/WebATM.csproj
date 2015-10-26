@@ -91,12 +91,23 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Home.html" />
+    <Content Include="Maps.xml" />
     <Content Include="Scripts\WebAtm.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AtmController.cs" />
+    <Compile Include="Insero Map\Circle.cs" />
+    <Compile Include="Insero Map\FillStyle.cs" />
+    <Compile Include="Insero Map\ImageAdapter.cs" />
+    <Compile Include="Insero Map\Map.cs" />
+    <Compile Include="Insero Map\MapReader.cs" />
+    <Compile Include="Insero Map\Polygon.cs" />
+    <Compile Include="Insero Map\Polyline.cs" />
+    <Compile Include="Insero Map\Shape.cs" />
+    <Compile Include="Insero Map\Style.cs" />
+    <Compile Include="Insero Map\Text.cs" />
     <Compile Include="Models\Flight.cs" />
     <Compile Include="Models\Plot.cs" />
     <Compile Include="Models\XmlReader.cs" />

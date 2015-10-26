@@ -1,0 +1,5691 @@
+<maps>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         AMRAM
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.9436111 6.6341667 TYPE=VOR  SIZE=7 SCALED=NO  NAME=AMRAM
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.9545640 6.6242726 SIZE=2 ALIGN=RB  [AMRAM]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKVJ
+      </groupname>
+      <name>
+         VJ
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.9886944 8.4244167 TYPE=NDB/Locator  SIZE=5 SCALED=NO  NAME=VJ
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         MSAW AREAS
+      </groupname>
+      <name>
+         Vestkraft
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4547222 8.4552778 TYPE=Obstruction  SIZE=7 SCALED=NO  NAME=VESTKRAFT
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.4549886 8.4566862 R=0.23
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Platforme
+      </groupname>
+      <name>
+         HORNS REV A
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5089444 7.8749167 TYPE=Aerodrome  SIZE=7 SCALED=NO  NAME=HORNS REV A
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         Centerlinie ext
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5317222 8.6025833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5350833 8.6311667 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5383611 8.6598889 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5415906 8.6887020 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5450490 8.7177928 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5481738 8.7463093 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5513927 8.7752854 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5548056 8.8039722 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5579252 8.8328471 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5610278 8.8616667 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5643520 8.8908847 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5676667 8.9189167 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5707500 8.9473333 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5742778 8.9769722 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5772117 9.0051992 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5804722 9.0345556 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5834581 9.0631614 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5867134 9.0917786 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5898212 9.1203985 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5930556 9.1497778 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5206389 8.5043333 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5173789 8.4756576 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5138056 8.4470000 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5106738 8.4180755 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5073855 8.3896823 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5039444 8.3607778 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5007500 8.3321944 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4972222 8.3037222 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4938333 8.2750833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4904722 8.2462778 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4871111 8.2176111 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4837500 8.1888056 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4804722 8.1601667 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4770000 8.1314444 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4735278 8.1028333 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4701389 8.0742500 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4667778 8.0456389 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4633333 8.0168611 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4600556 7.9880833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4565278 7.9596111 TYPE=Centerline_large  SIZE=14 SCALED=YES
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Platforme
+      </groupname>
+      <name>
+         HORNS REV B
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6001667 7.6238056 TYPE=Aerodrome  SIZE=7 SCALED=NO  NAME=HORNS REV B
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         TEMP-FALCB
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.8666667 6.6666667 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=FALCB
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.8666999 6.6666591 SIZE=2 ALIGN=RB  [FALCB]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK D380 KALLESMÆRSK ØST
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.5383333 7.9902778 POLYGON
+         C +#55.5683333 7.9875000
+         C +#55.6911111 8.0666667
+         C +#55.7327778 8.0436111
+         C +#55.6661111 7.9319444
+         C +#55.5608333 7.8311111
+         C )#55.5383333 7.9902778
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.5960364 7.8966872 SIZE=2 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         16500
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2015-04-16
+      </startdate>
+      <starttime>
+         06:00:00
+      </starttime>
+      <enddate>
+         2015-04-16
+      </enddate>
+      <endtime>
+         22:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         RR 20NM
+      </name>
+      <image>
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=20.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=40.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=60.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=80.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=100
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=120
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=140
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=160
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=180
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=200
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2009-06-19
+      </startdate>
+      <starttime>
+         08:04:35
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Anholt
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.6988889 11.5558333 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Anholt
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#56.6947740 11.5596827 SIZE=2 ALIGN=LT  [Anholt]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKSP
+      </groupname>
+      <name>
+         CTR
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (N05519280,E00902550 POLYGON
+         C +N05518480,E00907550
+         C +N05520380,E00916250
+         C +N05519280,E00922550
+         C +N05515280,E00927550
+         C +N05514280,E00933260
+         C +N05506580,E00928560
+         C +N05507380,E00924260
+         C +N05505480,E00916250
+         C +N05506580,E00909250
+         C +N05510580,E00903550
+         C )N05512077,E00859245
+      </image>
+      <altitude>
+         None
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         RWY
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=2 FILLSTYLE=NULL
+         C (#55.5238333 8.5334722
+         C )#55.5281111 8.5739444
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK D301 Fanoe-TSA
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5091667 5.7625000 POLYGON
+         C +#55.0000000 6.0405556
+         C +#55.0000000 7.7158333
+         C +#55.5408333 8.0950000
+         C )#55.8336111 6.6566667
+      </image>
+      <altitude>
+         3500/FL660
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2013-04-17
+      </startdate>
+      <starttime>
+         07:15:00
+      </starttime>
+      <enddate>
+         2013-04-17
+      </enddate>
+      <endtime>
+         14:15:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         STCA Areas
+      </groupname>
+      <name>
+         STCAexclude
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5372198 8.4966467 POLYGON
+         C +#55.5486050 8.5956465
+         C +#55.5205328 8.6076509
+         C )#55.5106754 8.5113900
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Thisted
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#57.0687778 8.7050278 TYPE=Aerodrome  SIZE=6 SCALED=NO  NAME=THISTED
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#57.0520703 8.6991505 SIZE=2 ALIGN=LT  [Thisted]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         RR 5NM
+      </name>
+      <image>
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=5.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=10.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=15.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=20.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=25.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=30.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=35.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=40.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=45.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=50.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=55.0
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         TEMP-FALCA
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7833333 7.5333333 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=FALCA
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.7873585 7.5287460 SIZE=2 ALIGN=RB  [FALCA]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Kystlinier_extra
+      </groupname>
+      <name>
+         Randers Fjord
+      </name>
+      <image>
+         ATB COL=0,0,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#56.6171404 10.3471422
+         C +#56.6023186 10.3504733
+         C +#56.6030826 10.3414727
+         C +#56.6049067 10.3220634
+         C +#56.6091470 10.3100088
+         C +#56.6076356 10.2979597
+         C +#56.6007642 10.2897324
+         C +#56.5898433 10.2854425
+         C +#56.5807960 10.2598700
+         C +#56.5643734 10.2451170
+         C +#56.5501945 10.2248553
+         C +#56.5398759 10.2177907
+         C +#56.5288019 10.2197095
+         C +#56.5042637 10.2247656
+         C +#56.4746283 10.2115779
+         C +#56.4727867 10.1936495
+         C +#56.4720830 10.1842380
+         C +#56.4642998 10.1553459
+         C +#56.4567688 10.1304768
+         C +#56.4603331 10.1166344
+         C +#56.4647885 10.1158183
+         C +#56.4657095 10.1050315
+         C +#56.4667298 10.0954374
+         C +#56.4672645 10.0843808
+         C +#56.4655617 10.0740906
+         C +#56.4642310 10.0751645
+         C +#56.4619453 10.0513957
+         C +#56.4585011 10.0428287
+         C +#56.4597496 10.0504945
+         C +#56.4615961 10.0603305
+         C +#56.4627874 10.0755206
+         C +#56.4641247 10.0900328
+         C +#56.4635607 10.1022621
+         C +#56.4560394 10.1266696
+         C +#56.4556557 10.1315940
+         C +#56.4628474 10.1567327
+         C +#56.4657141 10.1671205
+         C +#56.4700828 10.1852160
+         C +#56.4714698 10.1942713
+         C +#56.4732840 10.2148146
+         C +#56.4686514 10.2441411
+         C +#56.4684085 10.2716614
+         C +#56.4689859 10.2949857
+         C +#56.4717320 10.2900639
+         C +#56.4703644 10.2787410
+         C +#56.4728589 10.2651674
+         C +#56.4720650 10.2500340
+         C +#56.4814106 10.2288707
+         C +#56.4979330 10.2427691
+         C +#56.5062358 10.2373607
+         C +#56.5215976 10.2317597
+         C +#56.5441458 10.2332538
+         C +#56.5505695 10.2514911
+         C +#56.5604913 10.2540747
+         C +#56.5761824 10.2727060
+         C +#56.5867729 10.2952211
+         C +#56.5929573 10.3044094
+         C +#56.6023148 10.3013355
+         C +#56.6064305 10.3072936
+         C +#56.5969553 10.3468133
+         C )#56.5923706 10.3480344
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Temp - UAV corridor
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.2466667 8.5366667 POLYGON
+         C +#55.1533333 8.4883333
+         C +#55.2383333 7.8800000
+         C )#55.3366667 7.9500000
+      </image>
+      <altitude>
+         FL65
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+         2012-10-24
+      </startdate>
+      <starttime>
+         07:30:00
+      </starttime>
+      <enddate>
+         2012-10-24
+      </enddate>
+      <endtime>
+         14:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKKA
+      </groupname>
+      <name>
+         TMA
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (N05621180,E00830250
+         C +N05627580,E00838490
+         C +N05627480,E00924250
+         C +N05625580,E00935250
+         C +N05621580,E00942550
+         C +N05613580,E00942550
+         C +N05609580,E00935550
+         C +N05607580,E00924550
+         C +N05607380,E00849250
+         C +N05609280,E00837550
+         C +N05613080,E00830550
+         C )N05621180,E00830250
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKSP
+      </groupname>
+      <name>
+         RWY
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=3 FILLSTYLE=NULL
+         C (N05513290,E00914380
+         C )N05513030,E00917220
+      </image>
+      <altitude>
+         None
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         RR 1NM
+      </name>
+      <image>
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=1.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=2.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=3.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=4.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=5.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=6.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=7.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=8.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=9.00
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=10.0
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Endelave
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7563889 10.2486111 TYPE=Aerodrome  SIZE=4 SCALED=NO  NAME=ENDELAVE
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.7500644 10.1851670 SIZE=2 ALIGN=LT  [Endelave]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         HMR
+      </groupname>
+      <name>
+         KY60
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.4776263 5.4634789
+         C +#55.4761578 5.9990278
+         C +#55.4699902 7.0049425
+         C )#55.4593340 7.8482709
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5908333 5.4938889
+         C +#55.5977778 6.0000000
+         C )#55.6063889 7.0000000
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.6047395 7.0022509
+         C )#55.6052171 8.2942994
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.6060837 7.0005246
+         C )#55.4598136 7.8427986
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         Centerlinie ext 20NM
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5317222 8.6025833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5350833 8.6311667 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5383611 8.6598889 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5415906 8.6887020 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5450490 8.7177928 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5481738 8.7463093 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5513927 8.7752854 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5548056 8.8039722 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5579252 8.8328471 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5610278 8.8616667 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5643520 8.8908847 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5676667 8.9189167 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5707500 8.9473333 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5742778 8.9769722 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5772117 9.0051992 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5804722 9.0345556 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5834581 9.0631614 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5867134 9.0917786 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5898212 9.1203985 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5930556 9.1497778 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5206389 8.5043333 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5173789 8.4756576 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5138056 8.4470000 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5106738 8.4180755 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5073855 8.3896823 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5039444 8.3607778 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5007500 8.3321944 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4972222 8.3037222 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4938333 8.2750833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4904722 8.2462778 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4871111 8.2176111 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4837500 8.1888056 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4804722 8.1601667 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4770000 8.1314444 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4735278 8.1028333 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4701389 8.0742500 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4667778 8.0456389 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4633333 8.0168611 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4600556 7.9880833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4565278 7.9596111 TYPE=Centerline_large  SIZE=14 SCALED=YES
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Freerslev
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.8986111 12.2450000 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Freerslev
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.8932592 12.1868849 SIZE=2 ALIGN=LT  [Freerslev]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK D381 KALLESMÆSKT VEST
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.5608333 7.8311111 POLYGON
+         C +#55.6661111 7.9319444
+         C +#55.7327778 8.0436111
+         C +#55.8008333 8.0055556
+         C +#55.7327778 7.7986111
+         C +#55.5772222 7.7208333
+         C )#55.5608333 7.8311111
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.7120556 7.8181281 SIZE=2 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         11500
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2015-02-04
+      </startdate>
+      <starttime>
+         06:00:00
+      </starttime>
+      <enddate>
+         2015-02-04
+      </enddate>
+      <endtime>
+         23:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         RR 10NM
+      </name>
+      <image>
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=10.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=20.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=30.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=40.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=50.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=60.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=70.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=80.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=90.0
+         ATB COL=70,70,70 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.5260815 8.5537083 R=100
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2009-06-04
+      </startdate>
+      <starttime>
+         10:49:38
+      </starttime>
+      <enddate>
+         2009-06-04
+      </enddate>
+      <endtime>
+         10:50:03
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Vindmølleparker
+      </groupname>
+      <name>
+         Horns Rev A
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (N05530115,E00747469 POLYGON
+         C +N05530144,E00752341
+         C +N05528088,E00753049
+         C +N05528059,E00748179
+         C )N05530115,E00747469
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Vindmølleparker
+      </groupname>
+      <name>
+         Horns Rev B
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5596389 7.5983333 POLYGON
+         C +#55.5564722 7.5468056
+         C +#55.6097222 7.5516667
+         C +#55.6479722 7.5931944
+         C )#55.6297778 7.6340000
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Vindmølleparker
+      </groupname>
+      <name>
+         EHHG H7
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#54.5166667 6.0333333 R=0.68
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#54.5309134 6.0091612 SIZE=2 ALIGN=RB  [EHHG H7]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         NY SID
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=2 FILLSTYLE=NULL
+         C (#55.5238333 8.5334722
+         C )#55.5281111 8.5739444
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4360761 8.4969905 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=NY SID
+         ATB COL=255,255,255 STYLE=SOLID SIZE=2 FILLSTYLE=NULL
+         C (#55.5283697 8.5742402
+         C +#55.5316390 8.6040506
+         C +#55.5318099 8.6080050
+         C +#55.5311409 8.6107337
+         C +#55.5290923 8.6123172
+         C +#55.5265173 8.6113835
+         C +#55.5247491 8.6105058
+         C +#55.5224937 8.6086005
+         C +#55.4371667 8.4988611
+         C +#55.4190051 8.1673486
+         C )#55.4513609 7.8394054
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4186111 8.1686111 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=TEMP
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         FIR
+      </groupname>
+      <name>
+         DK FIR
+      </name>
+      <image>
+         ATB COL=128,255,255 STYLE=DASHDOTDOT SIZE=1 FILLSTYLE=NULL
+         C (N05500000,E00800000
+         C +N05500000,E00630000
+         C +N05500000,E00500000
+         C +N05700000,E00500000
+         C +N05700000,E00600000
+         C +N05700000,E00730000
+         C +N05830000,E01030000
+         C +N05612550,E01222100
+         C +N05612590,E01221480
+         C +N05612440,E01222300
+         C +N05612360,E01222410
+         C +N05612210,E01222580
+         C +N05612180,E01223040
+         C +N05611450,E01223510
+         C +N05611240,E01224230
+         C +N05610580,E01225040
+         C +N05610400,E01225330
+         C +N05610320,E01225440
+         C +N05610270,E01225510
+         C +N05610130,E01226060
+         C +N05609540,E01226260
+         C +N05609420,E01226420
+         C +N05609330,E01226560
+         C +N05609230,E01227130
+         C +N05609110,E01227400
+         C +N05608510,E01228260
+         C +N05608430,E01228410
+         C +N05608130,E01229370
+         C +N05608050,E01229550
+         C +N05607560,E01230140
+         C +N05607490,E01230300
+         C +N05607410,E01230500
+         C +N05607330,E01231090
+         C +N05607260,E01231260
+         C +N05607180,E01231420
+         C +N05607100,E01232010
+         C +N05607020,E01232180
+         C +N05606540,E01232360
+         C +N05606450,E01232520
+         C +N05606360,E01233080
+         C +N05606280,E01233260
+         C +N05606050,E01234110
+         C +N05605560,E01234260
+         C +N05605460,E01234450
+         C +N05605320,E01235070
+         C +N05605170,E01235320
+         C +N05605080,E01235460
+         C +N05604600,E01236000
+         C +N05604350,E01236410
+         C +N05604290,E01236510
+         C +N05604060,E01237260
+         C +N05603530,E01237510
+         C +N05603440,E01238060
+         C +N05603390,E01238170
+         C +N05603290,E01238370
+         C +N05603180,E01238490
+         C +N05603070,E01238590
+         C +N05602570,E01239090
+         C +N05602480,E01239150
+         C +N05602390,E01239190
+         C +N05602310,E01239240
+         C +N05602250,E01239270
+         C +N05602140,E01239290
+         C +N05602070,E01239290
+         C +N05601580,E01239290
+         C +N05601450,E01239280
+         C +N05601360,E01239260
+         C +N05601250,E01239270
+         C +N05601060,E01239220
+         C +N05600550,E01239190
+         C +N05600410,E01239180
+         C +N05600310,E01239150
+         C +N05600040,E01239120
+         C +N05559300,E01239130
+         C +N05558100,E01239090
+         C +N05558030,E01239080
+         C +N05557460,E01239080
+         C +N05557340,E01239040
+         C +N05556600,E01238570
+         C +N05556470,E01238550
+         C +N05556390,E01238540
+         C +N05556280,E01238540
+         C +N05556150,E01238510
+         C +N05555580,E01238500
+         C +N05555480,E01238500
+         C +N05555400,E01238510
+         C +N05555330,E01238540
+         C +N05555250,E01238580
+         C +N05555170,E01239060
+         C +N05555110,E01239110
+         C +N05554380,E01239410
+         C +N05554280,E01239500
+         C +N05554180,E01240020
+         C +N05554010,E01240210
+         C +N05553530,E01240310
+         C +N05553450,E01240360
+         C +N05553380,E01240420
+         C +N05553270,E01240480
+         C +N05553200,E01240520
+         C +N05553150,E01240550
+         C +N05553050,E01240590
+         C +N05552540,E01241060
+         C +N05552370,E01241150
+         C +N05552250,E01241210
+         C +N05552180,E01241240
+         C +N05552100,E01241280
+         C +N05551560,E01241320
+         C +N05551430,E01241360
+         C +N05550600,E01241450
+         C +N05550460,E01241480
+         C +N05550410,E01241510
+         C +N05550270,E01241540
+         C +N05550200,E01241570
+         C +N05550090,E01242020
+         C +N05550030,E01242070
+         C +N05549540,E01242160
+         C +N05549380,E01242310
+         C +N05541570,E01250490
+         C +N05538390,E01253430
+         C +N05536510,E01252530
+         C +N05532270,E01243460
+         C +N05529210,E01242550
+         C +N05525540,E01236380
+         C +N05520140,E01238310
+         C +N05520120,E01238420
+         C +N05455000,E01251000
+         C )N05427000,E01200000
+         C (N05504000,E00820000
+         C +N05504500,E00824000
+         C +N05503300,E00829300
+         C +N05501300,E00829300
+         C +N05459400,E00832000
+         C +N05459400,E00834000
+         C +N05455300,E00834000
+         C +N05455000,E00838000
+         C +N05455000,E00841000
+         C +N05454000,E00844000
+         C +N05454500,E00850000
+         C +N05454200,E00858000
+         C +N05452400,E00908000
+         C +N05451300,E00915000
+         C +N05448400,E00920300
+         C +N05450500,E00922300
+         C +N05451000,E00925000
+         C +N05449400,E00926200
+         C +N05453400,E00936000
+         C +N05453200,E00939000
+         C +N05451300,E00937300
+         C +N05449500,E00945000
+         C +N05451000,E00954300
+         C +N05445300,E01005000
+         C +N05445300,E01010000
+         C +N05440000,E01025000
+         C +N05439300,E01033000
+         C +N05439100,E01100000
+         C +N05437000,E01110000
+         C +N05427300,E01140000
+         C +N05427000,E01145000
+         C )N05427000,E01200000
+         C (N05504000,E00820000
+         C )N05500000,E00800000
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2009-06-04
+      </startdate>
+      <starttime>
+         08:19:01
+      </starttime>
+      <enddate>
+         2009-06-04
+      </enddate>
+      <endtime>
+         08:20:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         NAV AIDS
+      </groupname>
+      <name>
+         EJ
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5412500 8.6997500 TYPE=NDB/Locator  SIZE=7 SCALED=NO  NAME=EJ
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         NEBUM
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.8333333 8.0000000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=NEBSA
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.8571207 7.8919799 SIZE=2 ALIGN=LC  [NEBUM]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKKA
+      </groupname>
+      <name>
+         CTR
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (N05621380,E00850250
+         C +N05621380,E00855550
+         C +N05624480,E00902550
+         C +N05626280,E00917550
+         C +N05621580,E00922550
+         C +N05613580,E00922550
+         C +N05613580,E00917250
+         C +N05610480,E00910250
+         C +N05610480,E00905550
+         C +N05612480,E00902550
+         C +N05612480,E00857550
+         C +N05613280,E00855550
+         C +N05613280,E00850250
+         C )N05621380,E00850250
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK D373 RØMØ VEST
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=HORIZONTAL
+         C (#55.0147222 8.0727778 POLYGON
+         C +#55.3327778 8.2819444
+         C +#55.3327778 8.4486111
+         C +#55.1577778 8.4486111
+         C +#55.0666667 8.3333333
+         C )#55.0147222 8.0727778
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.2276750 8.2415484 SIZE=3 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         24500
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2015-04-14
+      </startdate>
+      <starttime>
+         06:00:00
+      </starttime>
+      <enddate>
+         2015-04-14
+      </enddate>
+      <endtime>
+         14:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKBI
+      </groupname>
+      <name>
+         GE
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7361667 9.0185833 TYPE=NDB/Locator  SIZE=5 SCALED=NO  NAME=GE
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Læsø
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#57.2772222 11.0000833 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=LæSø
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#57.2657955 11.0065348 SIZE=2 ALIGN=LT  [Læsø]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKKA
+      </groupname>
+      <name>
+         LTA
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (N05638280,E00942250
+         C +N05633430,E00954550
+         C +N05611280,E00954550
+         C +N05603170,E00929550
+         C +N05605080,E00818550
+         C +N05627130,E00815250
+         C +N05638280,E00847350
+         C )N05638280,E00942250
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Hindringer
+      </groupname>
+      <name>
+         Radar3
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5288889 8.5541667 TYPE=Obstruction  SIZE=4 SCALED=NO
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKSP
+      </groupname>
+      <name>
+         SKR
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.2289167 9.2140556 TYPE=VOR/DME_TACAN  SIZE=5 SCALED=NO  NAME=SKR
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         Temp - NORTH
+      </name>
+      <image>
+         ATB COL=0,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.8833333 6.6666667 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=NORTH
+         ATB COL=0,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.8849922 6.6666701 SIZE=2 ALIGN=RB  [NORTH]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         BDR POINTS
+      </groupname>
+      <name>
+         ALL
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05740310,E00848080 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=AMSEV
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05820040,E01008560 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=ARTOR
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05520350,E00500000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=DANDI
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05547470,E00500000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=GIRDO
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05700000,E00530270 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=KARLI
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05719050,E01129530 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=LOBBI
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05500000,E00752340 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=TUSKA
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Vamdrup
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4362778 9.3309167 TYPE=Aerodrome  SIZE=6 SCALED=NO  NAME=VAMDRUP
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.4369927 9.3302424 SIZE=2 ALIGN=RB  [VAMDRUP]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         LOKSA
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7513889 9.5133333 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=LOKSA
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         LATVO
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5650000 8.9138889 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=LATVO
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         True
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.1826111 10.0657222 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=TRUE
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#56.1751800 10.0717329 SIZE=2 ALIGN=LT  [True]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Platforme
+      </groupname>
+      <name>
+         SIRI
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.4827222 4.9111389 TYPE=Aerodrome  SIZE=7 SCALED=NO  NAME=SIRI
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         REXW
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7833333 6.2066667 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=REXW
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.7922394 6.1961176 SIZE=2 ALIGN=RB  [REXW]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKBI
+      </groupname>
+      <name>
+         LTA
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (N05605180,E00804400
+         C +N05603170,E00929550
+         C +N05552580,E00954550
+         C +N05529580,E00954560
+         C +N05524210,E00800070
+         C +N05536580,E00808550
+         C )N05605180,E00804400
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         EPILO
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.8278333 8.4122778 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=EPILO
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.8347024 8.4239207 SIZE=2 ALIGN=LC  [EPILO]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKSP
+      </groupname>
+      <name>
+         TMA
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.4561111 8.9533333 POLYGON
+         C +#55.2833333 9.9000000
+         C +#55.0833333 9.9000000
+         C +#55.0000000 9.5000000
+         C +#55.1577778 8.6652778
+         C )#55.4416667 8.6652778
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Hindringer
+      </groupname>
+      <name>
+         Nordenskov
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6569444 8.6713889 TYPE=Obstruction  SIZE=7 SCALED=NO  NAME=Nordenskov
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Svæveflyve områder
+      </groupname>
+      <name>
+         BOLHEDE WEST
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
+         C (#55.6666667 8.6833333 POLYGON
+         C +#55.6143333 8.6832222
+         C +#55.6214167 8.6119444
+         C )#55.6639722 8.6071944
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.6580778 8.6465106 SIZE=3 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         FL040
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Grønholt
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.9397222 12.3819444 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Grønholt
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.9268202 12.3726355 SIZE=2 ALIGN=LT  [Grønholt]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         NAV AIDS
+      </groupname>
+      <name>
+         ODN
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05534511,E01039101 TYPE=VOR  SIZE=7 SCALED=NO  NAME=ODN
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Nav Aids
+      </groupname>
+      <name>
+         TNO
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7740833 11.4391667 TYPE=VOR/DME_TACAN  SIZE=7 SCALED=YES  NAME=TNO
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Hindringer
+      </groupname>
+      <name>
+         Nybro
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6680556 8.3652778 TYPE=Obstruction  SIZE=7 SCALED=NO  NAME=Nybro
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKBI
+      </groupname>
+      <name>
+         AREA
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#56.0883333 8.0777778
+         C )#56.0547222 9.4986111
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#56.0547222 9.4986111
+         C )#55.8827778 9.9152778
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.8827778 9.9152778
+         C )#55.4994444 9.9155556
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.4994444 9.9155556
+         C )#55.4058333 8.0019444
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.4058333 8.0019444
+         C )#55.6161111 8.1486111
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.6161111 8.1486111
+         C )#56.0883333 8.0777778
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Haderslev
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.3022222 9.5225000 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Haderslev
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.2859120 9.5311734 SIZE=2 ALIGN=LT  [Haderslev]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         NAV AIDS
+      </groupname>
+      <name>
+         TU
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.2879444 10.7752500 TYPE=VOR  SIZE=4 SCALED=NO  NAME=TU
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         EKRD
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=2 FILLSTYLE=NULL
+         C (#56.5077778 10.0433333
+         C )#56.5055556 10.0291667
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         VFR Rapportpunkter
+      </groupname>
+      <name>
+         V Nebel
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5405556 8.5438889 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=V Nebel
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         NAV AIDS
+      </groupname>
+      <name>
+         VES
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6031389 8.2999444 TYPE=VOR/DME_TACAN  SIZE=7 SCALED=NO  NAME=VESTA
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Platforme
+      </groupname>
+      <name>
+         DAN B
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4690278 5.1330556 TYPE=Aerodrome  SIZE=7 SCALED=NO  NAME=DAN B
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Temp - Falcon Transit Corridor
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5672222 7.2458333 POLYGON
+         C +#55.5325000 8.1594444
+         C +#55.6327778 8.1666667
+         C )#55.6725000 7.1094444
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.6169283 7.9718901 SIZE=4 ALIGN=LT  [1500ft - FL65]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+         2012-10-24
+      </startdate>
+      <starttime>
+         07:30:00
+      </starttime>
+      <enddate>
+         2012-10-24
+      </enddate>
+      <endtime>
+         14:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         TEMP- UAS Hemmet
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
+         C (#55.6541667 8.5463889 POLYGON
+         C +#55.6566667 8.3000000
+         C +#55.6833333 8.1969444
+         C +#55.9466667 8.1388889
+         C +#55.9441667 8.3819444
+         C )#55.8233333 8.5477778
+
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2015-03-23
+      </startdate>
+      <starttime>
+         13:00:00
+      </starttime>
+      <enddate>
+         2015-03-26
+      </enddate>
+      <endtime>
+         23:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK R33 VEJERS
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.6183333 8.1686111 POLYGON
+         C +#55.6258333 8.1013889
+         C +#55.6911111 8.0666667
+         C +#55.5683333 7.9875000
+         C +#55.5383333 7.9902778
+         C +#55.5461111 8.1055556
+         C )#55.6183333 8.1686111
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.5890184 7.9986523 SIZE=2 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         5000
+      </altitude>
+      <active>
+         Timed
+      </active>
+      <startdate>
+         2015-04-27
+      </startdate>
+      <starttime>
+         10:00:00
+      </starttime>
+      <enddate>
+         2015-04-27
+      </enddate>
+      <endtime>
+         22:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         VFR Rapportpunkter
+      </groupname>
+      <name>
+         Skads
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5111111 8.5627778 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=Skads
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         TEMP-BLAAV
+      </name>
+      <image>
+         ATB COL=0,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5833333 8.0333333 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=BLAAV
+         ATB COL=0,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.5890255 8.0314201 SIZE=2 ALIGN=RB  [BLAAV]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK R38 RØMØ ØST
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.0833333 8.3133333 POLYGON
+         C +#55.1666667 8.2125000
+         C +#55.3333333 8.2833333
+         C +#55.3338333 8.6652778
+         C +#55.2833333 8.7500000
+         C +#55.1333333 8.7500000
+         C )#55.0856944 8.6675000
+      </image>
+      <altitude>
+         24500
+      </altitude>
+      <active>
+         Timed
+      </active>
+      <startdate>
+         2015-04-27
+      </startdate>
+      <starttime>
+         07:55:00
+      </starttime>
+      <enddate>
+         2015-04-27
+      </enddate>
+      <endtime>
+         12:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Hadsund
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.7558889 10.2286944 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=HADSUND
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#56.7492007 10.2332054 SIZE=2 ALIGN=LT  [Hadsund]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         VFR Rapportpunkter
+      </groupname>
+      <name>
+         St Darum
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4147222 8.6316667 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=St.Darum
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Svæveflyve områder
+      </groupname>
+      <name>
+         BOLHEDE
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=BDIAGONAL
+         C (#55.6722222 8.8493333 POLYGON
+         C +#55.5968611 8.8573333
+         C +#55.6143333 8.6832222
+         C )#55.6666667 8.6833333
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.6556060 8.7740129 SIZE=3 ALIGN=LT  [#######]
+      </image>
+      <altitude>
+         FL40
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Varde
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6077778 8.4402778 TYPE=Aerodrome  SIZE=6 SCALED=NO  NAME=VARDE
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.6101351 8.4384974 SIZE=2 ALIGN=RB  [Varde]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         VFR Rapportpunkter
+      </groupname>
+      <name>
+         DORIT
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5222222 8.0000000 TYPE=Intersection  SIZE=7 SCALED=NO
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         DAVAL
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4705556 5.4677778 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=DAVAL
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         DETOP
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.2447222 5.0000000 TYPE=VOR  SIZE=7 SCALED=NO  NAME=DETOP
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.2638334 5.0401989
+         C )#55.2782354 5.1059821
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.3499863 5.4955250 SIZE=2 ALIGN=RT  [DETOP]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Platforme
+      </groupname>
+      <name>
+         GORM C
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5798611 4.7589167 TYPE=Aerodrome  SIZE=7 SCALED=NO  NAME=GORM C
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Temp - Nymindegab
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
+         C (#55.8666667 8.1833333 POLYGON
+         C +#55.8000000 8.1833333
+         C +#55.8000833 8.0333333
+         C )#55.8667222 8.0333333
+      </image>
+      <altitude>
+         1700
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+         2013-02-24
+      </startdate>
+      <starttime>
+         07:00:00
+      </starttime>
+      <enddate>
+         2013-02-24
+      </enddate>
+      <endtime>
+         11:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Viborg
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.4100000 9.4092778 TYPE=Aerodrome  SIZE=5 SCALED=YES  NAME=VIBORG
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#56.3982697 9.4167485 SIZE=2 ALIGN=LT  [Viborg]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Kystlinier_extra
+      </groupname>
+      <name>
+         Mariager Fjord
+      </name>
+      <image>
+         ATB COL=0,0,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#56.7025083 10.2058190
+         C +#56.7013975 10.1895242
+         C +#56.7046966 10.1704526
+         C +#56.7162167 10.1509369
+         C +#56.7168869 10.1260315
+         C +#56.7121663 10.1087741
+         C +#56.7055726 10.1022721
+         C +#56.6996763 10.0998405
+         C +#56.6929475 10.0797180
+         C +#56.6932523 10.0732884
+         C +#56.6985411 10.0706250
+         C +#56.7017744 10.0610063
+         C +#56.6997157 10.0556624
+         C +#56.6982433 10.0455131
+         C +#56.6938555 10.0401257
+         C +#56.6926884 10.0240695
+         C +#56.6897494 10.0171217
+         C +#56.6847527 10.0155247
+         C +#56.6803489 10.0171189
+         C +#56.6785887 10.0112318
+         C +#56.6794594 10.0021832
+         C +#56.6794569 9.9952438
+         C +#56.6771104 9.9850745
+         C +#56.6733033 9.9759340
+         C +#56.6683105 9.9689747
+         C +#56.6658312 9.9642755
+         C +#56.6646590 9.9576489
+         C +#56.6660793 9.9507083
+         C +#56.6626348 9.9531564
+         C +#56.6575978 9.9578269
+         C +#56.6589808 9.9498776
+         C +#56.6578660 9.9449420
+         C +#56.6563488 9.9390366
+         C +#56.6534598 9.9363462
+         C +#56.6541341 9.9295091
+         C +#56.6533512 9.9235333
+         C +#56.6517324 9.9200237
+         C +#56.6503680 9.9130660
+         C +#56.6517604 9.9054535
+         C +#56.6511305 9.8933335
+         C +#56.6494105 9.8871354
+         C +#56.6497152 9.8803379
+         C +#56.6498484 9.8738864
+         C +#56.6486865 9.8726924
+         C +#56.6489233 9.8540353
+         C +#56.6462125 9.8463038
+         C +#56.6465354 9.8351224
+         C +#56.6468857 9.8297209
+         C +#56.6462648 9.8229931
+         C +#56.6435321 9.8144723
+         C +#56.6387557 9.8012975
+         C +#56.6377879 9.8052538
+         C +#56.6376847 9.8123487
+         C +#56.6393911 9.8181662
+         C +#56.6397583 9.8279237
+         C +#56.6380040 9.8356482
+         C +#56.6363131 9.8450096
+         C +#56.6389412 9.8507789
+         C +#56.6435677 9.8602621
+         C +#56.6430899 9.8674830
+         C +#56.6445287 9.8810869
+         C +#56.6440486 9.8831879
+         C +#56.6444140 9.8979690
+         C +#56.6465413 9.9050884
+         C +#56.6451347 9.9073040
+         C +#56.6456293 9.9106184
+         C +#56.6448036 9.9185084
+         C +#56.6464690 9.9233694
+         C +#56.6456795 9.9271908
+         C +#56.6480719 9.9366930
+         C +#56.6497859 9.9404640
+         C +#56.6475649 9.9464443
+         C +#56.6489753 9.9541375
+         C +#56.6500541 9.9599907
+         C +#56.6552480 9.9686643
+         C +#56.6557291 9.9698702
+         C +#56.6549691 9.9729577
+         C +#56.6545950 9.9791651
+         C +#56.6527777 9.9817485
+         C +#56.6541950 9.9851920
+         C +#56.6565515 9.9852448
+         C +#56.6578596 9.9828837
+         C +#56.6586057 9.9818490
+         C +#56.6592394 9.9849331
+         C +#56.6615850 9.9898592
+         C +#56.6641070 9.9907692
+         C +#56.6655760 9.9942552
+         C +#56.6648635 9.9986806
+         C +#56.6655844 10.0029364
+         C +#56.6679893 10.0057917
+         C +#56.6706594 10.0098852
+         C +#56.6712910 10.0136756
+         C +#56.6700050 10.0186578
+         C +#56.6719904 10.0255234
+         C +#56.6728592 10.0306409
+         C +#56.6758519 10.0299800
+         C +#56.6775441 10.0312514
+         C +#56.6819123 10.0382109
+         C +#56.6827144 10.0375934
+         C +#56.6827860 10.0396012
+         C +#56.6844682 10.0444048
+         C +#56.6882229 10.0456746
+         C +#56.6904815 10.0511198
+         C +#56.6908587 10.0578285
+         C +#56.6868300 10.0643513
+         C +#56.6833388 10.0743114
+         C +#56.6822595 10.0786983
+         C +#56.6831546 10.0845672
+         C +#56.6846277 10.0873678
+         C +#56.6847424 10.0906142
+         C +#56.6881478 10.0937014
+         C +#56.6885450 10.0971509
+         C +#56.6914195 10.1008256
+         C +#56.6959982 10.1097670
+         C +#56.6996664 10.1123228
+         C +#56.7037847 10.1120820
+         C +#56.7068221 10.1124780
+         C +#56.7103008 10.1170533
+         C +#56.7123612 10.1208191
+         C +#56.7115011 10.1236739
+         C +#56.7094606 10.1249390
+         C +#56.7097448 10.1366684
+         C +#56.7077558 10.1389072
+         C +#56.7048291 10.1535214
+         C +#56.7058435 10.1564411
+         C +#56.7061526 10.1600413
+         C +#56.7057334 10.1624209
+         C +#56.7048779 10.1653086
+         C +#56.7014611 10.1690006
+         C +#56.6979145 10.1740254
+         C +#56.6958342 10.1793779
+         C +#56.6940660 10.1858513
+         C +#56.6915055 10.1903539
+         C )#56.6873805 10.1952460
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         VFR Rapportpunkter
+      </groupname>
+      <name>
+         Lindknud
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5661111 8.9986111 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=Lindknud
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         NAV AIDS
+      </groupname>
+      <name>
+         HP
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5114444 8.4127222 TYPE=NDB/Locator  SIZE=7 SCALED=NO  NAME=HP
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Vindmølleparker
+      </groupname>
+      <name>
+         Dantysk
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.1527617 7.2036382 R=0.68
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.1325522 7.1431676 SIZE=2 ALIGN=RB  [Dantysk]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKSP
+      </groupname>
+      <name>
+         AREA
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (N05529580,E00954560 POLYGON
+         C +N05518580,E01003460
+         C +N05503480,E01002500
+         C +N05451000,E00931000
+         C +N05450150,E00917000
+         C +N05452200,E00913200
+         C +N05454000,E00901100
+         C +N05455000,E00840000
+         C +N05504170,E00826550
+         C )N05525490,E00826550
+      </image>
+      <altitude>
+         None
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         MSAW AREAS
+      </groupname>
+      <name>
+         Hadsten
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#56.3118216 9.9771523 R=3.00
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Temp - Falcon Live Aim Area
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.6166667 5.6166667 POLYGON
+         C +#55.0000000 6.3333333
+         C +#55.4333333 7.4166667
+         C )#56.0333333 6.6500000
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.6438170 6.2026473 SIZE=4 ALIGN=LC  [SL - FL450]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+         2012-10-24
+      </startdate>
+      <starttime>
+         07:30:00
+      </starttime>
+      <enddate>
+         2012-10-24
+      </enddate>
+      <endtime>
+         14:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         UAS VARDE
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
+         CIR C=#55.5955556 8.4680556 R=3.50
+      </image>
+      <altitude>
+         1500
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2015-03-24
+      </startdate>
+      <starttime>
+         12:00:00
+      </starttime>
+      <enddate>
+         2015-03-24
+      </enddate>
+      <endtime>
+         14:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         DORIT
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5222222 8.0000000 TYPE=Intersection  SIZE=7 SCALED=NO
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         VFR Rapportpunkter
+      </groupname>
+      <name>
+         Varde
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6244444 8.5152778 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=Varde
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Holsted
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4966667 8.9108333 TYPE=Aerodrome  SIZE=6 SCALED=NO  NAME=Holsted
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.5026717 8.9071327 SIZE=2 ALIGN=RB  [Holsted]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Platforme
+      </groupname>
+      <name>
+         TYRA E
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7215278 4.8020833 TYPE=Aerodrome  SIZE=7 SCALED=NO  NAME=TYRA E
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         LILLE RØMØ - TEMP
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=DIAGCROSS
+         C (#55.2661111 8.4486111 POLYGON
+         C +#55.2661111 8.6652778
+         C +#55.1577778 8.6652778
+         C )#55.1577778 8.4486111
+      </image>
+      <altitude>
+         6000
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2013-05-17
+      </startdate>
+      <starttime>
+         08:00:00
+      </starttime>
+      <enddate>
+         2013-05-17
+      </enddate>
+      <endtime>
+         12:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         MSAW AREAS
+      </groupname>
+      <name>
+         Nybro
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6680556 8.3652778 TYPE=Obstruction  SIZE=7 SCALED=NO  NAME=NYBRO
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.6698663 8.3636121 R=0.50
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK R34 BORDRUP
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.5494444 8.1708333 POLYGON
+         C +#55.6141667 8.2047222
+         C +#55.6258333 8.1013889
+         C +#55.6911111 8.0666667
+         C +#55.6772222 8.2847222
+         C +#55.5633333 8.3125000
+         C )#55.5494444 8.1708333
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.5873366 8.1990522 SIZE=2 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         1700
+      </altitude>
+      <active>
+         Timed
+      </active>
+      <startdate>
+         2015-04-27
+      </startdate>
+      <starttime>
+         06:00:00
+      </starttime>
+      <enddate>
+         2015-04-27
+      </enddate>
+      <endtime>
+         13:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKBI
+      </groupname>
+      <name>
+         TMA B
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5957778 8.3260000 POLYGON
+         C +#55.4416667 8.6653056
+         C +#55.4993611 9.9154167
+         C +#55.8827222 9.9154167
+         C +#55.9992778 9.6337222
+         C +#55.9666667 8.6166667
+         C )#55.8241944 8.2962222
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Platforme
+      </groupname>
+      <name>
+         SYD ARNE
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.0802778 4.2303889 TYPE=Aerodrome  SIZE=7 SCALED=NO  NAME=SYD ARNE
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKBI
+      </groupname>
+      <name>
+         TMA C
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.9143056 9.3505833 POLYGON
+         C +#55.8607500 9.6910000
+         C +#55.6568056 9.7081944
+         C +#55.5720833 9.6064722
+         C +#55.5518056 8.9401389
+         C +#55.5968611 8.8573333
+         C +#55.6214167 8.6119444
+         C +#55.7805833 8.5941944
+         C )#55.9000000 8.9900000
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKBI
+      </groupname>
+      <name>
+         TMA D
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.8204444 8.8010833 POLYGON
+         C +#55.8421389 9.4950000
+         C +#55.6593611 9.5113333
+         C )#55.6377778 8.8206389
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         DRONE
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7333333 8.4055556 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=DRONE
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.7330063 8.4103277 SIZE=1 ALIGN=LB  [DRONE]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         NAV AIDS
+      </groupname>
+      <name>
+         AAL
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#57.1037222 9.9955833 TYPE=VOR  SIZE=4 SCALED=YES  NAME=AAL
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#57.0901454 10.0556205 SIZE=2 ALIGN=RT  [AAL]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         NAV AIDS
+      </groupname>
+      <name>
+         RAM
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.4783611 8.1873611 TYPE=VOR/DME_TACAN  SIZE=5 SCALED=NO  NAME=RAM
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         CTR
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (N05533230,E00818080
+         C +N05536280,E00827250
+         C +N05537280,E00834550
+         C +N05536330,E00844110
+         C +N05526530,E00847200
+         C +N05525300,E00820460
+         C )N05533230,E00818080
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         VFR Rapportpunkter
+      </groupname>
+      <name>
+         Gørding
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4730556 8.8222222 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=Gørding
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         MIKRO
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4186111 8.1688889 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=MIKRO
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         TMA
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5486111 8.1652778 POLYGON
+         C +#55.4150000 8.1652778
+         C +#55.4561111 8.9533333
+         C +#55.5441667 8.9541667
+         C +#55.5969444 8.8572222
+         C +#55.6244444 8.5819444
+         C +#55.6077778 8.4569444
+         C +#55.5563889 8.3022222
+         C )#55.5486111 8.1652778
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5486115 8.1652769
+         C )#55.5450000 8.0988889
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         KUNAR
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6063889 7.0000000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=KUNAR
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         LUTAN
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4700000 6.0000000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=LUTAN
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         dop app 08
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5317222 8.6025833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5350833 8.6311667 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5383611 8.6598889 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5415906 8.6887020 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5450490 8.7177928 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5481738 8.7463093 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5513927 8.7752854 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5548056 8.8039722 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5579252 8.8328471 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5610278 8.8616667 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5643520 8.8908847 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5676667 8.9189167 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5707500 8.9473333 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5742778 8.9769722 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5772117 9.0051992 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5804722 9.0345556 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5834581 9.0631614 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5867134 9.0917786 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5898212 9.1203985 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5930556 9.1497778 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5206389 8.5043333 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5173789 8.4756576 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5138056 8.4470000 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5106738 8.4180755 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5073855 8.3896823 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5039444 8.3607778 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5007500 8.3321944 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4972222 8.3037222 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4938333 8.2750833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4904722 8.2462778 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4871111 8.2176111 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4837500 8.1888056 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4804722 8.1601667 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4770000 8.1314444 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4735278 8.1028333 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4701389 8.0742500 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4667778 8.0456389 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4633333 8.0168611 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4600556 7.9880833 TYPE=Centerline_small  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4565278 7.9596111 TYPE=Centerline_large  SIZE=14 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.5327483 8.6019151
+         C +#55.5358237 8.6065883
+         C +#55.5394339 8.6105128
+         C +#55.5427663 8.6139476
+         C +#55.5477662 8.6164055
+         C +#55.5530457 8.6154336
+         C +#55.5580489 8.6110296
+         C +#55.5608320 8.5997583
+         C +#55.5586136 8.5860300
+         C +#55.5536155 8.5713217
+         C +#55.5430586 8.5487765
+         C +#55.5242366 8.5050645
+         C +#55.4967677 8.2420393
+         C +#55.4785286 8.1004955
+         C +#55.4715956 8.0870502
+         C +#55.4615558 8.0773888
+         C +#55.4498234 8.0804041
+         C +#55.4427118 8.0903242
+         C +#55.4398673 8.1077446
+         C +#55.4406803 8.1186241
+         C +#55.4581148 8.2559615
+         C +#55.4693718 8.2670662
+         C +#55.4771525 8.2674988
+         C +#55.4852006 8.2635260
+         C +#55.4926917 8.2590663
+         C )#55.4973725 8.2419007
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.5001004 8.1290940 SIZE=4 ALIGN=LT V=78.0 [&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;]
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.4465025 8.1641237 SIZE=4 ALIGN=LT V=78.0 [&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         SISPU
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.1866667 7.0000000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=SISPU
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Svæveflyve områder
+      </groupname>
+      <name>
+         VORBASSE
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
+         C (#55.6388611 8.8528889 POLYGON
+         C +#55.6462222 9.0768889
+         C +#55.5544444 9.0205000
+         C +#55.5518056 8.9401389
+         C )#55.5968611 8.8573333
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.6281718 8.8967680 SIZE=3 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         2500
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKEB
+      </groupname>
+      <name>
+         Centerlinie ext 10NM
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5317222 8.6025833 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5350833 8.6311667 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5383611 8.6598889 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5415906 8.6887020 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5450490 8.7177928 TYPE=Centerline_large  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5481738 8.7463093 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5513927 8.7752854 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5548056 8.8039722 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5579252 8.8328471 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5610278 8.8616667 TYPE=Centerline_large  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5206389 8.5043333 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5173789 8.4756576 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5138056 8.4470000 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5106738 8.4180755 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5073855 8.3896823 TYPE=Centerline_large  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5039444 8.3607778 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5007500 8.3321944 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4972222 8.3037222 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4938333 8.2750833 TYPE=Centerline_small  SIZE=10 SCALED=YES
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4904722 8.2462778 TYPE=Centerline_large  SIZE=10 SCALED=YES
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Stauning
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.9901111 8.3538889 TYPE=Aerodrome  SIZE=6 SCALED=NO  NAME=STAUNING
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.9723796 8.3458439 SIZE=2 ALIGN=LT  [Stauning]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Hindringer
+      </groupname>
+      <name>
+         Vestkraft
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4547222 8.4552778 TYPE=Obstruction  SIZE=7 SCALED=NO  NAME=Vestkraft
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Temp - Nymindegab vest
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
+         C (#55.9000000 8.1583333 POLYGON
+         C +#55.7833333 8.1833333
+         C +#55.7833333 8.0250000
+         C )#55.9000000 8.0250000
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.8489372 8.0967616 SIZE=3 ALIGN=LC  [######]
+      </image>
+      <altitude>
+         1700
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2016-04-17
+      </startdate>
+      <starttime>
+         06:00:00
+      </starttime>
+      <enddate>
+         2015-04-17
+      </enddate>
+      <endtime>
+         11:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Corridor Fanoe
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.5408333 8.0950000 POLYGON
+         C +#55.0000000 7.7158333
+         C +#55.0000000 8.0000000
+         C +#55.0894444 8.4486111
+         C )#55.4302778 8.4486111
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         NIROX
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.9750000 7.0000000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=NIROX
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Temp - REX Live Aim
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.0000000 6.2066667 POLYGON
+         C +#55.0000000 7.5325000
+         C +#55.7500000 7.5325000
+         C )#55.7500000 6.2066667
+      </image>
+      <altitude>
+         FL660
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+         2012-10-24
+      </startdate>
+      <starttime>
+         07:30:00
+      </starttime>
+      <enddate>
+         2012-10-24
+      </enddate>
+      <endtime>
+         14:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         MSAW AREAS
+      </groupname>
+      <name>
+         Nordenskov
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.6569444 8.6713889 TYPE=Obstruction  SIZE=7 SCALED=NO  NAME=NORDENSKOV
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         CIR C=#55.6555920 8.6762360 R=0.58
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Grenaa
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.4425000 10.9305556 TYPE=Aerodrome  SIZE=4 SCALED=NO  NAME=GRENAA
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#56.4582972 10.9547636 SIZE=2 ALIGN=LT  [Grenaa]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Aars
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.8470000 9.4585278 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=AARS
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#56.8336119 9.4603154 SIZE=2 ALIGN=LT  [Aars]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Samsø
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.8898611 10.6137500 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Samsø
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.8736418 10.6055546 SIZE=2 ALIGN=LT  [Samsø]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         ATTUS
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=N05453590,E00846580 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=ATTUS
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK R32 OKSBY
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.6183333 8.1686111 POLYGON
+         C +#55.6141667 8.2047222
+         C +#55.5494444 8.1708333
+         C +#55.5461111 8.1055556
+         C )#55.6183333 8.1686111
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.5671731 8.1240526 SIZE=2 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         5000
+      </altitude>
+      <active>
+         Timed
+      </active>
+      <startdate>
+         2015-04-27
+      </startdate>
+      <starttime>
+         10:00:00
+      </starttime>
+      <enddate>
+         2015-04-27
+      </enddate>
+      <endtime>
+         22:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Gørlev
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5500000 11.2000000 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Gørlev
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.5407948 11.2148714 SIZE=2 ALIGN=LT  [Gørlev]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         NAV AIDS
+      </groupname>
+      <name>
+         ALS
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#54.9054167 9.9933611 TYPE=VOR  SIZE=5 SCALED=NO  NAME=ALS
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Flyvepladser
+      </groupname>
+      <name>
+         Skive
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.5501944 9.1727778 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Skive
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#56.5424228 9.1708968 SIZE=2 ALIGN=LT  [Skive]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         BANLU
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4933333 8.2369444 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=BANLU
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         NEBSA
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7750000 8.2833333 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=NEBSA
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.7767376 8.2949275 SIZE=2 ALIGN=LC  [NEBSA]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK D379 NYMINDEGAB ØST
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.8661111 8.1597222 POLYGON
+         C +#55.8666667 8.2283333
+         C +#55.8000000 8.2297222
+         C +#55.7997222 8.1738889
+         C )#55.8661111 8.1597222
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.8397843 8.1935430 SIZE=3 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         1700
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2015-04-17
+      </startdate>
+      <starttime>
+         06:00:00
+      </starttime>
+      <enddate>
+         2015-04-17
+      </enddate>
+      <endtime>
+         11:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         GELBA
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7294444 8.8166667 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=GELBA
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         ANESI
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4627778 7.0000000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=ANESI
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Temp - drone
+      </name>
+      <image>
+         ATB COL=128,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=BDIAGONAL
+         C (#55.7219444 7.9708333 POLYGON
+         C +#55.7244722 8.3827778
+         C +#55.5630556 8.3125000
+         C +#55.5491667 8.1705278
+         C +#55.5458333 8.1052778
+         C )#55.5680556 7.9775000
+      </image>
+      <altitude>
+         3500
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+         2012-01-08
+      </startdate>
+      <starttime>
+         06:00:00
+      </starttime>
+      <enddate>
+         2012-01-10
+      </enddate>
+      <endtime>
+         17:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Svæveflyve områder
+      </groupname>
+      <name>
+         GESTEN
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
+         C (#55.4722222 9.2921111 POLYGON
+         C +#55.5630000 9.2928056
+         C +#55.5518056 8.9401389
+         C +#55.5440833 8.9542778
+         C )#55.4561111 8.9533333
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.5396095 9.1968143 SIZE=3 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         2500
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+         2013-05-12
+      </startdate>
+      <starttime>
+         08:27:00
+      </starttime>
+      <enddate>
+         2013-05-12
+      </enddate>
+      <endtime>
+         12:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         PEGAM
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.4502778 7.8433333 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=PEGAM
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         TUXEN
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5908333 5.4938889 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=TUXEN
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         BEDRO
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.5977778 6.0000000 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=BEDRO
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         EK R35 HENNE
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.6915393 8.0648895 POLYGON
+         C +#55.7702778 8.1847222
+         C +#55.7702778 8.2625000
+         C +#55.6772222 8.2847222
+         C )#55.6911111 8.0666667
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         ALTTEXT POS=#55.7460830 8.1652922 SIZE=2 ALIGN=LT  [######]
+      </image>
+      <altitude>
+         1700
+      </altitude>
+      <active>
+         Timed
+      </active>
+      <startdate>
+         2015-04-27
+      </startdate>
+      <starttime>
+         06:00:00
+      </starttime>
+      <enddate>
+         2015-04-27
+      </enddate>
+      <endtime>
+         13:30:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         STCA Areas
+      </groupname>
+      <name>
+         EKEB EnRoute
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#55.7527245 7.2995661 POLYGON
+         C +#55.6915233 8.7828144
+         C +#55.3826738 8.7810295
+         C )#55.3598204 7.3218800
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Platforme
+      </groupname>
+      <name>
+         HARALD
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#56.3441111 4.2719167 TYPE=Aerodrome  SIZE=7 SCALED=NO  NAME=HARALD
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Kystlinier_extra
+      </groupname>
+      <name>
+         Limfjorden
+      </name>
+      <image>
+         ATB COL=0,0,0 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         C (#56.9903985 10.3418752
+         C +#56.9822067 10.3206785
+         C +#56.9892807 10.3096445
+         C +#56.9929446 10.3025291
+         C +#56.9920908 10.2908769
+         C +#56.9895658 10.2779347
+         C +#56.9848710 10.2562981
+         C +#56.9850259 10.2298393
+         C +#56.9898759 10.2088059
+         C +#57.0064766 10.1727494
+         C +#57.0339806 10.1206881
+         C +#57.0477977 10.0919128
+         C +#57.0600038 10.0591036
+         C +#57.0730509 10.0406522
+         C +#57.0790605 10.0297942
+         C +#57.0848005 10.0182601
+         C +#57.0868996 9.9992487
+         C +#57.0853831 9.9893764
+         C +#57.0832850 9.9829127
+         C +#57.0810987 9.9776136
+         C +#57.0788260 9.9734786
+         C +#57.0763694 9.9675232
+         C +#57.0735075 9.9626507
+         C +#57.0695652 9.9592791
+         C +#57.0664429 9.9578917
+         C +#57.0631601 9.9571477
+         C +#57.0598927 9.9549350
+         C +#57.0578328 9.9495467
+         C +#57.0559244 9.9445553
+         C +#57.0541282 9.9382006
+         C +#57.0533004 9.9341685
+         C +#57.0546433 9.9265147
+         C +#57.0569729 9.9208425
+         C +#57.0594278 9.9110272
+         C +#57.0621241 9.9005657
+         C +#57.0647376 9.8886850
+         C +#57.0609882 9.8761077
+         C +#57.0559126 9.8648996
+         C +#57.0517143 9.8564032
+         C +#57.0491713 9.8473577
+         C +#57.0480633 9.8406601
+         C +#57.0496055 9.8272542
+         C +#57.0538179 9.8140374
+         C +#57.0589514 9.8064697
+         C +#57.0652275 9.8016508
+         C +#57.0698159 9.7978779
+         C +#57.0706234 9.7906751
+         C +#57.0712276 9.7789761
+         C +#57.0711572 9.7690836
+         C +#57.0703772 9.7614840
+         C +#57.0661876 9.7490931
+         C +#57.0611131 9.7414268
+         C +#57.0584514 9.7338704
+         C +#57.0588346 9.7250936
+         C +#57.0597666 9.7125118
+         C +#57.0611542 9.7010224
+         C +#57.0638721 9.6933058
+         C +#57.0666759 9.6880701
+         C +#57.0709326 9.6777490
+         C +#57.0719973 9.6706056
+         C +#57.0730615 9.6634615
+         C +#57.0723475 9.6549064
+         C +#57.0733044 9.6492134
+         C +#57.0786279 9.6499786
+         C +#57.0835281 9.6565673
+         C +#57.0856053 9.6649593
+         C +#57.0876092 9.6743317
+         C +#57.0918280 9.6792955
+         C +#57.0950696 9.6756182
+         C +#57.0935932 9.6663642
+         C +#57.0910042 9.6538880
+         C +#57.0870908 9.6411088
+         C +#57.0827379 9.6307028
+         C +#57.0781224 9.6202484
+         C +#57.0740339 9.6173255
+         C +#57.0704375 9.6224006
+         C +#57.0667917 9.6245057
+         C +#57.0538206 9.6185281
+         C +#57.0481760 9.6078709
+         C +#57.0504059 9.5909571
+         C +#57.0480136 9.5834922
+         C +#57.0433996 9.5808903
+         C +#57.0410255 9.5768739
+         C +#57.0421314 9.5653627
+         C +#57.0429743 9.5537867
+         C +#57.0443402 9.5423356
+         C +#57.0444645 9.5296035
+         C +#57.0443427 9.5202487
+         C +#57.0432942 9.5052802
+         C +#57.0421408 9.4991224
+         C +#57.0429962 9.4909928
+         C +#57.0406869 9.4786714
+         C +#57.0391450 9.4631110
+         C +#57.0377057 9.4461121
+         C +#57.0337636 9.4186956
+         C +#57.0284488 9.4003354
+         C +#57.0232873 9.3761706
+         C +#57.0225711 9.3564620
+         C +#57.0166924 9.3311990
+         C +#57.0112997 9.3177845
+         C +#57.0016647 9.2937255
+         C +#56.9886442 9.2804792
+         C +#56.9804342 9.2613911
+         C +#56.9827339 9.2287322
+         C +#56.9887386 9.2111212
+         C +#56.9966721 9.1924820
+         C +#57.0104161 9.1629424
+         C +#57.0177129 9.1421178
+         C +#57.0249906 9.1139093
+         C +#57.0209941 9.0870478
+         C +#57.0134573 9.0652943
+         C +#57.0039662 9.0450990
+         C +#57.0040076 9.0328936
+         C +#57.0104785 9.0274706
+         C +#57.0183303 9.0213615
+         C +#57.0154666 8.9855298
+         C +#57.0027269 8.9700907
+         C +#57.0011287 8.9663340
+         C +#57.0048216 8.9510257
+         C +#57.0024705 8.9349060
+         C +#56.9957151 8.9251826
+         C +#56.9878599 8.9201181
+         C +#56.9807657 8.9196153
+         C +#56.9735092 8.9040538
+         C +#56.9726424 8.8930490
+         C +#56.9790521 8.8856386
+         C +#56.9909386 8.8809122
+         C +#56.9936750 8.8642897
+         C +#56.9877330 8.8565822
+         C +#56.9925964 8.8483008
+         C +#56.9907627 8.8395344
+         C +#56.9915751 8.8274129
+         C +#56.9830058 8.8348939
+         C +#56.9744544 8.8502257
+         C +#56.9699196 8.8418651
+         C +#56.9651491 8.8290564
+         C +#56.9656906 8.8169311
+         C +#56.9578463 8.7902152
+         C +#56.9508220 8.7833316
+         C +#56.9456232 8.7611849
+         C +#56.9452377 8.7469158
+         C +#56.9488852 8.7281390
+         C +#56.9479595 8.7220014
+         C +#56.9527577 8.7059151
+         C +#56.9500236 8.7028747
+         C +#56.9496169 8.6969140
+         C +#56.9503402 8.6819255
+         C +#56.9510387 8.6713279
+         C +#56.9441603 8.6625608
+         C +#56.9342170 8.6599043
+         C +#56.9292136 8.6593593
+         C +#56.9235836 8.6639595
+         C +#56.9116143 8.6404928
+         C +#56.8990529 8.6421851
+         C +#56.8879279 8.6267351
+         C +#56.8821823 8.6290544
+         C +#56.8758569 8.6316314
+         C +#56.8692128 8.6228915
+         C +#56.8631869 8.6333325
+         C +#56.8428999 8.6095576
+         C +#56.8174858 8.5760263
+         C +#56.8165934 8.5612760
+         C +#56.8160480 8.5330122
+         C +#56.8099812 8.5327532
+         C +#56.8057248 8.5372171
+         C +#56.8043939 8.5291834
+         C +#56.8058295 8.5193011
+         C +#56.8012734 8.5087058
+         C +#56.7967663 8.4945053
+         C +#56.7913645 8.4816113
+         C +#56.7850251 8.4749201
+         C +#56.7765686 8.4717373
+         C +#56.7677313 8.4792065
+         C +#56.7542733 8.4998881
+         C +#56.7421239 8.4881057
+         C +#56.7303451 8.4837015
+         C +#56.7195935 8.4761203
+         C +#56.7129056 8.4596702
+         C +#56.7154024 8.4830466
+         C +#56.7147341 8.4974998
+         C +#56.7157550 8.5064767
+         C +#56.7132252 8.5166423
+         C +#56.7090992 8.5225789
+         C +#56.7050062 8.5280331
+         C +#56.7032215 8.5349482
+         C +#56.7029534 8.5431575
+         C +#56.6949510 8.5472728
+         C +#56.6945997 8.5403968
+         C +#56.6974826 8.5288646
+         C +#56.6889611 8.5125090
+         C +#56.6778621 8.5154886
+         C +#56.6831763 8.4909084
+         C +#56.6962158 8.4538215
+         C +#56.6865340 8.4257605
+         C +#56.6785019 8.4166659
+         C +#56.6762973 8.4368659
+         C +#56.6853549 8.4652050
+         C +#56.6764574 8.4765644
+         C +#56.6660962 8.4966920
+         C +#56.6705364 8.5191187
+         C +#56.6814119 8.5330000
+         C +#56.6837155 8.5533444
+         C +#56.6906874 8.5647820
+         C +#56.7051704 8.5588081
+         C +#56.7203585 8.5562868
+         C +#56.7282022 8.5687719
+         C +#56.7386737 8.5411394
+         C +#56.7215956 8.5092770
+         C +#56.7272810 8.4988718
+         C +#56.7462608 8.5086982
+         C +#56.7555573 8.5414372
+         C +#56.7607265 8.5533629
+         C +#56.7860851 8.5438235
+         C +#56.7909794 8.5532141
+         C +#56.7857046 8.5637508
+         C +#56.7940587 8.5764038
+         C +#56.7926500 8.6119796
+         C +#56.8006418 8.6580011
+         C +#56.8142066 8.6618806
+         C +#56.8214118 8.6082732
+         C +#56.8350099 8.6243663
+         C +#56.8323809 8.6436974
+         C +#56.8398855 8.6329019
+         C +#56.8542203 8.6493401
+         C +#56.8710856 8.6414166
+         C +#56.8775368 8.6469964
+         C +#56.8833842 8.6341316
+         C +#56.8902526 8.6681285
+         C +#56.8870490 8.6890776
+         C +#56.8902706 8.7297933
+         C +#56.8888276 8.7377996
+         C +#56.8954852 8.7609896
+         C +#56.9022257 8.7967875
+         C +#56.9059701 8.8227286
+         C +#56.9297875 8.8291758
+         C +#56.9540833 8.8566963
+         C +#56.9503618 8.8708901
+         C +#56.9614365 8.9113705
+         C +#56.9431832 8.9094853
+         C +#56.9175434 8.9225880
+         C +#56.9022863 8.9046627
+         C +#56.8541163 8.8956227
+         C +#56.8600411 8.8820323
+         C +#56.8779646 8.8796308
+         C +#56.8794669 8.8641202
+         C +#56.8832106 8.8491427
+         C +#56.8748047 8.8521677
+         C +#56.8620194 8.8324817
+         C +#56.8474884 8.8390426
+         C +#56.8238898 8.8525979
+         C +#56.8017779 8.8781116
+         C +#56.7827563 8.8785711
+         C +#56.7839241 8.8680652
+         C +#56.7742875 8.8516336
+         C +#56.7609370 8.8442209
+         C +#56.7469125 8.8342584
+         C +#56.7380545 8.8297139
+         C +#56.7273639 8.8113679
+         C +#56.7220748 8.7876175
+         C +#56.7025166 8.7722832
+         C +#56.6930258 8.7775739
+         C +#56.6801942 8.7306073
+         C +#56.6806987 8.7025294
+         C +#56.6671675 8.6456463
+         C +#56.6794610 8.6317943
+         C +#56.6876345 8.6253035
+         C +#56.6952382 8.6344389
+         C +#56.7121879 8.6057814
+         C +#56.7190183 8.6130868
+         C +#56.7170680 8.6010299
+         C +#56.7220583 8.5946365
+         C +#56.7305531 8.5906596
+         C +#56.7297920 8.5813480
+         C +#56.7202887 8.5867744
+         C +#56.7128658 8.5884895
+         C +#56.7063485 8.5903978
+         C +#56.7005973 8.5667515
+         C +#56.6894869 8.5693362
+         C +#56.6907702 8.5845340
+         C +#56.6812507 8.5907588
+         C +#56.6634282 8.5711818
+         C +#56.6504116 8.5758148
+         C +#56.6417195 8.5838456
+         C +#56.6317615 8.5973679
+         C +#56.6030944 8.5927799
+         C +#56.5991281 8.5499287
+         C +#56.5884765 8.5235365
+         C +#56.5766874 8.5403024
+         C +#56.5604530 8.5572997
+         C +#56.5541415 8.5766665
+         C +#56.5424384 8.5773140
+         C +#56.5350567 8.5880084
+         C +#56.5228444 8.6010595
+         C +#56.5169560 8.6146157
+         C +#56.5122167 8.5971567
+         C +#56.5040490 8.5904956
+         C +#56.4957275 8.5862716
+         C +#56.4997415 8.6076554
+         C +#56.4834984 8.6206143
+         C +#56.4689622 8.6626235
+         C +#56.4759484 8.7068430
+         C +#56.4908076 8.7282174
+         C +#56.5141485 8.7317645
+         C +#56.5284046 8.7291670
+         C +#56.5432206 8.7456736
+         C +#56.5585506 8.7548897
+         C +#56.5677298 8.7403966
+         C +#56.5781257 8.7145735
+         C +#56.5872770 8.7008646
+         C +#56.6078653 8.6871477
+         C +#56.6103851 8.6769134
+         C +#56.6239990 8.6790498
+         C +#56.6283387 8.6966099
+         C +#56.6239241 8.7213884
+         C +#56.6423426 8.7620736
+         C +#56.6723911 8.7808989
+         C +#56.6861185 8.7930795
+         C +#56.6876455 8.8041936
+         C +#56.6956234 8.8209157
+         C +#56.6870761 8.8463288
+         C +#56.6948096 8.8464376
+         C +#56.6921357 8.8657250
+         C +#56.7012305 8.8794380
+         C +#56.6940065 8.8984903
+         C +#56.6947981 8.9135994
+         C +#56.7034907 8.9131370
+         C +#56.7119662 8.9093089
+         C +#56.7110067 8.8966371
+         C +#56.7158872 8.8853119
+         C +#56.7052114 8.8745487
+         C +#56.7108119 8.8592274
+         C +#56.7057536 8.8530867
+         C +#56.7054505 8.8306103
+         C +#56.7108331 8.8251903
+         C +#56.7241080 8.8381728
+         C +#56.7396458 8.8516861
+         C +#56.7520467 8.8711612
+         C +#56.7571168 8.8706561
+         C +#56.7642207 8.8606259
+         C +#56.7648710 8.8782954
+         C +#56.7736066 8.9053642
+         C +#56.7881788 8.9280039
+         C +#56.7999414 8.9650981
+         C +#56.7874710 9.0323950
+         C +#56.8012392 9.0291554
+         C +#56.8005051 9.0531175
+         C +#56.8034129 9.0704403
+         C +#56.7927681 9.0987633
+         C +#56.7877672 9.1117525
+         C +#56.7752055 9.1088005
+         C +#56.7627606 9.1175161
+         C +#56.7387463 9.1359223
+         C +#56.7115246 9.1749833
+         C +#56.6963885 9.1457215
+         C +#56.6818967 9.1266161
+         C +#56.6736790 9.1213838
+         C +#56.6634630 9.1000046
+         C +#56.6634626 9.1189858
+         C +#56.6541619 9.1102042
+         C +#56.6497988 9.1017656
+         C +#56.6015694 9.0395381
+         C +#56.5710703 9.0552963
+         C +#56.5637430 9.0763488
+         C +#56.5961587 9.0923518
+         C +#56.6013343 9.1361828
+         C +#56.6135944 9.1478297
+         C +#56.6152161 9.1243886
+         C +#56.6195485 9.1115982
+         C +#56.6325531 9.1322178
+         C +#56.6639537 9.1458995
+         C +#56.6508800 9.1553981
+         C +#56.6308168 9.1569315
+         C +#56.6225816 9.1763212
+         C +#56.6267441 9.2049518
+         C +#56.6272019 9.2565909
+         C +#56.6148041 9.2950787
+         C +#56.5997897 9.2838753
+         C +#56.5830396 9.2584970
+         C +#56.5674216 9.2559844
+         C +#56.5507679 9.2682382
+         C +#56.5342929 9.2879909
+         C +#56.5271831 9.3100829
+         C +#56.5386026 9.3416885
+         C +#56.5312830 9.3673843
+         C +#56.5642392 9.3668149
+         C +#56.5503604 9.3119879
+         C +#56.5530371 9.2938504
+         C +#56.5679361 9.2874135
+         C +#56.5855877 9.2904345
+         C +#56.6035449 9.2986093
+         C +#56.6305743 9.3152712
+         C +#56.6559758 9.3165173
+         C +#56.6746801 9.3059730
+         C +#56.6880555 9.2928410
+         C +#56.6934045 9.2663561
+         C +#56.6878675 9.2372719
+         C +#56.6750155 9.2140129
+         C +#56.6654149 9.1839991
+         C +#56.6657787 9.1689861
+         C +#56.6741128 9.1583671
+         C +#56.6838649 9.1669633
+         C +#56.6926033 9.1803473
+         C +#56.7020673 9.2027931
+         C +#56.7171497 9.2241060
+         C +#56.7378116 9.2354131
+         C +#56.7544344 9.2356263
+         C +#56.7640280 9.2176813
+         C +#56.7654322 9.1977525
+         C +#56.7656258 9.1851342
+         C +#56.7882683 9.1791191
+         C +#56.8016262 9.1670714
+         C +#56.8170897 9.1847093
+         C +#56.8356388 9.2081931
+         C +#56.8543441 9.2101386
+         C +#56.8735400 9.1854285
+         C +#56.8859312 9.1679670
+         C +#56.9013297 9.1677870
+         C +#56.9236204 9.1896872
+         C +#56.9380383 9.2046549
+         C +#56.9614706 9.2320834
+         C +#56.9672362 9.2614994
+         C +#56.9776894 9.2806109
+         C +#56.9932895 9.2959044
+         C +#57.0019465 9.3209944
+         C +#57.0084334 9.3570795
+         C +#57.0150611 9.4009138
+         C +#57.0146447 9.4455479
+         C +#57.0149983 9.4891822
+         C +#57.0085751 9.5297718
+         C +#56.9987225 9.5695069
+         C +#56.9914680 9.5829936
+         C +#56.9873152 9.5865455
+         C +#56.9837999 9.5804579
+         C +#56.9799395 9.5730883
+         C +#56.9717291 9.5682809
+         C +#56.9650116 9.5702542
+         C +#56.9596784 9.5713584
+         C +#56.9559708 9.5652489
+         C +#56.9659738 9.5540565
+         C +#56.9617595 9.5458287
+         C +#56.9545859 9.5393003
+         C +#56.9503665 9.5402867
+         C +#56.9440063 9.5467704
+         C +#56.9365584 9.5533510
+         C +#56.9291318 9.5627191
+         C +#56.9268095 9.5677373
+         C +#56.9268369 9.5733288
+         C +#56.9331445 9.5732764
+         C +#56.9402875 9.5738250
+         C +#56.9475989 9.5752129
+         C +#56.9538780 9.5759476
+         C +#56.9579733 9.5737456
+         C +#56.9613690 9.5781806
+         C +#56.9633408 9.5930950
+         C +#56.9649449 9.6099258
+         C +#56.9695065 9.6194904
+         C +#56.9764381 9.6268572
+         C +#56.9835958 9.6282546
+         C +#56.9881081 9.6297907
+         C +#56.9901982 9.6343424
+         C +#56.9916510 9.6415539
+         C +#56.9972230 9.6498159
+         C +#57.0045834 9.6609694
+         C +#57.0097531 9.6659245
+         C +#57.0211025 9.6654920
+         C +#57.0314094 9.6700919
+         C +#57.0404179 9.6807860
+         C +#57.0446261 9.7035223
+         C +#57.0463319 9.7276475
+         C +#57.0492143 9.7476929
+         C +#57.0547290 9.7571490
+         C +#57.0583400 9.7672545
+         C +#57.0587834 9.7818082
+         C +#57.0572369 9.7966746
+         C +#57.0538040 9.8046450
+         C +#57.0500701 9.8137369
+         C +#57.0459252 9.8283290
+         C +#57.0437341 9.8430062
+         C +#57.0463277 9.8548977
+         C +#57.0512703 9.8645955
+         C +#57.0557301 9.8749874
+         C +#57.0589958 9.8838731
+         C +#57.0595690 9.8936704
+         C +#57.0581807 9.9033564
+         C +#57.0553209 9.9122472
+         C +#57.0528199 9.9164063
+         C +#57.0508134 9.9227017
+         C +#57.0495741 9.9304082
+         C +#57.0475127 9.9403144
+         C +#57.0494542 9.9492725
+         C +#57.0535680 9.9583830
+         C +#57.0581122 9.9648933
+         C +#57.0637849 9.9716425
+         C +#57.0679789 9.9751542
+         C +#57.0710837 9.9803801
+         C +#57.0744660 9.9867930
+         C +#57.0773235 9.9937405
+         C +#57.0786775 10.0029605
+         C +#57.0788330 10.0120977
+         C +#57.0775049 10.0199492
+         C +#57.0762747 10.0249422
+         C +#57.0736505 10.0275596
+         C +#57.0595268 10.0416654
+         C +#57.0509381 10.0575832
+         C +#57.0482964 10.0514272
+         C +#57.0466659 10.0544141
+         C +#57.0496346 10.0623789
+         C +#57.0476337 10.0661333
+         C +#57.0456994 10.0710407
+         C +#57.0390986 10.0886934
+         C +#57.0280552 10.1126833
+         C +#57.0164061 10.1327193
+         C +#57.0005225 10.1657665
+         C +#56.9896268 10.1906626
+         C +#56.9868343 10.2046816
+         C +#56.9810858 10.2269483
+         C +#56.9800699 10.2465070
+         C +#56.9818878 10.2623287
+         C +#56.9843449 10.2800342
+         C +#56.9862634 10.2947759
+         C +#56.9854684 10.3067869
+         C +#56.9824008 10.3104855
+         C +#56.9724834 10.3074474
+         C +#56.9690697 10.3059332
+         C +#56.9703048 10.3116682
+         C )#56.9615973 10.3010996
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         Skydeområder
+      </groupname>
+      <name>
+         Skallingen
+      </name>
+      <image>
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
+         C (#55.4757778 8.3141111 POLYGON
+         C +#55.4727222 8.2933056
+         C +#55.4850278 8.2723611
+         C +#55.4891111 8.2740833
+         C +#55.4975556 8.2946944
+         C )#55.4886944 8.3152778
+      </image>
+      <altitude>
+         3000
+      </altitude>
+      <active>
+         No
+      </active>
+      <startdate>
+         2011-12-07
+      </startdate>
+      <starttime>
+         06:30:00
+      </starttime>
+      <enddate>
+         2011-12-07
+      </enddate>
+      <endtime>
+         15:00:00
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         RNAV
+      </groupname>
+      <name>
+         TEMP-FALCC
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7833333 6.2066667 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=REXW
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         TEXT POS=#55.7922394 6.1961176 SIZE=2 ALIGN=RB  [REXW]
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         STCA Areas
+      </groupname>
+      <name>
+         EKAH EnRoute
+      </name>
+      <image>
+         ATB COL=221,221,221 STYLE=DOT SIZE=1 FILLSTYLE=NULL
+         C (#57.1214404 10.5469924 POLYGON
+         C +#56.7063458 11.0111169
+         C +#56.4211031 11.7930246
+         C +#55.9806072 11.6463118
+         C +#55.8647274 11.1658257
+         C +#55.9621023 10.2130090
+         C +#56.0758695 9.6102390
+         C )#56.6349463 9.6169125
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+   <map>
+      <groupname>
+         EKBI
+      </groupname>
+      <name>
+         LO
+      </name>
+      <image>
+         ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
+         SYM C=#55.7444722 9.2796667 TYPE=NDB/Locator  SIZE=5 SCALED=NO  NAME=LO
+      </image>
+      <altitude>
+      </altitude>
+      <active>
+         Yes
+      </active>
+      <startdate>
+      </startdate>
+      <starttime>
+         00:00:-01
+      </starttime>
+      <enddate>
+      </enddate>
+      <endtime>
+         00:00:-01
+      </endtime>
+   </map>
+</maps>

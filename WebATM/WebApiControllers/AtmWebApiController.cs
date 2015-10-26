@@ -22,10 +22,10 @@ namespace WebATM.WebApiControllers
          return AtmController.GetAllFlights();
       }
 
-        //[Route("GetUpdatedFlights")]
-        //public IEnumerable<Flight> GetUpdatedFlights()
-        //{
-        //    return AtmController.GetUpdatedFlights();
-        //}
+        [Route("ReadMapElements")]
+        public IEnumerable<Insero_Map.Map> GetUpdatedFlights()
+        {
+            return Insero_Map.MapReader.ReadMapElements();
+        }
     }
 }
