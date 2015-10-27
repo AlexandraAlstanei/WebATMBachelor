@@ -26,7 +26,6 @@ namespace WebATM.Insero_Map
                 var isPolyline = false;
                 Polygon currentPolygon = null;
                 Polyline currentPolyline = null;
-
                 while ((originalLine = reader.ReadLine()) != null)
                 {
                     var line = originalLine.ToUpper().Trim();
@@ -39,25 +38,27 @@ namespace WebATM.Insero_Map
                     {
                         continue;
                     }
-
+                    
                     if (line.StartsWith("ATB"))
                     {
                         var lineParts = line.Split(' ');
                         foreach (var linePart in lineParts)
-                        {
+                        { 
                             if (linePart.StartsWith("COL"))
                             {
+                                color = new List<Color>(); 
                                 var linePartParts = linePart.Split('=');
                                 try
                                 {
                                     var colorParted = linePartParts[1].Split(',');
-                                    String colorString = string.Format("#{0:X}{1:X}{2:X}", colorParted[0], colorParted[1], colorParted[2]);
-
-                                    var colorObject = colorConverter.ConvertFromString(colorString);
+                                    var R = Convert.ToInt32(colorParted[0]);
+                                    var G = Convert.ToInt32(colorParted[1]);
+                                    var B = Convert.ToInt32(colorParted[2]);
+                                    
+                                    var colorObject = Color.FromArgb(255, R, G, B);
                                     if (colorObject != null)
                                     {
-                                        var colorTemp = (Color)colorObject;
-                                        color.Add(colorTemp);
+                                        color.Add(colorObject);
                                     }
                                 }
                                 catch (Exception)
@@ -67,7 +68,7 @@ namespace WebATM.Insero_Map
                             }
                         }
                     }
-                    else if (line.StartsWith("C (") && line.Contains("POLYGON")) // Start of polygon
+                    else if (line.StartsWith("C (#") && line.Contains("POLYGON")) // Start of polygon
                     {
                         isPolygon = true;
 
@@ -76,11 +77,31 @@ namespace WebATM.Insero_Map
                         var polygon = new Polygon();
                         polygon.Color = color;
                         polygon.Style = lineStyle;
-                        polygon.Points.Add(TrimPoint(lineParts[1] + "," + lineParts[2]));
-
+                        Coordinates points = new Coordinates();
+                        var lat = lineParts[1].Split('#');
+                        points.Latitude = Convert.ToDouble(lat[1]);
+                        points.Longitude = Convert.ToDouble(lineParts[2]);
+                        polygon.coordinates.Add(points);
                         currentPolygon = polygon;
                     }
-                    else if (line.StartsWith("C (")) // Start of polyline
+                    else if (line.StartsWith("C (N") && line.Contains("POLYGON"))
+                    {
+                        isPolygon = true;
+                        var polygon = new Polygon();
+                        polygon.Color = color;
+                        polygon.Style = lineStyle;
+                        var lineParts = line.Split(' ');
+                        Coordinates points = new Coordinates();
+                        var coord = lineParts[1].Split('N');
+                        var latParts = coord[1].Split(',');
+                        var divider = createDivider(latParts[0].Length-3);
+                        points.Latitude = (Convert.ToDouble(latParts[0]))/divider;
+                        var longParts = latParts[1].Split('E');
+                        points.Longitude = (Convert.ToDouble(longParts[1]))/ createDivider(longParts[1].Length - 3); 
+                        polygon.coordinates.Add(points);
+                        currentPolygon = polygon;
+                    }
+                    else if (line.StartsWith("C (") && line.Contains("POLYLINE")) // Start of polyline
                     {
                         isPolyline = true;
 
@@ -89,51 +110,97 @@ namespace WebATM.Insero_Map
                         var polyline = new Polyline();
                         polyline.Color = color;
                         polyline.Style = lineStyle;
-                        polyline.Points.Add(TrimPoint(lineParts[1] + "," + lineParts[2]));
+                        Coordinates points = new Coordinates();
+                        points.Latitude = Convert.ToDouble(lineParts[1]);
+                        points.Longitude = Convert.ToDouble(lineParts[2]);
+                        polyline.coordinates.Add(points);
 
                         currentPolyline = polyline;
                     }
-                    else if (line.StartsWith("C +") && isPolygon)
+                    else if (line.StartsWith("C +#") && isPolygon)
                     {
                         var lineParts = line.Split(' ');
-                        currentPolygon.Points.Add(TrimPoint(lineParts[1] + "," + lineParts[2]));
+                        Coordinates points = new Coordinates();
+                        var lat = lineParts[1].Split('#');
+                        points.Latitude = Convert.ToDouble(lat[1]);
+                        points.Longitude = Convert.ToDouble(lineParts[2]);
+                        currentPolygon.coordinates.Add(points);
+                    }
+                    else if (line.StartsWith("C +N") && isPolygon)
+                    {
+                        var lineParts = line.Split(' ');
+                        Coordinates points = new Coordinates();
+                        var coord = lineParts[1].Split('N');
+                        var latParts = coord[1].Split(',');
+                        var divider = createDivider(latParts[0].Length - 3);
+                        points.Latitude = (Convert.ToDouble(latParts[0])) / divider;
+                        var longParts = latParts[1].Split('E');
+                        points.Longitude = (Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3);
+                        currentPolygon.coordinates.Add(points);
                     }
                     else if (line.StartsWith("C +") && isPolyline)
                     {
                         var lineParts = line.Split(' ');
-                        currentPolyline.Points.Add(TrimPoint(lineParts[1] + "," + lineParts[2]));
+                        Coordinates points = new Coordinates();
+                        points.Latitude = Convert.ToDouble(lineParts[1]);
+                        points.Longitude = Convert.ToDouble(lineParts[2]);
+                        currentPolyline.coordinates.Add(points); ;
                     }
-                    else if (line.StartsWith("C )") && isPolygon)
+                    else if (line.StartsWith("C )#") && isPolygon)
                     {
                         var lineParts = line.Split(' ');
-                        currentPolygon.Points.Add(TrimPoint(lineParts[1] + "," + lineParts[2]));
+                        Coordinates points = new Coordinates();
+                        var lat = lineParts[1].Split('#');
+                        points.Latitude = Convert.ToDouble(lat[1]);
+                        points.Longitude = Convert.ToDouble(lineParts[2]);
+                        currentPolygon.coordinates.Add(points);
 
                         listOfShapes.Add(currentPolygon);
                         currentPolygon = null;
 
                         isPolygon = false;
                     }
+                    else if (line.StartsWith("C )N") && isPolygon)
+                    {
+                        var lineParts = line.Split(' ');
+                        Coordinates points = new Coordinates();
+                        var coord = lineParts[1].Split('N');
+                        var latParts = coord[1].Split(',');
+                        var divider = createDivider(latParts[0].Length - 3);
+                        points.Latitude = (Convert.ToDouble(latParts[0])) / divider;
+                        var longParts = latParts[1].Split('E');
+                        points.Longitude = (Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3);
+                        currentPolygon.coordinates.Add(points);
+
+                        isPolygon = false;
+                    }
                     else if (line.StartsWith("C )") && isPolyline)
                     {
                         var lineParts = line.Split(' ');
-                        currentPolyline.Points.Add(TrimPoint(lineParts[1] + "," + lineParts[2]));
+                        Coordinates points = new Coordinates();
+                        points.Latitude = Convert.ToDouble(lineParts[1]);
+                        points.Longitude = Convert.ToDouble(lineParts[2]);
+                        currentPolyline.coordinates.Add(points);
 
                         listOfShapes.Add(currentPolyline);
                         currentPolyline = null;
 
                         isPolyline = false;
                     }
-                    else if (line.StartsWith("CIR"))
+                    else if (line.StartsWith("CIR")) //Start of circle
                     {
                         var circle = new Circle();
-
+                        circle.Color = color;
                         var lineParts = line.Split(' ');
                         foreach (var linePart in lineParts)
                         {
                             if (linePart.StartsWith("C") && !linePart.StartsWith("CIR"))
                             {
-                                var linePartParts = linePart.Split('=');
-                                circle.Center = linePartParts[1];
+                                var linePartParts = linePart.Split('#');
+                                    Coordinates points = new Coordinates();
+                                    points.Latitude = Convert.ToDouble(linePartParts[1]);
+                                    points.Longitude = Convert.ToDouble(lineParts[2]);
+                                    circle.centerCoordinates.Add(points);                              
                             }
                             else if (linePart.StartsWith("R"))
                             {
@@ -151,8 +218,6 @@ namespace WebATM.Insero_Map
                         }
 
                         listOfShapes.Add(circle);
-                    }else if{
-
                     }
                 }
             }
@@ -163,6 +228,17 @@ namespace WebATM.Insero_Map
         private static string TrimPoint(string point)
         {
             return point.Replace("(", "").Replace("+", "").Replace(")", "").Replace("#", "");
+        }
+
+        private static int createDivider(int length)
+        {
+            int divider = 1;
+            while (length != 0)
+            {
+                divider = divider * 10;
+                length--;
+            }
+            return divider;
         }
     }
 }

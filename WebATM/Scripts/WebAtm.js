@@ -44,7 +44,7 @@ function initMap() {
 
     //get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
-    addInseroMap();
+    
     //start a javascript timer that starts every 4 seconds
     //on each iteration, get data and change the position of the markers
     setInterval(updateMap, 4000);
@@ -53,6 +53,7 @@ function initMap() {
 function updateMap() {
     //this will repeat every 4 seconds 
     getDataAndDisplayOnMap();
+    addInseroMap();
     document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
 }
 
@@ -267,5 +268,17 @@ function addInseroMap() {
     //make AJAX call that returns the data in JSON format
     $.getJSON(uri)
            .done(function (data) {
+               var color = data[2].shapes[0].Color[0].Name;
+               var center = { lat: data[2].shapes[0].centerCoordinates[0].Latitude, lng: data[2].shapes[0].centerCoordinates[0].Longitude };
+               var r = data[2].shapes[0].Radius;
+               var Circle = new google.maps.Circle({
+                   strokeColor: color,
+                   strokeOpacity: 0.8,
+                   strokeWeight: 2,
+                   map: map,
+                   center: center,
+                   radius: r
+               });
            });
+    
 }

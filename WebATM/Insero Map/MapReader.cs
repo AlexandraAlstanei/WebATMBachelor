@@ -15,8 +15,8 @@ namespace WebATM.Insero_Map
         {
             List<Map> mapElements = null;
 
-            try
-            {
+            //try
+            //{
                 XDocument xml = null;
                 using (StreamReader oReader = new StreamReader(System.Web.HttpContext.Current.Server.MapPath(@"~/Maps.xml"), Encoding.GetEncoding("ISO-8859-1")))
                 {
@@ -36,12 +36,17 @@ namespace WebATM.Insero_Map
                                    enddate = (string)e.Element("enddate"),
                                    endtime = (string)e.Element("endtime"),
                                }).ToList();
-            }
-            catch (Exception e)
-            {
-                throw new Exception("File not found.");
+                foreach (Map map in mapElements)
+                {
+                    map.shapes = ImageAdapter.ConvertToShape(map.image);
+                }
+          //  }
+            //catch (Exception e)
+            //{
+            //  //  throw new Exception("File not found.");
+            //    throw new FileNotFoundException("File not found", e);
 
-            }
+            //}
             return mapElements;
         }
     }
