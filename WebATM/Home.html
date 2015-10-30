@@ -1,23 +1,56 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-   <title>Web ATM</title>
-   <meta charset="utf-8" />
-   <link rel="stylesheet" type="text/css" href="Content/css/WebAtm.css">
+    <title>Web ATM</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Content/css/WebAtm.css">
 </head>
 <body>
-        <div id="map"></div>
+    <div id="map"></div>
 
-        <!--Google Maps component should be initiated with a google API key
-        as they describe on their website: https://developers.google.com/maps/documentation/javascript/examples/map-simple -->
+    <!--Google Maps component should be initiated with a google API key
+    as they describe on their website: https://developers.google.com/maps/documentation/javascript/examples/map-simple -->
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIfdnVb87QNier4Hu3BRmBaCQu-VHEEYQ&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIfdnVb87QNier4Hu3BRmBaCQu-VHEEYQ&callback=initMap" async defer></script>
 
-        <script src="Scripts/WebAtm.js"></script>
-        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
-        <div id="debugwindow">
+    <script src="Scripts/WebAtm.js"></script>
+    <script src="Scripts/Menu.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <div id="debugwindow">
+    </div>
+    <div id="o-wrapper" class="o-wrapper">
+
+        <div class="c-buttons">
+            <button id="c-button--slide-left" class="c-button">Slide Left</button>
         </div>
+    </div>
 
+    <div id="c-mask" class="c-mask"></div><!-- /c-mask -->
 
+    <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+        <button class="c-menu__close">&larr; Close</button>
+        <ul class="c-menu__items">
+            <li class="c-menu__item"><a href="#" class="c-menu__link">BDR POINTS</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">EKBI</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">EKEB</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">EKKA</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">EKSP</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">EKVJ</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">FIR</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">Flyvepladser</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">Hindringer</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">HMR</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">Kystlinier_extra</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">MSAW AREAS</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">NAV AIDS</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">Platforme</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">RNAV</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">Skydeområder</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">STCA Areas</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">Svæveflyve områder</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">VFR Rapportpunkter</a></li>
+            <li class="c-menu__item"><a href="#" class="c-menu__link">Vindmølleparker</a></li>
+        </ul>
+    </nav><!-- /c-menu slide-left -->
 </body>
 </html>

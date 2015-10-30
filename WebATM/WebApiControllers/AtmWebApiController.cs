@@ -25,7 +25,8 @@ namespace WebATM.WebApiControllers
         [Route("ReadMapElements")]
         public IEnumerable<Insero_Map.Map> GetUpdatedFlights()
         {
-            return Insero_Map.MapReader.ReadMapElements();
+            IEnumerable<Insero_Map.Map> list = Insero_Map.MapReader.ReadMapElements();
+            return list;
         }
     }
 }

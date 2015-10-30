@@ -7,7 +7,7 @@ var found = false;
 var markerLatLng;
 var infowindow;
 var iconImage;
-
+var success = false;
 
 function initMap() {
     //Initialize google maps component
@@ -42,6 +42,21 @@ function initMap() {
     planeControlDiv.index = 2;
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(planeControlDiv);
 
+    var slideLeft = new Menu({
+        wrapper: '#o-wrapper',
+        type: 'slide-left',
+        menuOpenerClass: '.c-button',
+        maskId: '#c-mask'
+    });
+
+    var slideLeftBtn = document.querySelector('#c-button--slide-left');
+    map.controls[google.maps.ControlPosition.TOP_CENTER].push(slideLeftBtn);
+
+    slideLeftBtn.addEventListener('click', function (e) {
+        e.preventDefault;
+        slideLeft.open();
+    });
+
     //get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
     
@@ -53,7 +68,6 @@ function initMap() {
 function updateMap() {
     //this will repeat every 4 seconds 
     getDataAndDisplayOnMap();
-    addInseroMap();
     document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
 }
 
@@ -93,7 +107,6 @@ function getDataAndDisplayOnMap() {
                    }
            });
        }
-
 
 function createMarker(markerLatLng, id) {
     if (planeMode) {
@@ -262,23 +275,26 @@ function calculateDirection(latitudeA, longitudeA, latitudeB, longitudeB) {
     return directionAngle;
 }
 
+
 function addInseroMap() {
     var uri = 'api/webatm/ReadMapElements';
 
     //make AJAX call that returns the data in JSON format
     $.getJSON(uri)
            .done(function (data) {
-               var color = data[2].shapes[0].Color[0].Name;
+               var color = '#FFFFFF';
                var center = { lat: data[2].shapes[0].centerCoordinates[0].Latitude, lng: data[2].shapes[0].centerCoordinates[0].Longitude };
                var r = data[2].shapes[0].Radius;
-               var Circle = new google.maps.Circle({
-                   strokeColor: color,
+               // Add the circle for this city to the map.
+               var cityCircle = new google.maps.Circle({
+                   strokeColor: '#FF0000',
                    strokeOpacity: 0.8,
                    strokeWeight: 2,
+                   fillColor: '#FF0000',
+                   fillOpacity: 0.35,
                    map: map,
                    center: center,
-                   radius: r
+                   radius: r * 1000
                });
            });
-    
 }

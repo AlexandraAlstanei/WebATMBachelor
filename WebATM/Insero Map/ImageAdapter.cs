@@ -13,7 +13,7 @@ namespace WebATM.Insero_Map
         public static List<Shape> ConvertToShape(string image)
         {
             ColorConverter colorConverter = new ColorConverter();
-            List<Color> color = null;
+            List<String> color = null;
             Style lineStyle = Style.Solid;
 
             List<Shape> listOfShapes = new List<Shape>();
@@ -46,7 +46,7 @@ namespace WebATM.Insero_Map
                         { 
                             if (linePart.StartsWith("COL"))
                             {
-                                color = new List<Color>(); 
+                                color = new List<String>(); 
                                 var linePartParts = linePart.Split('=');
                                 try
                                 {
@@ -56,14 +56,15 @@ namespace WebATM.Insero_Map
                                     var B = Convert.ToInt32(colorParted[2]);
                                     
                                     var colorObject = Color.FromArgb(255, R, G, B);
-                                    if (colorObject != null)
+                                    var hexColor = HexConverter(colorObject);
+                                    if (hexColor != null)
                                     {
-                                        color.Add(colorObject);
+                                        color.Add(hexColor);
                                     }
                                 }
                                 catch (Exception)
                                 {
-                                    color.Add(Color.Black);
+                                    color.Add("#ffffff");
                                 }
                             }
                         }
@@ -239,6 +240,11 @@ namespace WebATM.Insero_Map
                 length--;
             }
             return divider;
+        }
+
+        private static String HexConverter(System.Drawing.Color c)
+        {
+            return "#" + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2");
         }
     }
 }

@@ -8,7 +8,7 @@ namespace WebATM.Insero_Map
 {
     public class Shape
     {
-        public List<Color> Color { get; set; }
+        public List<String> Color { get; set; }
         public Style Style { get; set; }
         public FillStyle FillStyle { get; set; }
 
