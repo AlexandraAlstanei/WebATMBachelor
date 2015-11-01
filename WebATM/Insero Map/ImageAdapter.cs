@@ -155,7 +155,7 @@ namespace WebATM.Insero_Map
                         points.Latitude = Convert.ToDouble(lat[1]);
                         points.Longitude = Convert.ToDouble(lineParts[2]);
                         currentPolygon.coordinates.Add(points);
-
+                        currentPolygon.type = "Polygon";
                         listOfShapes.Add(currentPolygon);
                         currentPolygon = null;
 
@@ -182,7 +182,7 @@ namespace WebATM.Insero_Map
                         points.Latitude = Convert.ToDouble(lineParts[1]);
                         points.Longitude = Convert.ToDouble(lineParts[2]);
                         currentPolyline.coordinates.Add(points);
-
+                        currentPolyline.type = "Polyline";
                         listOfShapes.Add(currentPolyline);
                         currentPolyline = null;
 
@@ -217,7 +217,7 @@ namespace WebATM.Insero_Map
                                 circle.Radius = radius;
                             }
                         }
-
+                        circle.type = "Circle";
                         listOfShapes.Add(circle);
                     }
                 }

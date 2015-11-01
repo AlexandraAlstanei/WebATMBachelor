@@ -11,6 +11,7 @@ namespace WebATM.Insero_Map
         public List<String> Color { get; set; }
         public Style Style { get; set; }
         public FillStyle FillStyle { get; set; }
+        public String type;
 
         public Shape()
         {

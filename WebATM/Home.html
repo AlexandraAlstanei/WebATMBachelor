@@ -30,27 +30,134 @@
     <nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
         <button class="c-menu__close">&larr; Close</button>
         <ul class="c-menu__items">
-            <li class="c-menu__item"><a href="#" class="c-menu__link">BDR POINTS</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">EKBI</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">EKEB</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">EKKA</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">EKSP</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">EKVJ</a></li>
+            <!--<li class="c-menu__item"><a href="#" class="c-menu__link">BDR POINTS</a></li>
+            <li><input type="checkbox" />ALL </li>-->
+            <li id ="EKBI" class="c-menu__item"><a href="#" class="c-menu__link">EKBI</a></li>
+            <!--<li><input type="checkbox" />GE </li>
+            <li><input type="checkbox" />LTA</li>
+            <li><input type="checkbox" />AREA </li>-->
+            <li><input id ="TMA B" type="checkbox" onclick="validate1()"/>TMA B </li>
+            <li><input id ="TMA C"type="checkbox" />TMA C </li>
+            <li><input id ="TMA D"type="checkbox" />TMA D </li>
+            <!--<li><input type="checkbox" />LO</li>-->
+            <li id ="EKEB" class="c-menu__item"><a href="#" class="c-menu__link">EKEB</a></li>
+            <!--<li><input type="checkbox" />Centerlinie ext </li>-->
+            <li><input id ="RR 20NM" type="checkbox" />RR 20NM</li>
+            <!--<li><input type="checkbox" />RWY </li>-->
+            <li><input id ="RR 5NM" type="checkbox" />RR 5NM </li>
+            <li><input id ="RR 1NM" type="checkbox" />RR 1NM </li>
+            <!--<li><input type="checkbox" />Centerlinie ext 20NM </li>-->
+            <li><input id ="RR 10NM" type="checkbox" />RR 10NM</li>
+            <!--<li><input type="checkbox" />CTR </li>-->
+            <li><input id ="TMA" type="checkbox"/>TMA </li>
+            <li><input id ="dop app 08" type="checkbox" />dop app 08 </li>
+            <!--<li><input type="checkbox" />Centerlinie ext 10NM</li>-->
+            <!--<li class="c-menu__item"><a href="#" class="c-menu__link">EKKA</a></li>
+            <li><input type="checkbox" />TMA </li>
+            <li><input type="checkbox" />CTR </li>
+            <li><input type="checkbox" />LTA </li>-->
+            <li id ="EKSP" class="c-menu__item"><a href="#" class="c-menu__link">EKSP</a></li>
+            <li><input id ="CTR" type="checkbox" />CTR </li>
+            <!--<li><input type="checkbox" />RWY </li>
+            <li><input type="checkbox" />SKR </li>-->
+            <li><input id ="TMA" type="checkbox" />TMA</li>
+            <li><input id ="AREA" type="checkbox" />AREA </li>
+            <!--<li class="c-menu__item"><a href="#" class="c-menu__link">EKVJ</a></li>
+            <li><input type="checkbox" />VJ</li>
             <li class="c-menu__item"><a href="#" class="c-menu__link">FIR</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">Flyvepladser</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">Hindringer</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">HMR</a></li>
+            <li><input type="checkbox" />DK FIR</li>-->
+            <li id ="Flyvepladser" class="c-menu__item"><a href="#" class="c-menu__link">Flyvepladser</a></li>
+            <li><input id ="Anholt" type="checkbox" />Anholt </li>
+            <li><input id ="Thisted" type="checkbox" />Thisted</li>
+            <li><input id ="Endelave" type="checkbox" />Endelave </li>
+            <li><input id ="Freerslev" type="checkbox" />Freerslev </li>
+            <li><input id ="Læsø" type="checkbox" />Læsø </li>
+            <li><input id ="Vamdrup" type="checkbox" />Vamdrup </li>
+            <li><input id ="True" type="checkbox" />True</li>
+            <li><input id ="Grønholt" type="checkbox" />Grønholt </li>
+            <li><input id ="Haderslev" type="checkbox" />Haderslev </li>
+            <!--<li><input type="checkbox" />EKRD </li>-->
+            <li><input id ="Hadsund" type="checkbox" />Hadsund</li>
+            <li><input id ="Varde" type="checkbox" />Varde </li>
+            <li><input id ="Viborg" type="checkbox" />Viborg </li>
+            <li><input id ="Holsted" type="checkbox" />Holsted </li>
+            <li><input id ="Stauning" type="checkbox" />Stauning</li>
+            <li><input id ="Grenaa" type="checkbox" />Grenaa </li>
+            <li><input id ="Aars" type="checkbox" />Aars </li>
+            <li><input id ="Samsø" type="checkbox" />Samsø </li>
+            <li><input id ="Gørlev" type="checkbox" />Gørlev </li>
+            <li><input id ="Skive" type="checkbox" />Skive</li>
+            <!--<li class="c-menu__item"><a href="#" class="c-menu__link">Hindringer</a></li>
+            <li><input type="checkbox" />Radar3 </li>
+            <li><input type="checkbox" />Nordenskov </li>
+            <li><input type="checkbox" />Nybro </li>
+            <li><input type="checkbox" />Vestkraft</li>-->
+            <!--<li class="c-menu__item"><a href="#" class="c-menu__link">HMR</a></li>
+            <li><input type="checkbox" />KY60 </li>
             <li class="c-menu__item"><a href="#" class="c-menu__link">Kystlinier_extra</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">MSAW AREAS</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">NAV AIDS</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">Platforme</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">RNAV</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">Skydeområder</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">STCA Areas</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">Svæveflyve områder</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">VFR Rapportpunkter</a></li>
-            <li class="c-menu__item"><a href="#" class="c-menu__link">Vindmølleparker</a></li>
+            <li><input type="checkbox" />Randers Fjord </li>-->
+            <li id ="MSAW AREAS" class="c-menu__item"><a href="#" class="c-menu__link">MSAW AREAS</a></li>
+            <li><input id ="Vestkraft" type="checkbox" onclick="validate2()"/>Vestkraft </li>
+            <li><input id ="Hadsten" type="checkbox" />Hadsten </li>
+            <li><input id ="Nordenskov" type="checkbox" />Nordenskov</li>
+            <li><input id ="Nybro" type="checkbox" />Nybro</li>
+            <li id ="NAV AIDS" class="c-menu__item"><a href="#" class="c-menu__link">NAV AIDS</a></li>
+            <li><input id ="AAL" type="checkbox" />AAL </li>
+            <li><input id ="Hadsten" type="checkbox" />Hadsten </li>
+            <li><input id ="Nordenskov" type="checkbox" />Nordenskov</li>
+            <li><input id ="Nybro" type="checkbox" />Nybro</li>
+            <!--<li class="c-menu__item"><a href="#" class="c-menu__link">Platforme</a></li>-->
+            <li id ="RNAV" class="c-menu__item"><a href="#" class="c-menu__link">RNAV</a></li>
+            <li><input id ="AMRAM" type="checkbox" />AMRAM </li>
+            <li><input id ="TEMP-FALCB" type="checkbox" />TEMP-FALCB</li>
+            <li><input id ="TEMP-FALCA" type="checkbox" />TEMP-FALCA </li>
+            <li><input id ="NEBUM" type="checkbox" />NEBUM </li>
+            <li><input id ="Temp - North" type="checkbox" />Temp - NORTH</li>
+            <li><input id ="REXW" type="checkbox" />REXW </li>
+            <li><input id ="EPILO" type="checkbox" />EPILO</li>
+            <li><input id ="TEMP-BLAAV" type="checkbox" />TEMP-BLAAV </li>
+            <li><input id ="DETOP" type="checkbox" />DETOP </li>
+            <li><input id ="DRONE" type="checkbox" />DRONE</li>
+            <li><input id ="NEBSA" type="checkbox" />NEBSA</li>
+            <li><input id ="TEMP-FALCC" type="checkbox" />TEMP-FALCC </li>
+            <li id ="Skydeområder" class="c-menu__item"><a href="#" class="c-menu__link">Skydeområder</a></li>
+            <li><input id ="EK D380 KALLESMÆRSK ØST" type="checkbox" />EK D380 KALLESMÆRSK ØST </li>
+            <li><input id ="EK D301 Fanoe-TSA" type="checkbox" />EK D301 Fanoe-TSA</li>
+            <li><input id ="Temp - UAV corridor" type="checkbox" />Temp - UAV corridor</li>
+            <li><input id ="EK D381 KALLESMÆSKT VEST" type="checkbox" />EK D381 KALLESMÆSKT VEST </li>
+            <li><input id ="EK D373 RØMØ VEST" type="checkbox" />EK D373 RØMØ VEST</li>
+            <li><input id ="Temp - Falcon Transit Corridor" type="checkbox" />Temp - Falcon Transit Corridor </li>
+            <li><input id ="TEMP- UAS Hemmet" type="checkbox" />TEMP- UAS Hemmet</li>
+            <li><input id ="EK R33 VEJERS" type="checkbox" />EK R33 VEJERS </li>
+            <li><input id ="EK R38 RØMØ ØST" type="checkbox" />EK R38 RØMØ ØST</li>
+            <li><input id ="Temp - Falcon Live Aim Area" type="checkbox" />Temp - Falcon Live Aim Area</li>
+            <li><input id ="UAS VARDE" type="checkbox" />UAS VARDE</li>
+            <li><input id ="LILLE RØMØ - TEMP" type="checkbox" />LILLE RØMØ - TEMP</li>
+            <li><input id ="EK R34 BORDRUP" type="checkbox" />EK R34 BORDRUP</li>
+            <li><input id ="Temp - Nymindegab vest" type="checkbox" />Temp - Nymindegab vest </li>
+            <li><input id ="Corridor Fanoe" type="checkbox" />Corridor Fanoe </li>
+            <li><input id ="Temp - REX Live Aim" type="checkbox" />Temp - REX Live Aim</li>
+            <li><input id ="EK R32 OKSBY" type="checkbox" />EK R32 OKSBY</li>
+            <li><input id ="EK D379 NYMINDEGAB ØST" type="checkbox" />EK D379 NYMINDEGAB ØST</li>
+            <li><input id ="Temp - drone" type="checkbox" />Temp - drone </li>
+            <li><input id ="EK R35 HENNE" type="checkbox" />EK R35 HENNE</li>
+            <li><input id ="DSkallingen" type="checkbox" />DSkallingen</li>
+            <li id ="STCA Areas" class="c-menu__item"><a href="#" class="c-menu__link">STCA Areas</a></li>
+            <li><input id ="STCAexclude" type="checkbox" />STCAexclude</li>
+            <li><input id ="EKEB EnRoute" type="checkbox" />EKEB EnRoute</li>
+            <li><input id ="EKAH EnRoute" type="checkbox" />EKAH EnRoute</li>
+            <li id ="Svæveflyve områder" class="c-menu__item"><a href="#" class="c-menu__link">Svæveflyve områder</a></li>
+            <li><input id ="BOLHEDE WEST" type="checkbox" />BOLHEDE WEST</li>
+            <li><input id ="BOLHEDE" type="checkbox" />BOLHEDE</li>
+            <li><input id ="VORBASSE" type="checkbox" />VORBASSE</li>
+            <li><input id ="GESTEN" type="checkbox" />GESTEN</li>
+            <!--<li class="c-menu__item"><a href="#" class="c-menu__link">VFR Rapportpunkter</a></li>-->
+            <li id ="Vindmølleparker" class="c-menu__item"><a href="#" class="c-menu__link">Vindmølleparker</a></li>
+            <li><input id ="Horns Rev A" type="checkbox" />Horns Rev A</li>
+            <li><input id ="Horns Rev B" type="checkbox" />Horns Rev B</li>
+            <li><input id ="EHHG H7" type="checkbox" />EHHG H7</li>
+            <li><input id ="Dantysk" type="checkbox" />Dantysk</li>
         </ul>
-    </nav><!-- /c-menu slide-left -->
+    </nav>
 </body>
 </html>
