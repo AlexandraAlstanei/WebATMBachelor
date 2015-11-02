@@ -278,52 +278,593 @@ function calculateDirection(latitudeA, longitudeA, latitudeB, longitudeB) {
 function validate1() {
     var TMA_B = document.getElementById('TMA B');
     if (TMA_B.checked) {
-        var mapElement = searchMap('TMA_B');
-        for (var j = 0; j < mapElement.shapes.length; j++) {
-            if (mapElement.shapes[j].type.localeCompare('Polygon')) {
-
-            } else if (mapElement.shapes[j].type.localeCompare('Polyline')) {
-
-            } else if (mapElement.shapes[j].type.localeCompare('Circle')) {
-
-            }
-        }
+        drawMap();
     }
 }
 
 function validate2() {
-    var TMA_B = document.getElementById('Vestkraft');
-    if (TMA_B.checked) {
-        var uri = 'api/webatm/ReadMapElements';
-        //make AJAX call that returns the data in JSON format
-        var mapElement;
-        $.getJSON(uri)
-               .done(function (data) {
-                   for (var i = 0; i < data.length; i++) {
-                       if (data[i].name.localeCompare('\n         Vestkraft\n      ') == 0) {
-                           mapElement = data[i];
-                           for (var j = 0; j < mapElement.shapes.length; j++) {
-                               if (mapElement.shapes[j].type.localeCompare('Polygon') == 0) {
-                                   var color = mapElement.shapes[j].Color;
-                                   var pathCoordinates = [];
-                                   for (var m = 0; m < mapElement.shapes[j].coordinates.length; m++) {
-                                       var coord = { lat: mapElement.shapes[j].coordinates[m].Latitude, lng: mapElement.shapes[j].coordinates[m].Longitude };
-                                       pathCoordinates.push(coord);
-                                   }
-                                   
-                               } else if (mapElement.shapes[j].type.localeCompare('Polyline') == 0) {
+    var TMA_C = document.getElementById('TMA C');
+    if (TMA_C.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
 
-                               } else if (mapElement.shapes[j].type.localeCompare('Circle') == 0) {
-                                   var color = mapElement.shapes[j].Color;
-                                   var center = { lat: mapElement.shapes[j].centerCoordinates[0].Latitude, lng: mapElement.shapes[j].centerCoordinates[0].Longitude };
-                                   var r = mapElement.shapes[j].Radius;
-                                   addCircle(color, center, r);
+function validate3() {
+    var TMA_D = document.getElementById('TMA D');
+    if (TMA_D.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate4() {
+    var RR_20NM = document.getElementById('RR 20NM');
+    if (RR_20NM.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate5() {
+    var RR_5NM = document.getElementById('RR 5NM');
+    if (RR_5NM.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate6() {
+    var RR_1NM = document.getElementById('RR 1NM');
+    if (RR_1NM.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate7() {
+    var RR_10NM = document.getElementById('RR 10NM');
+    if (RR_10NM.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate8() {
+    var TMA = document.getElementById('TMA');
+    if (TMA.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate9() {
+    var dop_app_08 = document.getElementById('dop app 08');
+    if (dop_app_08.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate10() {
+    var CTR = document.getElementById('CTR');
+    if (CTR.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate11() {
+    var TMA = document.getElementById('TMA');
+    if (TMA.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate12() {
+    var AREA = document.getElementById('AREA');
+    if (AREA.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate13() {
+    var Anholt= document.getElementById('Anholt');
+    if (Anholt.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate14() {
+    var Thisted = document.getElementById('Thisted');
+    if (Thisted.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate15() {
+    var Endelave = document.getElementById('Endelave');
+    if (Endelave.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate16() {
+    var Freerslev = document.getElementById('Freerslev');
+    if (Freerslev.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate17() {
+    var Læsø = document.getElementById('Læsø');
+    if (Læsø.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate18() {
+    var Vamdrup = document.getElementById('Vamdrup');
+    if (Vamdrup.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate19() {
+    var True = document.getElementById('True');
+    if (True.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate20() {
+    var Grønholt = document.getElementById('Grønholt');
+    if (Grønholt.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate21() {
+    var Haderslev = document.getElementById('Haderslev');
+    if (Haderslev.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate22() {
+    var Hadsund = document.getElementById('Hadsund');
+    if (Hadsund.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate23() {
+    var Varde = document.getElementById('Varde');
+    if (Varde.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate24() {
+    var Viborg = document.getElementById('Viborg');
+    if (Viborg.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate25() {
+    var Holsted = document.getElementById('Holsted');
+    if (Holsted.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate26() {
+    var Stauning = document.getElementById('Stauning');
+    if (Stauning.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate27() {
+    var Grenaa = document.getElementById('Grenaa');
+    if (Grenaa.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate28() {
+    var Aars = document.getElementById('Aars');
+    if (Aars.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate29() {
+    var Samsø = document.getElementById('Samsø');
+    if (Samsø.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate30() {
+    var Gørlev = document.getElementById('Gørlev');
+    if (Gørlev.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate31() {
+    var Skive = document.getElementById('Skive');
+    if (Skive.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate32() {
+    var Vestkraft = document.getElementById('Vestkraft');
+    if (Vestkraft.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate33() {
+    var Hadsten = document.getElementById('Hadsten');
+    if (Hadsten.checked) {
+        drawMap();
+    }
+}
+
+function validate34() {
+    var Nordenskov = document.getElementById('Nordenskov');
+    if (Nordenskov.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate35() {
+    var Nybro = document.getElementById('Nybro');
+    if (Nybro.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate36() {
+    var AAL = document.getElementById('AAL');
+    if (AAL.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate37() {
+    var AMRAM = document.getElementById('AMRAM');
+    if (AMRAM.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate38() {
+    var TEMP_FALCB = document.getElementById('TEMP-FALCB');
+    if (TEMP_FALCB.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate39() {
+    var TEMP_FALCA = document.getElementById('TEMP-FALCA');
+    if (TEMP_FALCA.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate40() {
+    var NEBUM = document.getElementById('NEBUM');
+    if (NEBUM.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate41() {
+    var Temp_NORTH = document.getElementById('Temp - NORTH');
+    if (Temp_NORTH.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate42() {
+    var REXW = document.getElementById('REXW');
+    if (REXW.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate43() {
+    var EPILO = document.getElementById('EPILO');
+    if (EPILO.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate44() {
+    var TEMP_BLAAV = document.getElementById('TEMP-BLAAV');
+    if (TEMP_BLAAV.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate45() {
+    var DETOP = document.getElementById('DETOP');
+    if (DETOP.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate46() {
+    var DRONE = document.getElementById('DRONE');
+    if (DRONE.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate47() {
+    var NEBSA = document.getElementById('NEBSA');
+    if (NEBSA.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate48() {
+    var TEMP_FALCC = document.getElementById('TEMP-FALCC');
+    if (TEMP_FALCC.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate49() {
+    var EK_D380_KALLESMÆRSK_ØST = document.getElementById('EK D380 KALLESMÆRSK ØST');
+    if (EK_D380_KALLESMÆRSK_ØST.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate50() {
+    var EK_D301_Fanoe_TSA = document.getElementById('EK D301 Fanoe-TSA');
+    if (EK_D301_Fanoe_TSA.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate51() {
+    var Temp_UAV_corridor = document.getElementById('Temp - UAV corridor');
+    if (Temp_UAV_corridor.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate52() {
+    var EK_D381_KALLESMÆSKT_VEST = document.getElementById('EK D381 KALLESMÆSKT VEST');
+    if (EK_D381_KALLESMÆSKT_VEST.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate53() {
+    var EK_D373_RØMØ_VEST = document.getElementById('EK D373 RØMØ VEST');
+    if (EK_D373_RØMØ_VEST.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate54() {
+    var Temp_Falcon_Transit_Corridor = document.getElementById('Temp - Falcon Transit Corridor');
+    if (Temp_Falcon_Transit_Corridor.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate55() {
+    var TEMP_UAS_Hemmet = document.getElementById('TEMP-UAS Hemmet');
+    if (TEMP_UAS_Hemmet.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate56() {
+    var EK_R33_VEJERS = document.getElementById('EK R33 VEJERS');
+    if (EK_R33_VEJERS.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate57() {
+    var EK_R38_RØMØ_ØST = document.getElementById('EK R38 RØMØ ØST');
+    if (EK_R38_RØMØ_ØST.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate58() {
+    var Temp_Falcon_Live_Aim_Area = document.getElementById('Temp - Falcon Live Aim Area');
+    if (Temp_Falcon_Live_Aim_Area.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate59() {
+    var UAS_VARDE = document.getElementById('UAS VARDE');
+    if (UAS_VARDE.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate60() {
+    var LILLE_RØMØ_TEMP = document.getElementById('LILLE RØMØ - TEMP');
+    if (LILLE_RØMØ_TEMP.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate61() {
+    var EK_R34_BORDRUP = document.getElementById('EK R34 BORDRUP');
+    if (EK_R34_BORDRUP.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate62() {
+    var Temp_Nymindegab_vest = document.getElementById('Temp - Nymindegab vest');
+    if (Temp_Nymindegab_vest.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate63() {
+    var Corridor_Fanoe = document.getElementById('Corridor Fanoe');
+    if (Corridor_Fanoe.checked) {
+        drawMap();
+    }
+}
+
+function validate64() {
+    var Temp_REX_Live_Aim = document.getElementById('Temp - REX Live Aim');
+    if (Temp_REX_Live_Aim.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate65() {
+    var EK_R32_OKSBY = document.getElementById('EK R32 OKSBY');
+    if (EK_R32_OKSBY.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate66() {
+    var EK_D379_NYMINDEGAB_ØST = document.getElementById('EK D379 NYMINDEGAB ØST');
+    if (EK_D379_NYMINDEGAB_ØST.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate67() {
+    var Temp_drone = document.getElementById('Temp - drone');
+    if (Temp_drone.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate68() {
+    var EK_R35_HENNE = document.getElementById('EK R35 HENNE');
+    if (EK_R35_HENNE.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate69() {
+    var DSkallingen = document.getElementById('DSkallingen');
+    if (DSkallingen.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate70() {
+    var STCAexclude = document.getElementById('STCAexclude');
+    if (STCAexclude.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate71() {
+    var EKEB_EnRoute = document.getElementById('EKEB EnRoute');
+    if (EKEB_EnRoute.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate72() {
+    var EKAH_EnRoute = document.getElementById('EKAH EnRoute');
+    if (EKAH_EnRoute.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate73() {
+    var BOLHEDE_WEST = document.getElementById('BOLHEDE WEST');
+    if (BOLHEDE_WEST.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate74() {
+    var BOLHEDE= document.getElementById('BOLHEDE');
+    if (BOLHEDE.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate75() {
+    var VORBASSE = document.getElementById('VORBASSE');
+    if (VORBASSE.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate76() {
+    var GESTEN = document.getElementById('GESTEN');
+    if (GESTEN.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate77() {
+    var Horns_Rev_A = document.getElementById('Horns Rev A');
+    if (Horns_Rev_A.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate78() {
+    var Horns_Rev_B = document.getElementById('Horns Rev B');
+    if (Horns_Rev_B.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate79() {
+    var EHHG_H7 = document.getElementById('EHHG H7');
+    if (EHHG_H7.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function validate80() {
+    var Dantysk = document.getElementById('Dantysk');
+    if (Dantysk.checked) {
+        drawMap('\n         Vestkraft\n      ');
+    }
+}
+
+function drawMap(mapName) {
+    var uri = 'api/webatm/ReadMapElements';
+    //make AJAX call that returns the data in JSON format
+    var mapElement;
+    $.getJSON(uri)
+           .done(function (data) {
+               for (var i = 0; i < data.length; i++) {
+                   if (data[i].name.localeCompare(mapName) == 0) {
+                       mapElement = data[i];
+                       for (var j = 0; j < mapElement.shapes.length; j++) {
+                           if (mapElement.shapes[j].type.localeCompare('Polygon') == 0) {
+                               var color = mapElement.shapes[j].Color;
+                               var pathCoordinates = [];
+                               for (var m = 0; m < mapElement.shapes[j].coordinates.length; m++) {
+                                   var coord = { lat: mapElement.shapes[j].coordinates[m].Latitude, lng: mapElement.shapes[j].coordinates[m].Longitude };
+                                   pathCoordinates.push(coord);
                                }
+
+                           } else if (mapElement.shapes[j].type.localeCompare('Polyline') == 0) {
+
+                           } else if (mapElement.shapes[j].type.localeCompare('Circle') == 0) {
+                               var color = mapElement.shapes[j].Color;
+                               var center = { lat: mapElement.shapes[j].centerCoordinates[0].Latitude, lng: mapElement.shapes[j].centerCoordinates[0].Longitude };
+                               var r = mapElement.shapes[j].Radius;
+                               addCircle(color, center, r);
                            }
                        }
                    }
-               });
-    }
+               }
+           });
 }
 
 function addCircle(color, center, r) {
