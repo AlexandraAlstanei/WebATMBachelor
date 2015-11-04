@@ -217,9 +217,18 @@ namespace WebATM.Insero_Map
                                 circle.Radius = radius;
                             }
                         }
-                        circle.type = "Circle";
+                            circle.type = "Circle";
                         listOfShapes.Add(circle);
-                    }
+                    }else if (line.StartsWith("TEXT"))
+                        {
+                        var text = new Text();
+                        text.Color = color;
+                        var lineParts = line.Split(' ');
+                        foreach (var linePart in lineParts)
+                        {
+
+                        }
+                        }
                 }
             }
 

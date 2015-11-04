@@ -836,17 +836,14 @@ function validate80() {
     }
 }
 
-function drawMap(mapName, isDuplicate, groupName) {
+function drawMap(mapName, groupName) {
     var uri = 'api/webatm/ReadMapElements';
     //make AJAX call that returns the data in JSON format
     var mapElement;
-    var isPartOfGroup;
     $.getJSON(uri)
            .done(function (data) {
                for (var i = 0; i < data.length; i++) {
-                   isPartOfGroup = checkGroupName(groupName);
-                   if(isPartOfGroup){
-                       if (data[i].name.localeCompare(mapName) == 0) {
+                       if ((data[i].name.localeCompare(mapName) == 0) && (data[i].groupname.localeCompare(groupName) == 0)) {
                            mapElement = data[i];
                            for (var j = 0; j < mapElement.shapes.length; j++) {
                                if (mapElement.shapes[j].type.localeCompare('Polygon') == 0) {
@@ -868,7 +865,6 @@ function drawMap(mapName, isDuplicate, groupName) {
                            }
                        }
                    }
-               }
            });
 }
 
