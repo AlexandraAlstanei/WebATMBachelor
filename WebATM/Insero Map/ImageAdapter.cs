@@ -38,15 +38,15 @@ namespace WebATM.Insero_Map
                     {
                         continue;
                     }
-                    
+
                     if (line.StartsWith("ATB"))
                     {
                         var lineParts = line.Split(' ');
                         foreach (var linePart in lineParts)
-                        { 
+                        {
                             if (linePart.StartsWith("COL"))
                             {
-                                color = new List<String>(); 
+                                color = new List<String>();
                                 var linePartParts = linePart.Split('=');
                                 try
                                 {
@@ -54,7 +54,7 @@ namespace WebATM.Insero_Map
                                     var R = Convert.ToInt32(colorParted[0]);
                                     var G = Convert.ToInt32(colorParted[1]);
                                     var B = Convert.ToInt32(colorParted[2]);
-                                    
+
                                     var colorObject = Color.FromArgb(255, R, G, B);
                                     var hexColor = HexConverter(colorObject);
                                     if (hexColor != null)
@@ -95,10 +95,10 @@ namespace WebATM.Insero_Map
                         Coordinates points = new Coordinates();
                         var coord = lineParts[1].Split('N');
                         var latParts = coord[1].Split(',');
-                        var divider = createDivider(latParts[0].Length-3);
-                        points.Latitude = (Convert.ToDouble(latParts[0]))/divider;
+                        var divider = createDivider(latParts[0].Length - 3);
+                        points.Latitude = (Convert.ToDouble(latParts[0])) / divider;
                         var longParts = latParts[1].Split('E');
-                        points.Longitude = (Convert.ToDouble(longParts[1]))/ createDivider(longParts[1].Length - 3); 
+                        points.Longitude = (Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3);
                         polygon.coordinates.Add(points);
                         currentPolygon = polygon;
                     }
@@ -198,10 +198,10 @@ namespace WebATM.Insero_Map
                             if (linePart.StartsWith("C") && !linePart.StartsWith("CIR"))
                             {
                                 var linePartParts = linePart.Split('#');
-                                    Coordinates points = new Coordinates();
-                                    points.Latitude = Convert.ToDouble(linePartParts[1]);
-                                    points.Longitude = Convert.ToDouble(lineParts[2]);
-                                    circle.centerCoordinates.Add(points);                              
+                                Coordinates points = new Coordinates();
+                                points.Latitude = Convert.ToDouble(linePartParts[1]);
+                                points.Longitude = Convert.ToDouble(lineParts[2]);
+                                circle.centerCoordinates.Add(points);
                             }
                             else if (linePart.StartsWith("R"))
                             {
@@ -217,18 +217,34 @@ namespace WebATM.Insero_Map
                                 circle.Radius = radius;
                             }
                         }
-                            circle.type = "Circle";
+                        circle.type = "Circle";
                         listOfShapes.Add(circle);
-                    }else if (line.StartsWith("TEXT"))
-                        {
+                    }
+                    else if (line.StartsWith("TEXT"))
+                    {
                         var text = new Text();
                         text.Color = color;
                         var lineParts = line.Split(' ');
                         foreach (var linePart in lineParts)
                         {
-
-                        }
-                        }
+                            if (linePart.StartsWith("POS"))
+                            {
+                                var linePartParts = linePart.Split('#');
+                                Coordinates points = new Coordinates();
+                                points.Latitude = Convert.ToDouble(linePartParts[1]);
+                                points.Longitude = Convert.ToDouble(lineParts[2]);
+                                text.coordinates.Add(points);
+                            }
+                            if (linePart.StartsWith("["))
+                            {
+                                var linePartParts = linePart.Split('[');
+                                var txt = linePartParts[1].Split(']');
+                                text.textString = txt[0];
+                            }
+                            }
+                        text.type = "Text";
+                        listOfShapes.Add(text);
+                    }
                 }
             }
 

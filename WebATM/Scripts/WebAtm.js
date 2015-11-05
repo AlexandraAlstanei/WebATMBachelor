@@ -8,6 +8,8 @@ var markerLatLng;
 var infowindow;
 var iconImage;
 var success = false;
+var slideLeftMaps;
+var slideLeftDetails;
 
 function initMap() {
     //Initialize google maps component
@@ -42,20 +44,34 @@ function initMap() {
     planeControlDiv.index = 2;
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(planeControlDiv);
 
-    var slideLeft = new Menu({
+    slideLeftDetails = new Menu({
         wrapper: '#o-wrapper',
         type: 'slide-left',
         menuOpenerClass: '.c-button',
         maskId: '#c-mask'
     });
 
-    var slideLeftBtn = document.querySelector('#c-button--slide-left');
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(slideLeftBtn);
-
-    slideLeftBtn.addEventListener('click', function (e) {
-        e.preventDefault;
-        slideLeft.open();
+    slideLeftMaps = new Menu({
+        wrapper: '#o-wrapper',
+        type: 'slide-left',
+        menuOpenerClass: '.c-button',
+        maskId: '#c-mask'
     });
+
+    //Button control for plane mode
+    var mapControlDiv = document.createElement('div');
+    var mapControl = new MapControl(mapControlDiv, map);
+
+    mapControlDiv.index = 2;
+    //var slideLeftBtn = document.querySelector('#c-button--slide-left');
+    //map.controls[google.maps.ControlPosition.TOP_CENTER].push(slideLeftBtn);
+
+    map.controls[google.maps.ControlPosition.TOP_CENTER].push(mapControlDiv);
+
+    //slideLeftBtn.addEventListener('click', function (e) {
+    //    e.preventDefault;
+    //    slideLeft.open();
+    //});
 
     //get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
@@ -170,6 +186,7 @@ function createMarker(markerLatLng, id) {
 
 function addClickHandler(pathMarker) {
     google.maps.event.addListener(pathMarker, 'click', function () {
+
     });
 }
 
@@ -238,6 +255,36 @@ function PlaneControl(planeControlDiv, map) {
         aviationMode = false;
         clearAllMarkers();
         getDataAndDisplayOnMap();
+    });
+}
+
+function MapControl(mapControlDiv, map) {
+
+    // Set CSS for the control border.
+    var mapControlUI = document.createElement('div');
+    mapControlUI.style.backgroundColor = '#fff';
+    mapControlUI.style.border = '2px solid #fff';
+    mapControlUI.style.borderRadius = '3px';
+    mapControlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+    mapControlUI.style.cursor = 'pointer';
+    mapControlUI.style.textAlign = 'center';
+    mapControlUI.title = 'Click to add Insero maps';
+    mapControlDiv.appendChild(mapControlUI);
+
+    // Set CSS for the control interior.
+    var mapControlText = document.createElement('div');
+    mapControlText.style.color = 'rgb(25,25,25)';
+    mapControlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+    mapControlText.style.fontSize = '12px';
+    mapControlText.style.lineHeight = '30px';
+    mapControlText.style.paddingLeft = '5px';
+    mapControlText.style.paddingRight = '5px';
+    mapControlText.innerHTML = 'Insero maps';
+    mapControlUI.appendChild(mapControlText);
+
+    mapControlUI.addEventListener('click', function (e) {
+        e.preventDefault;
+        slideLeftMaps.open();
     });
 }
 
@@ -843,72 +890,64 @@ function drawMap(mapName, groupName) {
     $.getJSON(uri)
            .done(function (data) {
                for (var i = 0; i < data.length; i++) {
-                       if ((data[i].name.localeCompare(mapName) == 0) && (data[i].groupname.localeCompare(groupName) == 0)) {
-                           mapElement = data[i];
-                           for (var j = 0; j < mapElement.shapes.length; j++) {
-                               if (mapElement.shapes[j].type.localeCompare('Polygon') == 0) {
-                                   var color = mapElement.shapes[j].Color;
-                                   var pathCoordinates = [];
-                                   for (var m = 0; m < mapElement.shapes[j].coordinates.length; m++) {
-                                       var coord = { lat: mapElement.shapes[j].coordinates[m].Latitude, lng: mapElement.shapes[j].coordinates[m].Longitude };
-                                       pathCoordinates.push(coord);
-                                   }
-                                   addPolygon(color, pathCoordinates);
-                               } else if (mapElement.shapes[j].type.localeCompare('Polyline') == 0) {
-
-                               } else if (mapElement.shapes[j].type.localeCompare('Circle') == 0) {
-                                   var color = mapElement.shapes[j].Color;
-                                   var center = { lat: mapElement.shapes[j].centerCoordinates[0].Latitude, lng: mapElement.shapes[j].centerCoordinates[0].Longitude };
-                                   var r = mapElement.shapes[j].Radius;
-                                   addCircle(color, center, r);
+                   if ((data[i].name.localeCompare(mapName) == 0) && (data[i].groupname.localeCompare(groupName) == 0)) {
+                       mapElement = data[i];
+                       for (var j = 0; j < mapElement.shapes.length; j++) {
+                           if (mapElement.shapes[j].type.localeCompare('Polygon') == 0) {
+                               var color = mapElement.shapes[j].Color;
+                               var pathCoordinates = [];
+                               for (var m = 0; m < mapElement.shapes[j].coordinates.length; m++) {
+                                   var coord = { lat: mapElement.shapes[j].coordinates[m].Latitude, lng: mapElement.shapes[j].coordinates[m].Longitude };
+                                   pathCoordinates.push(coord);
                                }
-                           }
-                       }
-                   }
-           });
-}
+                               addPolygon(color, pathCoordinates);
+                           } else if (mapElement.shapes[j].type.localeCompare('Polyline') == 0) {
 
-function checkGroupName(groupName) {
-    var uri = 'api/webatm/ReadMapElements';
-    //make AJAX call that returns the data in JSON format
-    var isPartOfTheGroup = false;
-    $.getJSON(uri)
-           .done(function (data) {
-               for (var i = 0; i < data.length; i++) {
-                   if (data[i].groupname.localeCompare(groupName) == 0) {
-                       isPartOfTheGroup = true;
+                           } else if (mapElement.shapes[j].type.localeCompare('Circle') == 0) {
+                               var color = mapElement.shapes[j].Color;
+                               var center = { lat: mapElement.shapes[j].centerCoordinates[0].Latitude, lng: mapElement.shapes[j].centerCoordinates[0].Longitude };
+                               var r = mapElement.shapes[j].Radius;
+                               addCircle(color, center, r);
+                           }
+                           //else if (mapElement.shapes[j].type.localeCompare('Text') == 0) {
+                           //    var color = mapElement.shapes[j].Color;
+                           //    var textPosition = { lat: mapElement.shapes[j].coordinates[0].Latitude, lng: mapElement.shapes[j].coordinates[0].Longitude };
+                           //    var text = mapElement.shapes[j].textString;
+                           //    addText(color, text, textPosition);
+                           //}
+                       }
                    }
                }
            });
 }
 
 function addCircle(color, center, r) {
-    var uri = 'api/webatm/ReadMapElements';
-    //make AJAX call that returns the data in JSON format
-    $.getJSON(uri)
-           .done(function (data) {
-               // Add the circle for this city to the map.
-               var cityCircle = new google.maps.Circle({
-                   strokeColor: color,
-                   map: map,
-                   center: center,
-                   radius: r * 10000,
-                   fillOpacity: 0.0
-               });
-           });
+    // Add the circle to the map.
+    var cityCircle = new google.maps.Circle({
+        strokeColor: color,
+        map: map,
+        center: center,
+        radius: r * 10000,
+        fillOpacity: 0.0
+    });
 }
 
 function addPolygon(color, pathCoordinates) {
-    var uri = 'api/webatm/ReadMapElements';
-    //make AJAX call that returns the data in JSON format
-    $.getJSON(uri)
-           .done(function (data) {
-               // Add the circle for this city to the map.
-               var flightPath = new google.maps.Polyline({
-                   path: pathCoordinates,
-                   geodesic: true,
-                   strokeColor: color,
-                   map: map
-               });
-           });
+    // Add the polygon to the map.
+    var flightPath = new google.maps.Polyline({
+        path: pathCoordinates,
+        geodesic: true,
+        strokeColor: color,
+        map: map
+    });
+}
+
+function addText(color, text, textPosition) {
+    //Add the text to the map.
+    var mapLabel = new MapLabel({
+        text: text,
+        color: color,
+        position: textPosition,
+       // map: map
+    });
 }
