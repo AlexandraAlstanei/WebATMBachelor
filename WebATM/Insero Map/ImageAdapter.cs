@@ -66,6 +66,10 @@ namespace WebATM.Insero_Map
                                 {
                                     color.Add("#ffffff");
                                 }
+                            }else if (linePart.StartsWith("FILLSTYLE"))
+                            {
+                                var linePartParts = linePart.Split('=');
+
                             }
                         }
                     }
@@ -198,10 +202,8 @@ namespace WebATM.Insero_Map
                             if (linePart.StartsWith("C") && !linePart.StartsWith("CIR"))
                             {
                                 var linePartParts = linePart.Split('#');
-                                Coordinates points = new Coordinates();
-                                points.Latitude = Convert.ToDouble(linePartParts[1]);
-                                points.Longitude = Convert.ToDouble(lineParts[2]);
-                                circle.centerCoordinates.Add(points);
+                                circle.centerCoordinates.Latitude =  Convert.ToDouble(linePartParts[1]);
+                                circle.centerCoordinates.Longitude = Convert.ToDouble(lineParts[2]);
                             }
                             else if (linePart.StartsWith("R"))
                             {
@@ -214,7 +216,7 @@ namespace WebATM.Insero_Map
                                 }
                                 catch (Exception) { }
 
-                                circle.Radius = radius;
+                                circle.Radius = convertToMeters(radius);
                             }
                         }
                         circle.type = "Circle";
@@ -270,6 +272,12 @@ namespace WebATM.Insero_Map
         private static String HexConverter(System.Drawing.Color c)
         {
             return "#" + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2");
+        }
+
+        private static double convertToMeters(double radius)
+        {
+            double conversionFactor = 1852;
+            return radius * conversionFactor;
         }
     }
 }

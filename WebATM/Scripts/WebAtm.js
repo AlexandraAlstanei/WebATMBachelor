@@ -36,21 +36,14 @@ function initMap() {
     var centerControl = new AviationControl(centerControlDiv, map);
 
     centerControlDiv.index = 1;
-    map.controls[google.maps.ControlPosition.LEFT_TOP].push(centerControlDiv);
+    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(centerControlDiv);
 
     //Button control for plane mode
     var planeControlDiv = document.createElement('div');
     var planeControl = new PlaneControl(planeControlDiv, map);
 
     planeControlDiv.index = 2;
-    map.controls[google.maps.ControlPosition.LEFT_TOP].push(planeControlDiv);
-
-    slideLeftDetails = new Menu({
-        wrapper: '#wrapper',
-        type: 'slide-left',
-        menuOpenerClass: '.c-button',
-        maskId: '#c-mask'
-    });
+    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(planeControlDiv);
 
     slideLeftMaps = new Menu({
         wrapper: '#o-wrapper',
@@ -59,20 +52,13 @@ function initMap() {
         maskId: '#c-mask'
     });
 
-    //Button control for plane mode
-    var mapControlDiv = document.createElement('div');
-    var mapControl = new MapControl(mapControlDiv, map);
+    var slideLeftBtn = document.querySelector('#c-button--slide-left');
+    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(slideLeftBtn);
 
-    mapControlDiv.index = 2;
-    //var slideLeftBtn = document.querySelector('#c-button--slide-left');
-    //map.controls[google.maps.ControlPosition.TOP_CENTER].push(slideLeftBtn);
-
-    map.controls[google.maps.ControlPosition.TOP_CENTER].push(mapControlDiv);
-
-    //slideLeftBtn.addEventListener('click', function (e) {
-    //    e.preventDefault;
-    //    slideLeft.open();
-    //});
+    slideLeftBtn.addEventListener('click', function (e) {
+        e.preventDefault;
+        slideLeftMaps.open();
+    });
 
     //get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
@@ -201,8 +187,8 @@ function AviationControl(controlDiv, map) {
     controlUI.style.borderRadius = '3px';
     controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
     controlUI.style.cursor = 'pointer';
-    controlUI.style.marginBottom = '18px';
-    controlUI.style.marginBottom = '18px';
+  //  controlUI.style.marginBottom = '18px';
+   // controlUI.style.marginBottom = '18px';
     controlUI.style.textAlign = 'center';
     controlUI.title = 'Click to switch to aviation mode';
     controlDiv.appendChild(controlUI);
@@ -256,36 +242,6 @@ function PlaneControl(planeControlDiv, map) {
         aviationMode = false;
         clearAllMarkers();
         getDataAndDisplayOnMap();
-    });
-}
-
-function MapControl(mapControlDiv, map) {
-
-    // Set CSS for the control border.
-    var mapControlUI = document.createElement('div');
-    mapControlUI.style.backgroundColor = '#fff';
-    mapControlUI.style.border = '2px solid #fff';
-    mapControlUI.style.borderRadius = '3px';
-    mapControlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
-    mapControlUI.style.cursor = 'pointer';
-    mapControlUI.style.textAlign = 'center';
-    mapControlUI.title = 'Click to add Insero maps';
-    mapControlDiv.appendChild(mapControlUI);
-
-    // Set CSS for the control interior.
-    var mapControlText = document.createElement('div');
-    mapControlText.style.color = 'rgb(25,25,25)';
-    mapControlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-    mapControlText.style.fontSize = '12px';
-    mapControlText.style.lineHeight = '30px';
-    mapControlText.style.paddingLeft = '5px';
-    mapControlText.style.paddingRight = '5px';
-    mapControlText.innerHTML = 'Insero maps';
-    mapControlUI.appendChild(mapControlText);
-
-    mapControlUI.addEventListener('click', function (e) {
-        e.preventDefault;
-        slideLeftMaps.open();
     });
 }
 
@@ -1056,7 +1012,7 @@ function drawMap(mapName, groupName, id) {
 
                            } else if (mapElement.shapes[j].type.localeCompare('Circle') == 0) {
                                var color = mapElement.shapes[j].Color;
-                               var center = { lat: mapElement.shapes[j].centerCoordinates[0].Latitude, lng: mapElement.shapes[j].centerCoordinates[0].Longitude };
+                               var center = { lat: mapElement.shapes[j].centerCoordinates.Latitude, lng: mapElement.shapes[j].centerCoordinates.Longitude };
                                var r = mapElement.shapes[j].Radius;
                                addCircle(color, center, r, id);
                            }
@@ -1078,7 +1034,7 @@ function addCircle(color, center, r, id) {
         strokeColor: color,
         map: map,
         center: center,
-        radius: r * 10000,
+        radius: r, 
         fillOpacity: 0.0
     });
     circle.metadata = {
@@ -1089,26 +1045,17 @@ function addCircle(color, center, r, id) {
 
 function addPolygon(color, pathCoordinates, id) {
     // Add the polygon to the map.
-    var polygon = new google.maps.Polyline({
+    var polygon = new google.maps.Polygon({
         path: pathCoordinates,
         geodesic: true,
         strokeColor: color,
-        map: map
+        map: map,
+        fillOpacity: 0.0
     });
     polygon.metadata = {
         id: id
     };
     shapes.push(polygon)
-}
-
-function addText(color, text, textPosition) {
-    //Add the text to the map.
-    var mapLabel = new MapLabel({
-        text: text,
-        color: color,
-        position: textPosition,
-       // map: map
-    });
 }
 
 function removeShape(id) {
