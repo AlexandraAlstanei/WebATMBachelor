@@ -86,11 +86,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\WebAtm.css" />
+    <Content Include="Content\Icons\plane.png" />
+    <Content Include="Content\Icons\square.png" />
     <Content Include="Flights.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Home.html" />
+    <Content Include="Content\Icons\map.png" />
     <Content Include="Maps.xml" />
     <Content Include="Scripts\Menu.js" />
     <Content Include="Scripts\WebAtm.js" />

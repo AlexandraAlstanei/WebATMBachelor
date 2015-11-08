@@ -20,8 +20,8 @@ function initMap() {
         zoom: 8,
         mapTypeControl: true,
         mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-            position: google.maps.ControlPosition.RIGHT_TOP,
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            position: google.maps.ControlPosition.LEFT_BOTTOM,
             mapTypeIds: [
               google.maps.MapTypeId.ROADMAP,
               google.maps.MapTypeId.TERRAIN,
@@ -30,20 +30,6 @@ function initMap() {
             ]
         }
     });
-
-    //Button control for Aviation mode
-    var centerControlDiv = document.createElement('div');
-    var centerControl = new AviationControl(centerControlDiv, map);
-
-    centerControlDiv.index = 1;
-    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(centerControlDiv);
-
-    //Button control for plane mode
-    var planeControlDiv = document.createElement('div');
-    var planeControl = new PlaneControl(planeControlDiv, map);
-
-    planeControlDiv.index = 2;
-    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(planeControlDiv);
 
     slideLeftMaps = new Menu({
         wrapper: '#o-wrapper',
@@ -55,9 +41,29 @@ function initMap() {
     var slideLeftBtn = document.querySelector('#c-button--slide-left');
     map.controls[google.maps.ControlPosition.RIGHT_TOP].push(slideLeftBtn);
 
+    var planeControl = document.querySelector('#c-button-plane-control');
+    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(planeControl);
+
+    var squareControl = document.querySelector('#c-button-square-control');
+    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(squareControl);
+
     slideLeftBtn.addEventListener('click', function (e) {
         e.preventDefault;
         slideLeftMaps.open();
+    });
+
+    planeControl.addEventListener('click', function () {
+        planeMode = true;
+        aviationMode = false;
+        clearAllMarkers();
+        getDataAndDisplayOnMap();
+    });
+
+    squareControl.addEventListener('click', function () {
+        aviationMode = true;
+        planeMode = false;
+        clearAllMarkers();
+        getDataAndDisplayOnMap();
     });
 
     //get initial data from the WebAPI and display it on the map
@@ -71,7 +77,7 @@ function initMap() {
 function updateMap() {
     //this will repeat every 4 seconds 
     getDataAndDisplayOnMap();
-    document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
+   // document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
 }
 
 function getDataAndDisplayOnMap() {
@@ -94,7 +100,9 @@ function getDataAndDisplayOnMap() {
                                rotation = calculateDirection(data[i].Plots[0].Latitude, data[i].Plots[0].Longitude, data[i].Plots[1].Latitude, data[i].Plots[1].Longitude);
                            }
                            currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
-                           iconImage.rotation = rotation;
+                           if(planeMode){
+                               iconImage.rotation = rotation;
+                           }
                            currentlyDisplayedMarkers[m].setOptions({
                                icon: iconImage
                            });
@@ -112,7 +120,7 @@ function getDataAndDisplayOnMap() {
 
 function createMarker(markerLatLng, id) {
     if (planeMode) {
-        //display the marker on the map by using an svg image of a plane
+        // Display the marker on the map by using an svg image of a plane.
         iconImage = {
             path: 'M438.8,320.6c-3.6-3.1-147.2-107.2-147.2-107.2c-0.2-0.2-0.4-0.4-0.5-0.5c-5.5-5.6-5.2-10.4-5.6-18.8c0,0-0.9-69-2.2-92  S270,64,256,64c0,0,0,0,0,0s0,0,0,0c-14,0-25.9,15-27.2,38s-2.2,92-2.2,92c-0.4,8.4-0.1,13.2-5.6,18.8c-0.2,0.2-0.4,0.4-0.5,0.5  c0,0-143.5,104.1-147.2,107.2s-9.2,7.8-9.2,18.2c0,12.2,3.6,13.7,10.6,11.6c0,0,140.2-39.5,145.4-40.8s7.9,0.6,8.3,7.5  s0.8,46.4,0.9,51s-0.6,4.7-2.9,7.4l-32,40.8c-1.7,2-2.7,4.5-2.7,7.3c0,0,0,6.1,0,12.4s2.8,7.3,8.2,4.9s32.6-17.4,32.6-17.4  c0.7-0.3,4.6-1.9,6.4-1.9c4.2,0,8-0.1,8.8,6.2c1.3,11.4,4.9,20.3,8.5,20.3c0,0,0,0,0,0s0,0,0,0c3.6,0,7.2-8.9,8.5-20.3  c0.7-6.3,4.6-6.2,8.8-6.2c1.8,0,5.7,1.6,6.4,1.9c0,0,27.2,15,32.6,17.4s8.2,1.4,8.2-4.9s0-12.4,0-12.4c0-2.8-1-5.4-2.7-7.3l-32-40.8  c-2.3-2.7-2.9-2.9-2.9-7.4s0.5-44.1,0.9-51s3.1-8.8,8.3-7.5s145.4,40.8,145.4,40.8c7.1,2.1,10.6,0.6,10.6-11.6  C448,328.4,442.5,323.7,438.8,320.6z',
             fillColor: '#800000',
@@ -125,33 +133,13 @@ function createMarker(markerLatLng, id) {
         }
 
     } else {
+        // Display the marker on the map by using an svg image of a square.
         iconImage = {
             path: 'M265.54,0H13.259C5.939,0,0.003,5.936,0.003,13.256v252.287c0,7.32,5.936,13.256,13.256,13.256H265.54c7.318,0,13.256-5.936,13.256-13.256V13.255C278.796,5.935,272.86,0,265.54,0z M252.284,252.287H26.515V26.511h225.769V252.287z',
             strokeColor: '#800000',
             scale: 0.05,
             fillOpacity: 1,
             strokeWeight: 1
-        }
-        if (aviationMode) {
-            iconImage = {
-                path: 'M265.54,0H13.259C5.939,0,0.003,5.936,0.003,13.256v252.287c0,7.32,5.936,13.256,13.256,13.256H265.54c7.318,0,13.256-5.936,13.256-13.256V13.255C278.796,5.935,272.86,0,265.54,0z M252.284,252.287H26.515V26.511h225.769V252.287z',
-                strokeColor: '#800000',
-                scale: 0.05,
-                fillOpacity: 1,
-                strokeWeight: 1
-            }
-        } else {
-            // display the marker on the map by using an svg image of a plane
-            iconImage = {
-                path: 'M438.8,320.6c-3.6-3.1-147.2-107.2-147.2-107.2c-0.2-0.2-0.4-0.4-0.5-0.5c-5.5-5.6-5.2-10.4-5.6-18.8c0,0-0.9-69-2.2-92  S270,64,256,64c0,0,0,0,0,0s0,0,0,0c-14,0-25.9,15-27.2,38s-2.2,92-2.2,92c-0.4,8.4-0.1,13.2-5.6,18.8c-0.2,0.2-0.4,0.4-0.5,0.5  c0,0-143.5,104.1-147.2,107.2s-9.2,7.8-9.2,18.2c0,12.2,3.6,13.7,10.6,11.6c0,0,140.2-39.5,145.4-40.8s7.9,0.6,8.3,7.5  s0.8,46.4,0.9,51s-0.6,4.7-2.9,7.4l-32,40.8c-1.7,2-2.7,4.5-2.7,7.3c0,0,0,6.1,0,12.4s2.8,7.3,8.2,4.9s32.6-17.4,32.6-17.4  c0.7-0.3,4.6-1.9,6.4-1.9c4.2,0,8-0.1,8.8,6.2c1.3,11.4,4.9,20.3,8.5,20.3c0,0,0,0,0,0s0,0,0,0c3.6,0,7.2-8.9,8.5-20.3  c0.7-6.3,4.6-6.2,8.8-6.2c1.8,0,5.7,1.6,6.4,1.9c0,0,27.2,15,32.6,17.4s8.2,1.4,8.2-4.9s0-12.4,0-12.4c0-2.8-1-5.4-2.7-7.3l-32-40.8  c-2.3-2.7-2.9-2.9-2.9-7.4s0.5-44.1,0.9-51s3.1-8.8,8.3-7.5s145.4,40.8,145.4,40.8c7.1,2.1,10.6,0.6,10.6-11.6  C448,328.4,442.5,323.7,438.8,320.6z',
-                fillColor: '#800000',
-                strokeColor: '#FFFF99',
-                strokeOpacity: 0.8,
-                strokeWeight: 2,
-                scale: 0.07,
-                fillOpacity: 1,
-                rotation: 0
-            }
         }
     }
     //draw the marker and attach it to the map
@@ -173,75 +161,6 @@ function createMarker(markerLatLng, id) {
 
 function addClickHandler(pathMarker) {
     google.maps.event.addListener(pathMarker, 'click', function () {
-     //   slideLeftDetails.open();
-    });
-}
-
-//create the button to change the marker from a plane image to a square image
-function AviationControl(controlDiv, map) {
-
-    // Set CSS for the control border.
-    var controlUI = document.createElement('div');
-    controlUI.style.backgroundColor = '#fff';
-    controlUI.style.border = '2px solid #fff';
-    controlUI.style.borderRadius = '3px';
-    controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
-    controlUI.style.cursor = 'pointer';
-  //  controlUI.style.marginBottom = '18px';
-   // controlUI.style.marginBottom = '18px';
-    controlUI.style.textAlign = 'center';
-    controlUI.title = 'Click to switch to aviation mode';
-    controlDiv.appendChild(controlUI);
-
-    // Set CSS for the control interior.
-    var controlText = document.createElement('div');
-    controlText.style.color = 'rgb(25,25,25)';
-    controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-    controlText.style.fontSize = '12px';
-    controlText.style.lineHeight = '30px';
-    controlText.style.paddingLeft = '5px';
-    controlText.style.paddingRight = '5px';
-    controlText.innerHTML = 'Aviation mode';
-    controlUI.appendChild(controlText);
-
-    controlUI.addEventListener('click', function () {
-        aviationMode = true;
-        planeMode = false;
-        clearAllMarkers();
-        getDataAndDisplayOnMap();
-    });
-}
-
-//create the button to change the markers from a square image to a plane image
-function PlaneControl(planeControlDiv, map) {
-
-    // Set CSS for the control border.
-    var planeControlUI = document.createElement('div');
-    planeControlUI.style.backgroundColor = '#fff';
-    planeControlUI.style.border = '2px solid #fff';
-    planeControlUI.style.borderRadius = '3px';
-    planeControlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
-    planeControlUI.style.cursor = 'pointer';
-    planeControlUI.style.textAlign = 'center';
-    planeControlUI.title = 'Click to switch to plane mode';
-    planeControlDiv.appendChild(planeControlUI);
-
-    // Set CSS for the control interior.
-    var planeControlText = document.createElement('div');
-    planeControlText.style.color = 'rgb(25,25,25)';
-    planeControlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-    planeControlText.style.fontSize = '12px';
-    planeControlText.style.lineHeight = '30px';
-    planeControlText.style.paddingLeft = '5px';
-    planeControlText.style.paddingRight = '5px';
-    planeControlText.innerHTML = 'Plane mode';
-    planeControlUI.appendChild(planeControlText);
-
-    planeControlUI.addEventListener('click', function () {
-        planeMode = true;
-        aviationMode = false;
-        clearAllMarkers();
-        getDataAndDisplayOnMap();
     });
 }
 
@@ -1016,12 +935,6 @@ function drawMap(mapName, groupName, id) {
                                var r = mapElement.shapes[j].Radius;
                                addCircle(color, center, r, id);
                            }
-                           //else if (mapElement.shapes[j].type.localeCompare('Text') == 0) {
-                           //    var color = mapElement.shapes[j].Color;
-                           //    var textPosition = { lat: mapElement.shapes[j].coordinates[0].Latitude, lng: mapElement.shapes[j].coordinates[0].Longitude };
-                           //    var text = mapElement.shapes[j].textString;
-                           //    addText(color, text, textPosition);
-                           //}
                        }
                    }
                }
