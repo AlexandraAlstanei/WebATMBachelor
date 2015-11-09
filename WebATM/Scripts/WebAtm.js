@@ -178,17 +178,17 @@ function createMarker(markerLatLng, info) {
 
     var sContent = '<div id="iw-container">' +
                     '<div class="iw-content">' +
-                    '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' + '<p1>' + 'Departure airport: ' + adep + '</p1>' +
-         '<br />' +  '<p2>' + 'Aircraft Type: ' + aircraftType + '</p2>' +
-        '<br />' + '<p3>' + 'Callsign: ' + callSign + '</p3>' +
-        '<br />' + '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' + '<p4>' + 'Destination airport: ' + ades + '</p4>' +       
+                    '<div class="child_div">' +
+                    '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' +
+                    '</div>' +
+                    '<div class="secondChild_div">' +
+                    'Departure airport: ' + adep +
+                    '</div>' +
+         '<br />' + '<div class="child_div">' + 'Aircraft Type: ' + aircraftType + '</div>' +
+        '<br />' + '<div class="child_div">' + 'Callsign: ' + callSign + '</div>' +
+        '<div class="child_div">' + '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' + '</div>' + '<div class="secondChild_div">' + 'Destination airport: ' + ades + '</div>' +
     '</div>' +
   '</div>';
-
-    //var sContent = '<h1>' + 'Aircraft Type: ' + info.AircraftType + '</h1>' +
-    //    '<br />' + '<h2>' + 'Departure airport: ' + info.ADEP + '</h2>' +
-    //    '<br />' + '<h3>' + 'Destination airport: ' + info.ADES + '</h3>' +
-    //    '<br />' + '<h4>' + 'Callsign: ' + info.CallSign + '</h4>';
 
     //Draw the marker and attach it to the map
     marker = new google.maps.Marker({
