@@ -74,13 +74,13 @@ function initMap() {
     //Start a javascript timer that starts every 4 seconds
     //On each iteration, get data and change the position of the markers
     setInterval(updateMap, 4000);
-   // setInterval(removeFlights, 15000);
+    // setInterval(removeFlights, 15000);
 }
 
 function updateMap() {
     //This will repeat every 4 seconds 
     getDataAndDisplayOnMap();
-   //document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
+    //document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
 }
 
 function removeFlights() {
@@ -115,28 +115,29 @@ function getDataAndDisplayOnMap() {
                                rotation = calculateDirection(data[i].Plots[0].Latitude, data[i].Plots[0].Longitude, data[i].Plots[1].Latitude, data[i].Plots[1].Longitude);
                            }
                            currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
-                           if(planeMode){
+                           if (planeMode) {
                                iconImage.rotation = rotation;
                            }
                            currentlyDisplayedMarkers[m].setOptions({
                                icon: iconImage
                            });
                            found = true;
-                         //  numberOfUpdates++;
-                         //  currentlyDisplayedMarkers[m].metadata.numberOfUpdates = numberOfUpdates;
+                           //  numberOfUpdates++;
+                           //  currentlyDisplayedMarkers[m].metadata.numberOfUpdates = numberOfUpdates;
                        }
                    }
                    //If the marker is not shown already, show it
                    if (!found) {
                        var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
                        pathPositions = data[i].Plots;
-                       createMarker(LatLng, data[i].TrackNumber, data[i].AircraftType);
+                       var info = data[i];
+                       createMarker(LatLng, info);
                    }
                }
            });
 }
 
-function createMarker(markerLatLng, id, aircraftType) {
+function createMarker(markerLatLng, info) {
     if (planeMode) {
         // Display the marker on the map by using an svg image of a plane.
         iconImage = {
@@ -159,8 +160,35 @@ function createMarker(markerLatLng, id, aircraftType) {
             strokeWeight: 1
         }
     }
+    var aircraftType;
+    var adep;
+    var ades;
+    var callSign;
+    if (info.AircraftType == null || info.ADEP == null || info.ADES == null || info.CallSign == null) {
+        aircraftType = 'N/A';
+        adep = 'N/A';
+        ades = 'N/A';
+        callSign = 'N/A';
+    } else {
+        aircraftType = info.AircraftType;
+        adep = info.ADEP;
+        ades = info.ADES;
+        callSign = info.CallSign;
+    }
 
-    var sContent = '<h1>' + 'Aircraft Type: ' + aircraftType + '</h1>';
+    var sContent = '<div id="iw-container">' +
+                    '<div class="iw-content">' +
+                    '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' + '<p1>' + 'Departure airport: ' + adep + '</p1>' +
+         '<br />' +  '<p2>' + 'Aircraft Type: ' + aircraftType + '</p2>' +
+        '<br />' + '<p3>' + 'Callsign: ' + callSign + '</p3>' +
+        '<br />' + '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' + '<p4>' + 'Destination airport: ' + ades + '</p4>' +       
+    '</div>' +
+  '</div>';
+
+    //var sContent = '<h1>' + 'Aircraft Type: ' + info.AircraftType + '</h1>' +
+    //    '<br />' + '<h2>' + 'Departure airport: ' + info.ADEP + '</h2>' +
+    //    '<br />' + '<h3>' + 'Destination airport: ' + info.ADES + '</h3>' +
+    //    '<br />' + '<h4>' + 'Callsign: ' + info.CallSign + '</h4>';
 
     //Draw the marker and attach it to the map
     marker = new google.maps.Marker({
@@ -172,15 +200,13 @@ function createMarker(markerLatLng, id, aircraftType) {
     });
     //Add aditional properties to the marker
     marker.metadata = {
-        id: id,
+        id: info.TrackNumber,
         numberOfUpdates: 0
     };
 
     infowindow = new google.maps.InfoWindow({
         content: sContent
-    });
-    //var coord = { lat: mapElement.shapes[j].coordinates[m].Latitude, lng: mapElement.shapes[j].coordinates[m].Longitude };
-    //pathCoordinates.push(coord);
+    });
 
     //addClickHandler(marker);
     google.maps.event.addListener(marker, 'click', function () {
@@ -189,6 +215,9 @@ function createMarker(markerLatLng, id, aircraftType) {
 
     });
 
+    google.maps.event.addListener(map, 'click', function () {
+        infowindow.close();
+    });
 
     //Add the marker to the markers array
     currentlyDisplayedMarkers.push(marker);
@@ -1006,7 +1035,7 @@ function addCircle(color, center, r, id) {
         strokeColor: color,
         map: map,
         center: center,
-        radius: r, 
+        radius: r,
         fillOpacity: 0.0
     });
     circle.metadata = {

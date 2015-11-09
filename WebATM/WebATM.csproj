@@ -86,8 +86,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\WebAtm.css" />
+    <Content Include="Content\Icons\landing.png" />
     <Content Include="Content\Icons\plane.png" />
     <Content Include="Content\Icons\square.png" />
+    <Content Include="Content\Icons\takingoff.png" />
     <Content Include="Flights.xml">
       <SubType>Designer</SubType>
     </Content>
