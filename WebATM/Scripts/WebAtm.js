@@ -9,8 +9,10 @@ var infowindow;
 var iconImage;
 var success = false;
 var slideLeftMaps;
-var slideLeftDetails;
 var shapes = [];
+var numberOfUpdates = 0;
+var infoWindow = null;
+var pathPositions = [];
 
 function initMap() {
     //Initialize google maps component
@@ -66,24 +68,37 @@ function initMap() {
         getDataAndDisplayOnMap();
     });
 
-    //get initial data from the WebAPI and display it on the map
+    //Get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
 
-    //start a javascript timer that starts every 4 seconds
-    //on each iteration, get data and change the position of the markers
+    //Start a javascript timer that starts every 4 seconds
+    //On each iteration, get data and change the position of the markers
     setInterval(updateMap, 4000);
+   // setInterval(removeFlights, 15000);
 }
 
 function updateMap() {
-    //this will repeat every 4 seconds 
+    //This will repeat every 4 seconds 
     getDataAndDisplayOnMap();
-   // document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
+   //document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
+}
+
+function removeFlights() {
+    for (var i = 0; i < currentlyDisplayedMarkers.length; i++) {
+        if (currentlyDisplayedMarkers[i].metadata.numberOfUpdates != 3) {
+            currentlyDisplayedMarkers[i].setMap(null);
+            if (i != -1) {
+                currentlyDisplayedMarkers.splice(i, 1);
+            }
+            currentlyDisplayedMarkers[i].metadata.numberOfUpdates = 0;
+        }
+    }
 }
 
 function getDataAndDisplayOnMap() {
     var uri = 'api/webatm/GetAllFlights';
 
-    //make AJAX call that returns the data in JSON format
+    //Make AJAX call that returns the data in JSON format
     $.getJSON(uri)
            .done(function (data) {
                // On success, 'data' contains a list of flights.
@@ -91,9 +106,9 @@ function getDataAndDisplayOnMap() {
                for (var i = 0; i < data.length; i++) {
                    found = false;
                    for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
-                       //find the corresponding marker
+                       //Find the corresponding marker
                        if (currentlyDisplayedMarkers[m].metadata.id == data[i].TrackNumber) {
-                           //create the new coordinates and change the position of the markers
+                           //Create the new coordinates and change the position of the markers
                            var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
                            var rotation = 90;
                            if (data[i].Plots.length > 1) {
@@ -107,18 +122,21 @@ function getDataAndDisplayOnMap() {
                                icon: iconImage
                            });
                            found = true;
+                         //  numberOfUpdates++;
+                         //  currentlyDisplayedMarkers[m].metadata.numberOfUpdates = numberOfUpdates;
                        }
                    }
-                   //if the marker is not shown already, show it
+                   //If the marker is not shown already, show it
                    if (!found) {
                        var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
-                       createMarker(LatLng, data[i].TrackNumber);
+                       pathPositions = data[i].Plots;
+                       createMarker(LatLng, data[i].TrackNumber, data[i].AircraftType);
                    }
                }
            });
 }
 
-function createMarker(markerLatLng, id) {
+function createMarker(markerLatLng, id, aircraftType) {
     if (planeMode) {
         // Display the marker on the map by using an svg image of a plane.
         iconImage = {
@@ -131,7 +149,6 @@ function createMarker(markerLatLng, id) {
             fillOpacity: 1,
             rotation: 0
         }
-
     } else {
         // Display the marker on the map by using an svg image of a square.
         iconImage = {
@@ -142,29 +159,71 @@ function createMarker(markerLatLng, id) {
             strokeWeight: 1
         }
     }
-    //draw the marker and attach it to the map
+
+    var sContent = '<h1>' + 'Aircraft Type: ' + aircraftType + '</h1>';
+
+    //Draw the marker and attach it to the map
     marker = new google.maps.Marker({
         position: markerLatLng,
         map: map,
         icon: iconImage,
-        draggable: false
+        draggable: false,
+        info: sContent
     });
-    //add aditional properties to the marker
+    //Add aditional properties to the marker
     marker.metadata = {
-        id: id
+        id: id,
+        numberOfUpdates: 0
     };
-    addClickHandler(marker);
-    //add the marker to the markers array
+
+    infowindow = new google.maps.InfoWindow({
+        content: sContent
+    });
+    //var coord = { lat: mapElement.shapes[j].coordinates[m].Latitude, lng: mapElement.shapes[j].coordinates[m].Longitude };
+    //pathCoordinates.push(coord);
+
+    //addClickHandler(marker);
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.setContent(this.info);
+        infowindow.open(map, this);
+
+    });
+
+
+    //Add the marker to the markers array
     currentlyDisplayedMarkers.push(marker);
 
 }
 
-function addClickHandler(pathMarker) {
-    google.maps.event.addListener(pathMarker, 'click', function () {
+function addClickHandler(clickedMarker) {
+
+    var contentString = clickedMarker.metadata.id;
+    google.maps.event.addListener(clickedMarker, 'click', function () {
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        infowindow.open(map, marker);
     });
 }
 
-//generate coordinates for testing purposes
+function createPath(pastPositions) {
+    var lineSymbol = {
+        path: 'M 0,-1 0,1',
+        strokeOpacity: 1,
+        scale: 4
+    };
+    var line = new google.maps.Polyline({
+        path: pastPositions,
+        strokeOpacity: 0,
+        icons: [{
+            icon: lineSymbol,
+            offset: '0',
+            repeat: '20px'
+        }]
+    });
+}
+
+//Generate coordinates for testing purposes
 function generateCoordinate(coordinate) {
     var u = Math.random();
     newCoordinate = coordinate + u;
@@ -172,7 +231,7 @@ function generateCoordinate(coordinate) {
     return newCoordinate;
 }
 
-//clear all the markers on the map
+//Clear all the markers on the map
 function clearAllMarkers() {
     for (var i = 0; i < currentlyDisplayedMarkers.length; i++) {
         currentlyDisplayedMarkers[i].setMap(null);
@@ -181,7 +240,7 @@ function clearAllMarkers() {
     currentlyDisplayedMarkers = []; //empty array
 }
 
-//calculate the bearing using two pairs of coordinates
+//Calculate the bearing using two pairs of coordinates
 function calculateDirection(latitudeA, longitudeA, latitudeB, longitudeB) {
     var x, y, direction;
     x = Math.cos(latitudeB) * Math.sin(longitudeA - longitudeB);
@@ -972,6 +1031,7 @@ function addPolygon(color, pathCoordinates, id) {
 }
 
 function removeShape(id) {
+    // Remove the shape from the map.
     for (var i = 0; i < shapes.length; i++) {
         if (shapes[i].metadata.id == id) {
             shapes[i].setMap(null);
