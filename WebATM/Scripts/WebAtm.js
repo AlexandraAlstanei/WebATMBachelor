@@ -11,8 +11,6 @@ var success = false;
 var slideLeftMaps;
 var shapes = [];
 var numberOfUpdates = 0;
-var infoWindow = null;
-var pathPositions = [];
 
 function initMap() {
     //Initialize google maps component
@@ -129,7 +127,6 @@ function getDataAndDisplayOnMap() {
                    //If the marker is not shown already, show it
                    if (!found) {
                        var LatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude };
-                       pathPositions = data[i].Plots;
                        var info = data[i];
                        createMarker(LatLng, info);
                    }
@@ -212,10 +209,11 @@ function createMarker(markerLatLng, info) {
         content: sContent
     });
 
-    //addClickHandler(marker);
     google.maps.event.addListener(marker, 'click', function () {
+        infowindow.close();
         infowindow.setContent(this.info);
         infowindow.open(map, this);
+        createPath(info.Plots);
 
     });
 
@@ -240,19 +238,34 @@ function addClickHandler(clickedMarker) {
 }
 
 function createPath(pastPositions) {
-    var lineSymbol = {
-        path: 'M 0,-1 0,1',
-        strokeOpacity: 1,
-        scale: 4
-    };
-    var line = new google.maps.Polyline({
-        path: pastPositions,
-        strokeOpacity: 0,
-        icons: [{
-            icon: lineSymbol,
-            offset: '0',
-            repeat: '20px'
-        }]
+    var pathPositions = [];
+    for (var m = 0; m < pastPositions.length; m++) {
+        var coord = { lat: pastPositions[m].Latitude, lng: pastPositions[m].Longitude };
+        pathPositions.push(coord);
+    }
+    //var lineSymbol = {
+    //    path: 'M 0,-1 0,1',
+    //    strokeOpacity: 1,
+    //    scale: 4
+    //};
+    //var line = new google.maps.Polyline({
+    //    path: pathPositions,
+    //    strokeOpacity: 1,
+    //    icons: [{
+    //        icon: lineSymbol,
+    //        offset: '0',
+    //        repeat: '20px'
+    //    }],
+    //    map: map
+    //});
+    var polyline = new google.maps.Polyline({
+        path: pathPositions,
+        geodesic: true,
+        map: map,
+        fillOpacity: 0.0,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
     });
 }
 
