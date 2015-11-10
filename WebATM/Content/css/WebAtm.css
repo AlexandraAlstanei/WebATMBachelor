@@ -203,7 +203,6 @@ body.has-active-menu {
 }
 
 #iw-container {
-	margin-bottom: 10px;
     width: 220px;
 }
 #iw-container .iw-title {
@@ -222,14 +221,15 @@ body.has-active-menu {
 	font-weight: 400;
 	margin-right: 1px;
 	padding: 15px 5px 20px 15px;
-	max-height: 140px;
+	max-height: 170px;
     width: 200px;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
 
-#parent{
-width: 160px;
+#parent1{
+width: 200px;
+height: 170px;
 }
 
 .child_div{
@@ -238,6 +238,7 @@ width: 160px;
 
 .secondChild_div{
     float:left;
+    width:150px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;

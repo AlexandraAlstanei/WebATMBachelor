@@ -174,7 +174,8 @@ function createMarker(markerLatLng, info) {
 
     var sContent = '<div id="iw-container">' +
                     '<div class="iw-content">' +
-                    '<div class="child_div">' +
+                    '<div id="parent1">' +
+                    '<div class="child_div">' +                    
                         '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' +
                          '</div>' +
                     '<div class="secondChild_div">' +
@@ -186,7 +187,6 @@ function createMarker(markerLatLng, info) {
                     '<div class="secondChild_div">' +
                          'Destination airport: ' + ades +
                          '</div>' +
-                    '<div id="parent">' +
                     '<div class="child_div">' +
                          '<img src="Content/Icons/atype.png" alt="Plane type" height="32" width="32">' +
                             '</div>' +
@@ -235,17 +235,6 @@ function createMarker(markerLatLng, info) {
 
 }
 
-function addClickHandler(clickedMarker) {
-
-    var contentString = clickedMarker.metadata.id;
-    google.maps.event.addListener(clickedMarker, 'click', function () {
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
-        infowindow.open(map, marker);
-    });
-}
-
 function createPath(pastPositions) {
     var pathPositions = [];
     for (var m = 0; m < pastPositions.length; m++) {
@@ -259,7 +248,9 @@ function createPath(pastPositions) {
     //};
     //var line = new google.maps.Polyline({
     //    path: pathPositions,
-    //    strokeOpacity: 1,
+    //    strokeColor: '#FF0000',
+    //    strokeOpacity: 1.0,
+    //    strokeWeight: 2,
     //    icons: [{
     //        icon: lineSymbol,
     //        offset: '0',
@@ -271,7 +262,6 @@ function createPath(pastPositions) {
         path: pathPositions,
         geodesic: true,
         map: map,
-        fillOpacity: 0.0,
         strokeColor: '#FF0000',
         strokeOpacity: 1.0,
         strokeWeight: 2
@@ -310,7 +300,6 @@ function calculateDirection(latitudeA, longitudeA, latitudeB, longitudeB) {
     }
     return directionAngle;
 }
-
 
 function validate1() {
     var TMA_B = document.getElementById('TMA B');
