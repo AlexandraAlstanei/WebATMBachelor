@@ -100,26 +100,78 @@ namespace WebATM.Insero_Map
                         var coord = lineParts[1].Split('N');
                         var latParts = coord[1].Split(',');
                         var divider = createDivider(latParts[0].Length - 3);
-                        points.Latitude = (Convert.ToDouble(latParts[0])) / divider;
+                        var latDecimals = ((Convert.ToDouble(latParts[0])) / divider).ToString().Split('.');
+                        if (latDecimals.Length >1)
+                        {
+                            var latDecimalsParts = ((Convert.ToDouble(latDecimals[1])) / 100).ToString().Split('.');
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), Convert.ToDouble(latDecimalsParts[0]), Convert.ToDouble(latDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), 0, 0);
+                        }
                         var longParts = latParts[1].Split('E');
-                        points.Longitude = (Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3);
+                        var longDecimals = ((Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3)).ToString().Split('.');
+                        if (longDecimals.Length > 1)
+                        {
+                            var longDecimalsParts = ((Convert.ToDouble(longDecimals[1])) / 100).ToString().Split('.');
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), Convert.ToDouble(longDecimalsParts[0]), Convert.ToDouble(longDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), 0, 0);
+                        }
                         polygon.coordinates.Add(points);
                         currentPolygon = polygon;
                     }
-                    else if (line.StartsWith("C (") && line.Contains("POLYLINE")) // Start of polyline
+                    else if (line.StartsWith("C (#") && !(line.Contains("POLYGON"))) // Start of polyline
                     {
                         isPolyline = true;
 
                         var lineParts = line.Split(' ');
-
                         var polyline = new Polyline();
                         polyline.Color = color;
                         polyline.Style = lineStyle;
                         Coordinates points = new Coordinates();
-                        points.Latitude = Convert.ToDouble(lineParts[1]);
+                        var linePartsPart = lineParts[1].Split('#');
+                        points.Latitude = Convert.ToDouble(linePartsPart[1]);
                         points.Longitude = Convert.ToDouble(lineParts[2]);
+                        polyline.type = "Polyline";
                         polyline.coordinates.Add(points);
 
+                        currentPolyline = polyline;
+                    }
+                    else if (line.StartsWith("C (N") && !(line.Contains("POLYGON")))
+                    {
+                        isPolyline = true;
+                        var polyline = new Polyline();
+                        polyline.Color = color;
+                        polyline.Style = lineStyle;
+                        var lineParts = line.Split(' ');
+                        Coordinates points = new Coordinates();
+                        var coord = lineParts[1].Split('N');
+                        var latParts = coord[1].Split(',');
+                        var divider = createDivider(latParts[0].Length - 3);
+                        var latDecimals = ((Convert.ToDouble(latParts[0])) / divider).ToString().Split('.');
+                        if (latDecimals.Length > 1) { 
+                        var latDecimalsParts = ((Convert.ToDouble(latDecimals[1])) / 100).ToString().Split('.');
+                        points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), Convert.ToDouble(latDecimalsParts[0]), Convert.ToDouble(latDecimalsParts[1]));
+                        }
+                        else
+                        {
+                        points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), 0, 0);
+                        }
+                        var longParts = latParts[1].Split('E');
+                        var longDecimals = ((Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3)).ToString().Split('.');
+                        if (longDecimals.Length > 1) { 
+                        var longDecimalsParts = ((Convert.ToDouble(longDecimals[1])) / 100).ToString().Split('.');
+                        points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), Convert.ToDouble(longDecimalsParts[0]), Convert.ToDouble(longDecimalsParts[1]));
+                        }
+                        else
+                        {
+                         points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), 0, 0);
+                        }
+                        polyline.coordinates.Add(points);
                         currentPolyline = polyline;
                     }
                     else if (line.StartsWith("C +#") && isPolygon)
@@ -138,18 +190,67 @@ namespace WebATM.Insero_Map
                         var coord = lineParts[1].Split('N');
                         var latParts = coord[1].Split(',');
                         var divider = createDivider(latParts[0].Length - 3);
-                        points.Latitude = (Convert.ToDouble(latParts[0])) / divider;
+                        var latDecimals = ((Convert.ToDouble(latParts[0])) / divider).ToString().Split('.');
+                        if (latDecimals.Length > 1)
+                        {
+                            var latDecimalsParts = ((Convert.ToDouble(latDecimals[1])) / 100).ToString().Split('.');
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), Convert.ToDouble(latDecimalsParts[0]), Convert.ToDouble(latDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), 0, 0);
+                        }
                         var longParts = latParts[1].Split('E');
-                        points.Longitude = (Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3);
+                        var longDecimals = ((Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3)).ToString().Split('.');
+                        if (longDecimals.Length > 1)
+                        {
+                            var longDecimalsParts = ((Convert.ToDouble(longDecimals[1])) / 100).ToString().Split('.');
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), Convert.ToDouble(longDecimalsParts[0]), Convert.ToDouble(longDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), 0, 0);
+                        }
                         currentPolygon.coordinates.Add(points);
                     }
-                    else if (line.StartsWith("C +") && isPolyline)
+                    else if (line.StartsWith("C +#") && isPolyline)
                     {
                         var lineParts = line.Split(' ');
                         Coordinates points = new Coordinates();
-                        points.Latitude = Convert.ToDouble(lineParts[1]);
+                        var linePartsPart = lineParts[1].Split('#');
+                        points.Latitude = Convert.ToDouble(linePartsPart[1]);
                         points.Longitude = Convert.ToDouble(lineParts[2]);
                         currentPolyline.coordinates.Add(points); ;
+                    }
+                    else if (line.StartsWith("C +N") && isPolyline)
+                    {
+                        var lineParts = line.Split(' ');
+                        Coordinates points = new Coordinates();
+                        var coord = lineParts[1].Split('N');
+                        var latParts = coord[1].Split(',');
+                        var divider = createDivider(latParts[0].Length - 3);
+                        var latDecimals = ((Convert.ToDouble(latParts[0])) / divider).ToString().Split('.');
+                        if (latDecimals.Length > 1)
+                        {
+                            var latDecimalsParts = ((Convert.ToDouble(latDecimals[1])) / 100).ToString().Split('.');
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), Convert.ToDouble(latDecimalsParts[0]), Convert.ToDouble(latDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), 0, 0);
+                        }
+                        var longParts = latParts[1].Split('E');
+                        var longDecimals = ((Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3)).ToString().Split('.');
+                        if (longDecimals.Length > 1)
+                        {
+                            var longDecimalsParts = ((Convert.ToDouble(longDecimals[1])) / 100).ToString().Split('.');
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), Convert.ToDouble(longDecimalsParts[0]), Convert.ToDouble(longDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), 0, 0);
+                        }
+                        currentPolyline.coordinates.Add(points);
                     }
                     else if (line.StartsWith("C )#") && isPolygon)
                     {
@@ -172,23 +273,74 @@ namespace WebATM.Insero_Map
                         var coord = lineParts[1].Split('N');
                         var latParts = coord[1].Split(',');
                         var divider = createDivider(latParts[0].Length - 3);
-                        points.Latitude = (Convert.ToDouble(latParts[0])) / divider;
+                        var latDecimals = ((Convert.ToDouble(latParts[0])) / divider).ToString().Split('.');
+                        if (latDecimals.Length > 1)
+                        {
+                            var latDecimalsParts = ((Convert.ToDouble(latDecimals[1])) / 100).ToString().Split('.');
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), Convert.ToDouble(latDecimalsParts[0]), Convert.ToDouble(latDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), 0, 0);
+                        }
                         var longParts = latParts[1].Split('E');
-                        points.Longitude = (Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3);
+                        var longDecimals = ((Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3)).ToString().Split('.');
+                        if (longDecimals.Length > 1)
+                        {
+                            var longDecimalsParts = ((Convert.ToDouble(longDecimals[1])) / 100).ToString().Split('.');
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), Convert.ToDouble(longDecimalsParts[0]), Convert.ToDouble(longDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), 0, 0);
+                        }
                         currentPolygon.coordinates.Add(points);
 
                         isPolygon = false;
                     }
-                    else if (line.StartsWith("C )") && isPolyline)
+                    else if (line.StartsWith("C )#") && isPolyline)
                     {
                         var lineParts = line.Split(' ');
                         Coordinates points = new Coordinates();
-                        points.Latitude = Convert.ToDouble(lineParts[1]);
+                        var linePartsPart = lineParts[1].Split('#');
+                        points.Latitude = Convert.ToDouble(linePartsPart[1]);
                         points.Longitude = Convert.ToDouble(lineParts[2]);
                         currentPolyline.coordinates.Add(points);
                         currentPolyline.type = "Polyline";
                         listOfShapes.Add(currentPolyline);
                         currentPolyline = null;
+
+                        isPolyline = false;
+                    }
+                    else if (line.StartsWith("C )N") && isPolyline)
+                    {
+                        var lineParts = line.Split(' ');
+                        Coordinates points = new Coordinates();
+                        var coord = lineParts[1].Split('N');
+                        var latParts = coord[1].Split(',');
+                        var divider = createDivider(latParts[0].Length - 3);
+                        var latDecimals = ((Convert.ToDouble(latParts[0])) / divider).ToString().Split('.');
+                        if (latDecimals.Length > 1)
+                        {
+                            var latDecimalsParts = ((Convert.ToDouble(latDecimals[1])) / 100).ToString().Split('.');
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), Convert.ToDouble(latDecimalsParts[0]), Convert.ToDouble(latDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Latitude = ConvertDegreeAngleToDouble(Convert.ToDouble(latDecimals[0]), 0, 0);
+                        }
+                        var longParts = latParts[1].Split('E');
+                        var longDecimals = ((Convert.ToDouble(longParts[1])) / createDivider(longParts[1].Length - 3)).ToString().Split('.');
+                        if (longDecimals.Length > 1)
+                        {
+                            var longDecimalsParts = ((Convert.ToDouble(longDecimals[1])) / 100).ToString().Split('.');
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), Convert.ToDouble(longDecimalsParts[0]), Convert.ToDouble(longDecimalsParts[1]));
+                        }
+                        else
+                        {
+                            points.Longitude = ConvertDegreeAngleToDouble(Convert.ToDouble(longDecimals[0]), 0, 0);
+                        }
+                        currentPolyline.coordinates.Add(points);
 
                         isPolyline = false;
                     }
@@ -278,6 +430,11 @@ namespace WebATM.Insero_Map
         {
             double conversionFactor = 1852;
             return radius * conversionFactor;
+        }
+
+        private static double ConvertDegreeAngleToDouble(double degrees, double minutes, double seconds)
+        {
+            return degrees + (minutes / 60) + (seconds / 3600);
         }
     }
 }

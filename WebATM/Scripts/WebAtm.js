@@ -184,9 +184,13 @@ function createMarker(markerLatLng, info) {
                     '<div class="secondChild_div">' +
                     'Departure airport: ' + adep +
                     '</div>' +
-         '<br />' + '<div class="child_div">' + 'Aircraft Type: ' + aircraftType + '</div>' +
-        '<br />' + '<div class="child_div">' + 'Callsign: ' + callSign + '</div>' +
-        '<div class="child_div">' + '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' + '</div>' + '<div class="secondChild_div">' + 'Destination airport: ' + ades + '</div>' +
+                 '<div class="child_div">' + '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' + '</div>' + '<div class="secondChild_div">' + 'Destination airport: ' + ades + '</div>' +
+                 '<div id="parent">' +
+        '<div class="child_div">' + '<img src="Content/Icons/atype.png" alt="Plane type" height="32" width="32">' +
+                    '</div>' + '<div class="secondChild_div">' + 'Aircraft Type: ' + aircraftType + '</div>' +
+        '<div class="child_div">' + '<img src="Content/Icons/radarinfo.png" alt="Radar" height="32" width="32">' +
+                    '</div>' + '<div class="secondChild_div">' + 'Callsign: ' + callSign + '</div>' +
+                    '</div>' +
     '</div>' +
   '</div>';
 
@@ -1016,7 +1020,13 @@ function drawMap(mapName, groupName, id) {
                                }
                                addPolygon(color, pathCoordinates, id);
                            } else if (mapElement.shapes[j].type.localeCompare('Polyline') == 0) {
-
+                               var color = mapElement.shapes[j].Color;
+                               var pathCoordinates = [];
+                               for (var m = 0; m < mapElement.shapes[j].coordinates.length; m++) {
+                                   var coord = { lat: mapElement.shapes[j].coordinates[m].Latitude, lng: mapElement.shapes[j].coordinates[m].Longitude };
+                                   pathCoordinates.push(coord);
+                               }
+                               addPolyline(color, pathCoordinates, id);
                            } else if (mapElement.shapes[j].type.localeCompare('Circle') == 0) {
                                var color = mapElement.shapes[j].Color;
                                var center = { lat: mapElement.shapes[j].centerCoordinates.Latitude, lng: mapElement.shapes[j].centerCoordinates.Longitude };
@@ -1057,6 +1067,21 @@ function addPolygon(color, pathCoordinates, id) {
         id: id
     };
     shapes.push(polygon)
+}
+
+function addPolyline(color, pathCoordinates, id) {
+    // Add the polyline to the map.
+    var polyline = new google.maps.Polyline({
+        path: pathCoordinates,
+        geodesic: true,
+        strokeColor: color,
+        map: map,
+        fillOpacity: 0.0
+    });
+    polyline.metadata = {
+        id: id
+    };
+    shapes.push(polyline)
 }
 
 function removeShape(id) {

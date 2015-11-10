@@ -204,7 +204,7 @@ body.has-active-menu {
 
 #iw-container {
 	margin-bottom: 10px;
-    width: 300px;
+    width: 220px;
 }
 #iw-container .iw-title {
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -223,14 +223,17 @@ body.has-active-menu {
 	margin-right: 1px;
 	padding: 15px 5px 20px 15px;
 	max-height: 140px;
+    width: 200px;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
 
+#parent{
+width: 160px;
+}
+
 .child_div{
     float:left;
-    margin-right:1px;
-    border:1px solid red;
 }
 
 .secondChild_div{
@@ -238,7 +241,6 @@ body.has-active-menu {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
-    border:1px solid red;
 }
 
 
