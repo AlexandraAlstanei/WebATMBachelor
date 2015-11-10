@@ -14,15 +14,13 @@ namespace WebATM.Insero_Map
         public static List<Map> ReadMapElements()
         {
             List<Map> mapElements = null;
-
-            //try
-            //{
                 XDocument xml = null;
+            //Uses a relative path  @"~/Maps.xml".
                 using (StreamReader oReader = new StreamReader(System.Web.HttpContext.Current.Server.MapPath(@"~/Maps.xml"), Encoding.GetEncoding("ISO-8859-1")))
                 {
                     xml = XDocument.Load(oReader);
                 }
-                //Uses a relative path  @"~/Maps.xml".
+                
                 mapElements = (from e in xml.Root.DescendantsAndSelf("maps").Elements("map")
                                select new Map
                                {
@@ -40,13 +38,6 @@ namespace WebATM.Insero_Map
                 {
                     map.shapes = ImageAdapter.ConvertToShape(map.image);
                 }
-          //  }
-            //catch (Exception e)
-            //{
-            //  //  throw new Exception("File not found.");
-            //    throw new FileNotFoundException("File not found", e);
-
-            //}
             return mapElements;
         }
     }

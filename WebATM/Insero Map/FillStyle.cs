@@ -7,10 +7,11 @@ namespace WebATM.Insero_Map
 {
     public enum FillStyle
     {
+        Transparent,
         Vertical,
-        Horizontal, 
+        Horizontal,
         Fdiagonal,
         Bdiagonal,
-        Diagcross, 
+        Diagcross,
     }
 }

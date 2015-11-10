@@ -7,7 +7,6 @@ var found = false;
 var markerLatLng;
 var infowindow;
 var iconImage;
-var success = false;
 var slideLeftMaps;
 var shapes = [];
 var numberOfUpdates = 0;
@@ -176,20 +175,30 @@ function createMarker(markerLatLng, info) {
     var sContent = '<div id="iw-container">' +
                     '<div class="iw-content">' +
                     '<div class="child_div">' +
-                    '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' +
-                    '</div>' +
+                        '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' +
+                         '</div>' +
                     '<div class="secondChild_div">' +
-                    'Departure airport: ' + adep +
-                    '</div>' +
-                 '<div class="child_div">' + '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' + '</div>' + '<div class="secondChild_div">' + 'Destination airport: ' + ades + '</div>' +
-                 '<div id="parent">' +
-        '<div class="child_div">' + '<img src="Content/Icons/atype.png" alt="Plane type" height="32" width="32">' +
-                    '</div>' + '<div class="secondChild_div">' + 'Aircraft Type: ' + aircraftType + '</div>' +
-        '<div class="child_div">' + '<img src="Content/Icons/radarinfo.png" alt="Radar" height="32" width="32">' +
-                    '</div>' + '<div class="secondChild_div">' + 'Callsign: ' + callSign + '</div>' +
-                    '</div>' +
-    '</div>' +
-  '</div>';
+                         'Departure airport: ' + adep +
+                         '</div>' +
+                    '<div class="child_div">' +
+                         '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' +
+                         '</div>' +
+                    '<div class="secondChild_div">' +
+                         'Destination airport: ' + ades +
+                         '</div>' +
+                    '<div id="parent">' +
+                    '<div class="child_div">' +
+                         '<img src="Content/Icons/atype.png" alt="Plane type" height="32" width="32">' +
+                            '</div>' +
+                    '<div class="secondChild_div">' +
+                         'Aircraft Type: ' + aircraftType +
+                            '</div>' +
+                    '<div class="child_div">' +
+                         '<img src="Content/Icons/radarinfo.png" alt="Radar" height="32" width="32">' +
+                            '</div>' +
+                    '<div class="secondChild_div">' +
+                         'Callsign: ' + callSign +
+                            '</div>' + '</div>' + '</div>' + '</div>';
 
     //Draw the marker and attach it to the map
     marker = new google.maps.Marker({

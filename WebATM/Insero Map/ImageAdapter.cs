@@ -15,6 +15,7 @@ namespace WebATM.Insero_Map
             ColorConverter colorConverter = new ColorConverter();
             List<String> color = null;
             Style lineStyle = Style.Solid;
+            FillStyle fillStyle = new FillStyle();
 
             List<Shape> listOfShapes = new List<Shape>();
 
@@ -66,10 +67,51 @@ namespace WebATM.Insero_Map
                                 {
                                     color.Add("#ffffff");
                                 }
-                            }else if (linePart.StartsWith("FILLSTYLE"))
+                            }
+                            else if (linePart.StartsWith("FILLSTYLE"))
                             {
                                 var linePartParts = linePart.Split('=');
-
+                                if (linePartParts[1] != null)
+                                {
+                                    if (linePartParts[1].Equals("VERTICAL"))
+                                    {
+                                        fillStyle = FillStyle.Vertical;
+                                    }
+                                    else if (linePartParts[1].Equals("HORIZONTAL"))
+                                    {
+                                        fillStyle = FillStyle.Horizontal;
+                                    }
+                                    else if (linePartParts[1].Equals("FDIAGONAL"))
+                                    {
+                                        fillStyle = FillStyle.Fdiagonal;
+                                    }
+                                    else if (linePartParts[1].Equals("BDIAGONAL"))
+                                    {
+                                        fillStyle = FillStyle.Bdiagonal;
+                                    }
+                                    else if (linePartParts[1].Equals("DIAGCROSS"))
+                                    {
+                                        fillStyle = FillStyle.Diagcross;
+                                    }
+                                }
+                                else
+                                {
+                                    fillStyle = FillStyle.Transparent;
+                                }
+                            }
+                            else if (linePart.StartsWith("STYLE"))
+                            {
+                                var linePartParts = linePart.Split('=');
+                                if (linePartParts[1] != null)
+                                {
+                                    if (linePartParts[1].Equals("DASHDOTDOT"))
+                                    {
+                                        lineStyle = Style.Dashdotdot;
+                                    }else if (linePartParts[1].Equals("DOT"))
+                                    {
+                                        lineStyle = Style.Dot;
+                                    }
+                                }
                             }
                         }
                     }
@@ -81,6 +123,7 @@ namespace WebATM.Insero_Map
 
                         var polygon = new Polygon();
                         polygon.Color = color;
+                        polygon.FillStyle = fillStyle;
                         polygon.Style = lineStyle;
                         Coordinates points = new Coordinates();
                         var lat = lineParts[1].Split('#');
@@ -94,6 +137,7 @@ namespace WebATM.Insero_Map
                         isPolygon = true;
                         var polygon = new Polygon();
                         polygon.Color = color;
+                        polygon.FillStyle = fillStyle;
                         polygon.Style = lineStyle;
                         var lineParts = line.Split(' ');
                         Coordinates points = new Coordinates();
@@ -348,6 +392,8 @@ namespace WebATM.Insero_Map
                     {
                         var circle = new Circle();
                         circle.Color = color;
+                        circle.FillStyle = fillStyle;
+                        circle.Style = lineStyle;
                         var lineParts = line.Split(' ');
                         foreach (var linePart in lineParts)
                         {
