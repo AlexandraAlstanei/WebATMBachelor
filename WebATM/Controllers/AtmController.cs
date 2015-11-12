@@ -22,9 +22,12 @@ namespace WebATM.Controllers
     {
         private static AtmController atmControllerInstance;
         private static List<Flight> flightList = new List<Flight>();
+        public static List<CAT62Data> bufferList = new List<CAT62Data>();
+        public static Boolean systemStarted = false;
 
         private AtmController()
         {
+
         }
         public static AtmController Instance
         {
@@ -39,9 +42,24 @@ namespace WebATM.Controllers
 
         }
 
+        public static void startMethod()
+        {
+            if (!systemStarted)
+            {
+                Extractor extractor = new Extractor();
+                extractor.StartThread(IPAddress.Parse("192.168.87.101"), 2222);
+                systemStarted = true;
+            }
+        }
+
         public static List<Flight> GetAllFlights()
         {
-            List<CAT62Data> list = GetExtractedDataFromBroadCast();
+            List<CAT62Data> list = new List<CAT62Data>();
+            for (int i = 0; i < bufferList.Count; i++)
+            {
+                list.Add(bufferList[i]);
+            }
+            bufferList.Clear();
             foreach (var item in list)
             {
                 Flight flight = new Flight();
@@ -98,18 +116,18 @@ namespace WebATM.Controllers
                         }
                     }
                 }
-                  if (flightList.Exists(x => x.TrackNumber == flight.TrackNumber))
-                    {
-                         Flight foundFlight = flightList.Find(x => x.TrackNumber == flight.TrackNumber);
-                         foundFlight.Plots.Insert(0, plot);
-                    }
-                    else
-                    {
-                        flight.Plots.Add(plot);
-                        flightList.Add(flight);
-                    }
+                if (flightList.Exists(x => x.TrackNumber == flight.TrackNumber))
+                {
+                    Flight foundFlight = flightList.Find(x => x.TrackNumber == flight.TrackNumber);
+                    foundFlight.Plots.Insert(0, plot);
                 }
-            return flightList;           
+                else
+                {
+                    flight.Plots.Add(plot);
+                    flightList.Add(flight);
+                }
+            }
+            return flightList;
         }
 
 
@@ -135,21 +153,18 @@ namespace WebATM.Controllers
         //    return flights;
         //}
 
-        public static List<CAT62Data> GetExtractedDataFromBroadCast()
-        {
-            UdpClient receiver = new UdpClient(2222);
-            IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("192.168.87.101"), 2222);
-          //   IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.230.63"), 2222);
+        //public static List<CAT62Data> GetExtractedDataFromBroadCast()
+        //{
+        //    UdpClient receiver = new UdpClient(2222);
+        //    IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("192.168.87.101"), 2222);
+        //    //   IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.230.63"), 2222);
 
-            byte[] data = null;
-            data = receiver.Receive(ref endPoint);
-            receiver.Close();
+        //    byte[] data = null;
+        //    data = receiver.Receive(ref endPoint);
+        //    receiver.Close();
 
-            AsterixExtractor.model.AsterixExtractor extractor = new AsterixExtractor.model.AsterixExtractor();
-            return extractor.ExtractAndDecodeDataBlock(data);
-        }
-
-
-
+        //    AsterixExtractor.model.AsterixExtractor extractor = new AsterixExtractor.model.AsterixExtractor();
+        //    return extractor.ExtractAndDecodeDataBlock(data);
+        //}
     }
 }

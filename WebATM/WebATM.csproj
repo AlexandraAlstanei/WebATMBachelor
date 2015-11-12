@@ -117,6 +117,7 @@
     <Compile Include="Insero Map\Shape.cs" />
     <Compile Include="Insero Map\Style.cs" />
     <Compile Include="Insero Map\Text.cs" />
+    <Compile Include="Models\Extractor.cs" />
     <Compile Include="Models\Flight.cs" />
     <Compile Include="Models\Plot.cs" />
     <Compile Include="Models\XmlReader.cs" />

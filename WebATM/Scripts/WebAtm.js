@@ -67,6 +67,7 @@ function initMap() {
 
     //Get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
+    
 
     //Start a javascript timer that starts every 4 seconds
     //On each iteration, get data and change the position of the markers
@@ -91,6 +92,7 @@ function removeFlights() {
         }
     }
 }
+
 
 function getDataAndDisplayOnMap() {
     var uri = 'api/webatm/GetAllFlights';
@@ -160,26 +162,30 @@ function createMarker(markerLatLng, info) {
     var adep;
     var ades;
     var callSign;
-    if (info.AircraftType == null || info.ADEP == null || info.ADES == null || info.CallSign == null) {
+    var wtc;
+    if (info.AircraftType == null || info.ADEP == null || info.ADES == null || info.CallSign == null|| info.WTC == null) {
         aircraftType = 'N/A';
         adep = 'N/A';
         ades = 'N/A';
         callSign = 'N/A';
+        wtc = 'N/A'
+
     } else {
         aircraftType = info.AircraftType;
         adep = info.ADEP;
         ades = info.ADES;
         callSign = info.CallSign;
+        wtc = info.WTC;
     }
 
     var sContent = '<div id="iw-container">' +
                     '<div class="iw-content">' +
                     '<div id="parent1">' +
-                    '<div class="child_div">' +                    
+                    '<div class="child_div">' +
                         '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' +
                          '</div>' +
                     '<div class="secondChild_div">' +
-                         'Departure airport: ' + adep +
+                         'Departure airport: ' + adep + 
                          '</div>' +
                     '<div class="child_div">' +
                          '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' +
@@ -191,7 +197,7 @@ function createMarker(markerLatLng, info) {
                          '<img src="Content/Icons/atype.png" alt="Plane type" height="32" width="32">' +
                             '</div>' +
                     '<div class="secondChild_div">' +
-                         'Aircraft Type: ' + aircraftType +
+                         'Aircraft/ WTC: ' + aircraftType + '  '+ wtc +
                             '</div>' +
                     '<div class="child_div">' +
                          '<img src="Content/Icons/radarinfo.png" alt="Radar" height="32" width="32">' +
@@ -201,13 +207,15 @@ function createMarker(markerLatLng, info) {
                             '</div>' + '</div>' + '</div>' + '</div>';
 
     //Draw the marker and attach it to the map
-    marker = new google.maps.Marker({
+      marker = new google.maps.Marker({
         position: markerLatLng,
         map: map,
         icon: iconImage,
         draggable: false,
-        info: sContent
-    });
+        info: sContent,
+        callSign: callSign
+      });
+
     //Add aditional properties to the marker
     marker.metadata = {
         id: info.TrackNumber,
@@ -218,11 +226,24 @@ function createMarker(markerLatLng, info) {
         content: sContent
     });
 
+    var callSignWindow = new google.maps.InfoWindow({
+        content: callSign
+    });
+
+    google.maps.event.addListener(marker, 'mouseover', function () {       
+        callSignWindow.setContent(this.callSign);
+        callSignWindow.open(map, this);
+    });
+
+    google.maps.event.addListener(marker, 'mouseout', function () {
+        callSignWindow.close();
+    });
+
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.close();
         infowindow.setContent(this.info);
         infowindow.open(map, this);
-        createPath(info.Plots);
+       // createPath(info.Plots);
 
     });
 

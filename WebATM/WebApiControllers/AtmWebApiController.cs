@@ -19,7 +19,8 @@ namespace WebATM.WebApiControllers
       [Route( "GetAllFlights" )] 
       public IEnumerable<Flight> GetAllFlights()
       {
-         return AtmController.GetAllFlights();
+            AtmController.startMethod();
+            return AtmController.GetAllFlights();
       }
 
         [Route("ReadMapElements")]
