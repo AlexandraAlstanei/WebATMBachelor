@@ -9,7 +9,8 @@ var infowindow;
 var iconImage;
 var slideLeftMaps;
 var shapes = [];
-var numberOfUpdates = 0;
+var deletedFlights = 0;
+
 
 function initMap() {
     //Initialize google maps component
@@ -67,28 +68,25 @@ function initMap() {
 
     //Get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
-    
 
     //Start a javascript timer that starts every 4 seconds
     //On each iteration, get data and change the position of the markers
     setInterval(updateMap, 4000);
-    // setInterval(removeFlights, 15000);
+    setInterval(removeFlights, 15000);
 }
 
 function updateMap() {
     //This will repeat every 4 seconds 
     getDataAndDisplayOnMap();
-    //document.getElementById("debugwindow").innerHTML = currentlyDisplayedMarkers.length;
+    document.getElementById("flights_number").innerHTML = currentlyDisplayedMarkers.length + '/' + deletedFlights.toString();
 }
 
 function removeFlights() {
     for (var i = 0; i < currentlyDisplayedMarkers.length; i++) {
-        if (currentlyDisplayedMarkers[i].metadata.numberOfUpdates != 3) {
+        if (!currentlyDisplayedMarkers[i].metadata.updated) {
             currentlyDisplayedMarkers[i].setMap(null);
-            if (i != -1) {
-                currentlyDisplayedMarkers.splice(i, 1);
-            }
-            currentlyDisplayedMarkers[i].metadata.numberOfUpdates = 0;
+            deletedFlights++;
+            currentlyDisplayedMarkers[i].metadata.updated = false;
         }
     }
 }
@@ -112,17 +110,18 @@ function getDataAndDisplayOnMap() {
                            var rotation = 90;
                            if (data[i].Plots.length > 1) {
                                rotation = calculateDirection(data[i].Plots[0].Latitude, data[i].Plots[0].Longitude, data[i].Plots[1].Latitude, data[i].Plots[1].Longitude);
-                           }
-                           currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
+                           }                           
                            if (planeMode) {
                                iconImage.rotation = rotation;
                            }
                            currentlyDisplayedMarkers[m].setOptions({
                                icon: iconImage
                            });
+                           currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
+                           if (currentlyDisplayedMarkers[m].metadata.numberOfPlots < data[i].Plots.length) {
+                               currentlyDisplayedMarkers[m].metadata.updated = true;
+                           }
                            found = true;
-                           //  numberOfUpdates++;
-                           //  currentlyDisplayedMarkers[m].metadata.numberOfUpdates = numberOfUpdates;
                        }
                    }
                    //If the marker is not shown already, show it
@@ -163,7 +162,7 @@ function createMarker(markerLatLng, info) {
     var ades;
     var callSign;
     var wtc;
-    if (info.AircraftType == null || info.ADEP == null || info.ADES == null || info.CallSign == null|| info.WTC == null) {
+    if (info.AircraftType == null || info.ADEP == null || info.ADES == null || info.CallSign == null || info.WTC == null) {
         aircraftType = 'N/A';
         adep = 'N/A';
         ades = 'N/A';
@@ -185,7 +184,7 @@ function createMarker(markerLatLng, info) {
                         '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' +
                          '</div>' +
                     '<div class="secondChild_div">' +
-                         'Departure airport: ' + adep + 
+                         'Departure airport: ' + adep +
                          '</div>' +
                     '<div class="child_div">' +
                          '<img src="Content/Icons/landing.png" alt="Landing plane" height="32" width="32">' +
@@ -197,7 +196,7 @@ function createMarker(markerLatLng, info) {
                          '<img src="Content/Icons/atype.png" alt="Plane type" height="32" width="32">' +
                             '</div>' +
                     '<div class="secondChild_div">' +
-                         'Aircraft/ WTC: ' + aircraftType + '  '+ wtc +
+                         'Aircraft/ WTC: ' + aircraftType + '  ' + wtc +
                             '</div>' +
                     '<div class="child_div">' +
                          '<img src="Content/Icons/radarinfo.png" alt="Radar" height="32" width="32">' +
@@ -207,19 +206,20 @@ function createMarker(markerLatLng, info) {
                             '</div>' + '</div>' + '</div>' + '</div>';
 
     //Draw the marker and attach it to the map
-      marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
         position: markerLatLng,
         map: map,
         icon: iconImage,
         draggable: false,
         info: sContent,
         callSign: callSign
-      });
+    });
 
     //Add aditional properties to the marker
     marker.metadata = {
         id: info.TrackNumber,
-        numberOfUpdates: 0
+        numberOfPlots: info.Plots.length,
+        updated: false
     };
 
     infowindow = new google.maps.InfoWindow({
@@ -230,7 +230,7 @@ function createMarker(markerLatLng, info) {
         content: callSign
     });
 
-    google.maps.event.addListener(marker, 'mouseover', function () {       
+    google.maps.event.addListener(marker, 'mouseover', function () {
         callSignWindow.setContent(this.callSign);
         callSignWindow.open(map, this);
     });
@@ -243,7 +243,7 @@ function createMarker(markerLatLng, info) {
         infowindow.close();
         infowindow.setContent(this.info);
         infowindow.open(map, this);
-       // createPath(info.Plots);
+        // createPath(info.Plots);
 
     });
 
