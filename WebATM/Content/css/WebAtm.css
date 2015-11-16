@@ -10,18 +10,6 @@ html, body {
    height: 100%;
 }
 
-#debugwindow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-    height: 60px;
-    background-color: #232323;
-    color: white;
-    box-shadow: 0 0 5px rgba(0,0,0,.4);
-    z-index: 1;
-}
 #flights_number {
     position:absolute;
     bottom: 0;

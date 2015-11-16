@@ -87,6 +87,7 @@
   <ItemGroup>
     <Content Include="Content\css\WebAtm.css" />
     <Content Include="Content\Icons\atype.png" />
+    <Content Include="Content\Icons\cloud1.png" />
     <Content Include="Content\Icons\landing.png" />
     <Content Include="Content\Icons\plane.png" />
     <Content Include="Content\Icons\radarinfo.png" />

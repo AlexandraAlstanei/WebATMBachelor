@@ -110,7 +110,7 @@ function getDataAndDisplayOnMap() {
                            var rotation = 90;
                            if (data[i].Plots.length > 1) {
                                rotation = calculateDirection(data[i].Plots[0].Latitude, data[i].Plots[0].Longitude, data[i].Plots[1].Latitude, data[i].Plots[1].Longitude);
-                           }                           
+                           }
                            if (planeMode) {
                                iconImage.rotation = rotation;
                            }
@@ -162,24 +162,64 @@ function createMarker(markerLatLng, info) {
     var ades;
     var callSign;
     var wtc;
-    if (info.AircraftType == null || info.ADEP == null || info.ADES == null || info.CallSign == null || info.WTC == null) {
+    var altitude;
+    var speed;
+    if (info.AircraftType == null) {
         aircraftType = 'N/A';
-        adep = 'N/A';
-        ades = 'N/A';
-        callSign = 'N/A';
-        wtc = 'N/A'
-
     } else {
         aircraftType = info.AircraftType;
+    }
+    if (info.ADEP == null) {
+        adep = 'N/A';
+    } else {
         adep = info.ADEP;
+    }
+    if (info.ADES == null) {
+        ades = 'N/A';
+    } else {
         ades = info.ADES;
+    }
+    if (info.CallSign == null) {
+        callSign = 'N/A';
+    } else {
         callSign = info.CallSign;
+    }
+    if (info.WTC == null) {
+        wtc = 'N/A'
+    } else {
         wtc = info.WTC;
+    }
+    if (info.Plots.CurrentFlightLevel == null) {
+        altitude = 'N/A'
+    } else {
+        altitude = info.Plots.CurrentFlightLevel;
+    } if (info.Plots.Velocity == null) {
+        speed = 'N/A'
+    } else {
+        speed = info.Plots.Velocity;
     }
 
     var sContent = '<div id="iw-container">' +
                     '<div class="iw-content">' +
                     '<div id="parent1">' +
+                    '<div class="child_div">' +
+                         '<img src="Content/Icons/radarinfo.png" alt="Radar" height="32" width="32">' +
+                            '</div>' +
+                    '<div class="secondChild_div">' +
+                         'Callsign: ' + callSign +
+                            '</div>' +
+                    '<div class="child_div">' +
+                         '<img src="Content/Icons/cloud1.png" alt="Cloud" height="32" width="32">' +
+                            '</div>' +
+                    '<div class="secondChild_div">' +
+                         'Altitude Speed: ' + altitude + '  '+speed+
+                            '</div>' +
+                            '<div class="child_div">' +
+                         '<img src="Content/Icons/atype.png" alt="Plane type" height="32" width="32">' +
+                            '</div>' +
+                    '<div class="secondChild_div">' +
+                         'Aircraft/ WTC: ' + aircraftType + '  ' + wtc +
+                            '</div>' +
                     '<div class="child_div">' +
                         '<img src="Content/Icons/takingoff.png" alt="Take off plane" height="32" width="32">' +
                          '</div>' +
@@ -192,18 +232,7 @@ function createMarker(markerLatLng, info) {
                     '<div class="secondChild_div">' +
                          'Destination airport: ' + ades +
                          '</div>' +
-                    '<div class="child_div">' +
-                         '<img src="Content/Icons/atype.png" alt="Plane type" height="32" width="32">' +
-                            '</div>' +
-                    '<div class="secondChild_div">' +
-                         'Aircraft/ WTC: ' + aircraftType + '  ' + wtc +
-                            '</div>' +
-                    '<div class="child_div">' +
-                         '<img src="Content/Icons/radarinfo.png" alt="Radar" height="32" width="32">' +
-                            '</div>' +
-                    '<div class="secondChild_div">' +
-                         'Callsign: ' + callSign +
-                            '</div>' + '</div>' + '</div>' + '</div>';
+                     '</div>' + '</div>' + '</div>';
 
     //Draw the marker and attach it to the map
     marker = new google.maps.Marker({
