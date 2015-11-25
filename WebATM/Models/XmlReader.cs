@@ -5,14 +5,14 @@ using System.Web;
 using System.Xml.Linq;
 
 namespace WebATM.Models
+/// <summary>
+/// The Flights are being read from file in this class.
+/// The class uses LINQ technology for reading from file.
+/// </summary>
 {
-    /// <summary>
-    /// The flights are being read from file in this class.
-    /// The class uses Linq technology for reading all the files in the class.
-    /// </summary>
     public class XmlReader
     {
-        //the method returns a list of flights.
+        //The method returns a list of flights.
         public List<Flight> ReadFromFile()
         {
             List<Flight> flightList;
@@ -22,11 +22,11 @@ namespace WebATM.Models
                               Root.DescendantsAndSelf("flight")
                           select new Flight
                           {
-                             // TrackNumber = (string)e.Element("id"),
-                             // callSign = (string)e.Element("callsign"),
+                              TrackNumber = (int)e.Element("id"),
+                              CallSign = (string)e.Element("callsign"),
                               ADEP = (string)e.Element("adep"),
                               ADES = (string)e.Element("ades"),
-                             // ACType = (string)e.Element("actype"),
+                              AircraftType = (string)e.Element("actype"),
                               WTC = (string)e.Element("wtc"),
                               //Plots = (
                               //    from o in e.Elements("plots").Elements("plot")
@@ -35,8 +35,7 @@ namespace WebATM.Models
                               //        Latitude = (double)o.Element("latitude"),
                               //        Longitude = (double)o.Element("longitude"),
                               //        CurrentFlightLevel = (double)o.Element("altitude"),
-                              //       // speed = (double)o.Element("speed"),
-                              //       // ModeS = (String)o.Element("modescode"),
+                              //        Velocity = (double)o.Element("speed"),
                               //    })
                               //    .ToArray()
                           }).ToList();

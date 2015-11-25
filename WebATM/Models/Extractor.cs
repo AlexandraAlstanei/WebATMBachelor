@@ -12,6 +12,10 @@ using AsterixExtractor.geoCalculations;
 using WebATM.Controllers;
 
 namespace WebATM.Models
+/// <summary>
+/// The Extractor is a helper class that initiate a thread for receiving the data through Asterix.
+/// This class is public, so it can be accesible for the AtmController class.
+/// </summary>
 {
     public class Extractor
     {
@@ -25,7 +29,6 @@ namespace WebATM.Models
                 {
                     UdpClient receiver = new UdpClient(2222);
                     IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("192.168.87.101"), 2222);
-                    //   IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.230.63"), 2222);
 
                     byte[] data = null;
                     data = receiver.Receive(ref endPoint);

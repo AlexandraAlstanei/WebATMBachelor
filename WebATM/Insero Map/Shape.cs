@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Drawing;
 
 namespace WebATM.Insero_Map
+/// <summary>
+/// The Shape model is created in this class.
+/// It includes the common attributes for the Polygon, Polyline and Circle
+/// </summary>
 {
     public class Shape
     {

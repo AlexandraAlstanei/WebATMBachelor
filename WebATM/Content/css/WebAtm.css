@@ -6,10 +6,12 @@ html, body {
    font: Arial, Helvetica, sans-serif;
 }
 
+/*The map component*/
 #map {
    height: 100%;
 }
 
+/*The div displaying the number of flights*/
 #flights_number {
     position:absolute;
     bottom: 0;
@@ -161,6 +163,7 @@ body.has-active-menu {
   transform: translateX(0);
 }
 
+/*The button the opens the slide left menu*/
 #c-button--slide-left {
     background-color: white;
     border: 2px solid #fff;
@@ -176,6 +179,7 @@ body.has-active-menu {
     padding-right: 5px;
 }
 
+/*The button that changes the markers image to plane*/
 #c-button-plane-control {
     background-color: white;
     border: 2px solid #fff;
@@ -190,6 +194,7 @@ body.has-active-menu {
     padding-right: 5px;
 }
 
+/*The button that changes the markers image to square*/
 #c-button-square-control {
     background-color: white;
     border: 2px solid #fff;
@@ -203,6 +208,8 @@ body.has-active-menu {
     padding-left: 5px;
     padding-right: 5px;
 }
+
+/*Styles for the information window*/
 
 #iw-container {
     width: 220px;

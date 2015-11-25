@@ -31,6 +31,7 @@ function initMap() {
         }
     });
 
+    //Initialization of the slide left menu
     slideLeftMaps = new Menu({
         wrapper: '#o-wrapper',
         type: 'slide-left',
@@ -38,6 +39,7 @@ function initMap() {
         maskId: '#c-mask'
     });
 
+    //Initialization of the user controls
     var slideLeftBtn = document.querySelector('#c-button--slide-left');
     map.controls[google.maps.ControlPosition.RIGHT_TOP].push(slideLeftBtn);
 
@@ -47,6 +49,7 @@ function initMap() {
     var squareControl = document.querySelector('#c-button-square-control');
     map.controls[google.maps.ControlPosition.RIGHT_TOP].push(squareControl);
 
+    //Event listeners for the user controls.
     slideLeftBtn.addEventListener('click', function (e) {
         e.preventDefault;
         slideLeftMaps.open();
@@ -69,9 +72,9 @@ function initMap() {
     //Get initial data from the WebAPI and display it on the map
     getDataAndDisplayOnMap();
 
-    //Start a javascript timer that starts every 4 seconds
-    //On each iteration, get data and change the position of the markers
+    //Start a javascript timer that starts every 4 seconds for updating the map
     setInterval(updateMap, 4000);
+    //Start a javascript timer that starts every 15 seconds for updating the map
     setInterval(removeFlights, 15000);
 }
 
@@ -83,6 +86,7 @@ function updateMap() {
 
 function removeFlights() {
     for (var i = 0; i < currentlyDisplayedMarkers.length; i++) {
+        //If the currently displayed marker has not been updates in the past 15 seconds, delete it.
         if (!currentlyDisplayedMarkers[i].metadata.updated) {
             currentlyDisplayedMarkers[i].setMap(null);
             deletedFlights++;
@@ -99,7 +103,6 @@ function getDataAndDisplayOnMap() {
     $.getJSON(uri)
            .done(function (data) {
                // On success, 'data' contains a list of flights.
-               //  for each flight, draw the last plot on the map
                for (var i = 0; i < data.length; i++) {
                    found = false;
                    for (var m = 0; m < currentlyDisplayedMarkers.length; m++) {
@@ -108,6 +111,7 @@ function getDataAndDisplayOnMap() {
                            //Create the new coordinates and change the position of the markers
                            var updatedMarkerLatLng = { lat: data[i].Plots[0].Latitude, lng: data[i].Plots[0].Longitude }
                            var rotation = 90;
+                           //Set the new rotation of the svg. only if the plane mode is used
                            if (data[i].Plots.length > 1) {
                                rotation = calculateDirection(data[i].Plots[0].Latitude, data[i].Plots[0].Longitude, data[i].Plots[1].Latitude, data[i].Plots[1].Longitude);
                            }
@@ -117,6 +121,7 @@ function getDataAndDisplayOnMap() {
                            currentlyDisplayedMarkers[m].setOptions({
                                icon: iconImage
                            });
+                           //Set the marker metadata to updated.
                            currentlyDisplayedMarkers[m].setPosition(updatedMarkerLatLng);
                            if (currentlyDisplayedMarkers[m].metadata.numberOfPlots < data[i].Plots.length) {
                                currentlyDisplayedMarkers[m].metadata.updated = true;
@@ -157,6 +162,8 @@ function createMarker(markerLatLng, info) {
             strokeWeight: 1
         }
     }
+
+    //Create the information window for the marker
     var aircraftType;
     var adep;
     var ades;
@@ -251,6 +258,7 @@ function createMarker(markerLatLng, info) {
         updated: false
     };
 
+    //Set the content for the information window
     infowindow = new google.maps.InfoWindow({
         content: sContent
     });
@@ -259,6 +267,7 @@ function createMarker(markerLatLng, info) {
         content: callSign
     });
 
+    //Event listeners for the information windows
     google.maps.event.addListener(marker, 'mouseover', function () {
         callSignWindow.setContent(this.callSign);
         callSignWindow.open(map, this);
@@ -268,6 +277,8 @@ function createMarker(markerLatLng, info) {
         callSignWindow.close();
     });
 
+    //Event listener for the marker.
+    //When a marker is clicked the information window is open.
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.close();
         infowindow.setContent(this.info);
@@ -276,6 +287,7 @@ function createMarker(markerLatLng, info) {
 
     });
 
+    //When the user clicks outside the information window, it should close.
     google.maps.event.addListener(map, 'click', function () {
         infowindow.close();
     });
@@ -331,8 +343,7 @@ function clearAllMarkers() {
     for (var i = 0; i < currentlyDisplayedMarkers.length; i++) {
         currentlyDisplayedMarkers[i].setMap(null);
     }
-
-    currentlyDisplayedMarkers = []; //empty array
+    currentlyDisplayedMarkers = []; 
 }
 
 //Calculate the bearing using two pairs of coordinates
@@ -351,6 +362,7 @@ function calculateDirection(latitudeA, longitudeA, latitudeB, longitudeB) {
     return directionAngle;
 }
 
+// Validate functions for the checkboxes used for Insero Maps
 function validate1() {
     var TMA_B = document.getElementById('TMA B');
     if (TMA_B.checked) {
@@ -1064,11 +1076,12 @@ function validate80() {
 
 function drawMap(mapName, groupName, id) {
     var uri = 'api/webatm/ReadMapElements';
-    //make AJAX call that returns the data in JSON format
+    //Make AJAX call that returns the list of maps
     var mapElement;
     $.getJSON(uri)
-           .done(function (data) {
-               for (var i = 0; i < data.length; i++) {
+          .done(function (data) {
+              for (var i = 0; i < data.length; i++) {
+                  //Find the map in the list.
                    if ((data[i].name.localeCompare(mapName) == 0) && (data[i].groupname.localeCompare(groupName) == 0)) {
                        mapElement = data[i];
                        for (var j = 0; j < mapElement.shapes.length; j++) {

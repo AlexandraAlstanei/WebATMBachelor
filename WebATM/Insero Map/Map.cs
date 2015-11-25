@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace WebATM.Insero_Map
+/// <summary>
+/// The Map model is created in this class.
+/// This class is public, so it can be accesible for the MapReader class.
+/// </summary>
 {
     public class Map
     {

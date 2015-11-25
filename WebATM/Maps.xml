@@ -274,10 +274,10 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
-         EK D380 KALLESMÆRSK ØST
+         EK D380 KALLESMÃ†RSK Ã˜ST
       </name>
       <image>
          ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
@@ -454,7 +454,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          EK D301 Fanoe-TSA
@@ -710,7 +710,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Temp - UAV corridor
@@ -1058,10 +1058,10 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
-         EK D381 KALLESMÆSKT VEST
+         EK D381 KALLESMÃ†SKT VEST
       </name>
       <image>
          ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
@@ -1143,7 +1143,7 @@
    </map>
    <map>
       <groupname>
-         Vindmølleparker
+         VindmÃ¸lleparker
       </groupname>
       <name>
          Horns Rev A
@@ -1174,7 +1174,7 @@
    </map>
    <map>
       <groupname>
-         Vindmølleparker
+         VindmÃ¸lleparker
       </groupname>
       <name>
          Horns Rev B
@@ -1205,7 +1205,7 @@
    </map>
    <map>
       <groupname>
-         Vindmølleparker
+         VindmÃ¸lleparker
       </groupname>
       <name>
          EHHG H7
@@ -1563,10 +1563,10 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
-         EK D373 RØMØ VEST
+         EK D373 RÃ˜MÃ˜ VEST
       </name>
       <image>
          ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=HORIZONTAL
@@ -1630,13 +1630,13 @@
          Flyvepladser
       </groupname>
       <name>
-         Læsø
+         LÃ¦sÃ¸
       </name>
       <image>
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         SYM C=#57.2772222 11.0000833 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=LæSø
+         SYM C=#57.2772222 11.0000833 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=LÃ¦SÃ¸
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         TEXT POS=#57.2657955 11.0065348 SIZE=2 ALIGN=LT  [Læsø]
+         TEXT POS=#57.2657955 11.0065348 SIZE=2 ALIGN=LT  [LÃ¦sÃ¸]
       </image>
       <altitude>
       </altitude>
@@ -2101,7 +2101,7 @@
    </map>
    <map>
       <groupname>
-         Svæveflyve områder
+         SvÃ¦veflyve omrÃ¥der
       </groupname>
       <name>
          BOLHEDE WEST
@@ -2137,13 +2137,13 @@
          Flyvepladser
       </groupname>
       <name>
-         Grønholt
+         GrÃ¸nholt
       </name>
       <image>
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         SYM C=#55.9397222 12.3819444 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Grønholt
+         SYM C=#55.9397222 12.3819444 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=GrÃ¸nholt
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         TEXT POS=#55.9268202 12.3726355 SIZE=2 ALIGN=LT  [Grønholt]
+         TEXT POS=#55.9268202 12.3726355 SIZE=2 ALIGN=LT  [GrÃ¸nholt]
       </image>
       <altitude>
       </altitude>
@@ -2452,7 +2452,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Temp - Falcon Transit Corridor
@@ -2486,19 +2486,26 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          TEMP- UAS Hemmet
       </name>
       <image>
-         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
-         C (#55.6541667 8.5463889 POLYGON
-         C +#55.6566667 8.3000000
-         C +#55.6833333 8.1969444
-         C +#55.9466667 8.1388889
-         C +#55.9441667 8.3819444
-         C )#55.8233333 8.5477778
+         ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=FDIAGONAL
+
+         C (#55.6541667 8.5463889 POLYGON
+
+         C +#55.6566667 8.3000000
+
+         C +#55.6833333 8.1969444
+
+         C +#55.9466667 8.1388889
+
+         C +#55.9441667 8.3819444
+
+         C )#55.8233333 8.5477778
+
 
       </image>
       <altitude>
@@ -2521,7 +2528,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          EK R33 VEJERS
@@ -2615,10 +2622,10 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
-         EK R38 RØMØ ØST
+         EK R38 RÃ˜MÃ˜ Ã˜ST
       </name>
       <image>
          ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
@@ -2707,7 +2714,7 @@
    </map>
    <map>
       <groupname>
-         Svæveflyve områder
+         SvÃ¦veflyve omrÃ¥der
       </groupname>
       <name>
          BOLHEDE
@@ -2882,7 +2889,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Temp - Nymindegab
@@ -3158,7 +3165,7 @@
    </map>
    <map>
       <groupname>
-         Vindmølleparker
+         VindmÃ¸lleparker
       </groupname>
       <name>
          Dantysk
@@ -3251,7 +3258,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Temp - Falcon Live Aim Area
@@ -3285,7 +3292,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          UAS VARDE
@@ -3425,10 +3432,10 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
-         LILLE RØMØ - TEMP
+         LILLE RÃ˜MÃ˜ - TEMP
       </name>
       <image>
          ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=DIAGCROSS
@@ -3487,7 +3494,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          EK R34 BORDRUP
@@ -3771,11 +3778,11 @@
          VFR Rapportpunkter
       </groupname>
       <name>
-         Gørding
+         GÃ¸rding
       </name>
       <image>
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         SYM C=#55.4730556 8.8222222 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=Gørding
+         SYM C=#55.4730556 8.8222222 TYPE=Intersection  SIZE=7 SCALED=NO  NAME=GÃ¸rding
       </image>
       <altitude>
       </altitude>
@@ -4077,7 +4084,7 @@
    </map>
    <map>
       <groupname>
-         Svæveflyve områder
+         SvÃ¦veflyve omrÃ¥der
       </groupname>
       <name>
          VORBASSE
@@ -4232,7 +4239,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Temp - Nymindegab vest
@@ -4267,7 +4274,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Corridor Fanoe
@@ -4325,7 +4332,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Temp - REX Live Aim
@@ -4448,13 +4455,13 @@
          Flyvepladser
       </groupname>
       <name>
-         Samsø
+         SamsÃ¸
       </name>
       <image>
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         SYM C=#55.8898611 10.6137500 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Samsø
+         SYM C=#55.8898611 10.6137500 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=SamsÃ¸
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         TEXT POS=#55.8736418 10.6055546 SIZE=2 ALIGN=LT  [Samsø]
+         TEXT POS=#55.8736418 10.6055546 SIZE=2 ALIGN=LT  [SamsÃ¸]
       </image>
       <altitude>
       </altitude>
@@ -4501,7 +4508,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          EK R32 OKSBY
@@ -4540,13 +4547,13 @@
          Flyvepladser
       </groupname>
       <name>
-         Gørlev
+         GÃ¸rlev
       </name>
       <image>
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         SYM C=#55.5500000 11.2000000 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=Gørlev
+         SYM C=#55.5500000 11.2000000 TYPE=Aerodrome  SIZE=5 SCALED=NO  NAME=GÃ¸rlev
          ATB COL=255,255,255 STYLE=SOLID SIZE=1 FILLSTYLE=NULL
-         TEXT POS=#55.5407948 11.2148714 SIZE=2 ALIGN=LT  [Gørlev]
+         TEXT POS=#55.5407948 11.2148714 SIZE=2 ALIGN=LT  [GÃ¸rlev]
       </image>
       <altitude>
       </altitude>
@@ -4678,10 +4685,10 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
-         EK D379 NYMINDEGAB ØST
+         EK D379 NYMINDEGAB Ã˜ST
       </name>
       <image>
          ATB COL=255,255,0 STYLE=SOLID SIZE=1 FILLSTYLE=VERTICAL
@@ -4768,7 +4775,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Temp - drone
@@ -4803,7 +4810,7 @@
    </map>
    <map>
       <groupname>
-         Svæveflyve områder
+         SvÃ¦veflyve omrÃ¥der
       </groupname>
       <name>
          GESTEN
@@ -4920,7 +4927,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          EK R35 HENNE
@@ -5565,7 +5572,7 @@
    </map>
    <map>
       <groupname>
-         Skydeområder
+         SkydeomrÃ¥der
       </groupname>
       <name>
          Skallingen

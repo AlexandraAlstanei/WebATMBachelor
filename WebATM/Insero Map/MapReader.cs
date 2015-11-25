@@ -7,6 +7,10 @@ using System.Web;
 using System.Xml.Linq;
 
 namespace WebATM.Insero_Map
+/// <summary>
+/// The Maps are being read from file in this class.
+/// The class uses LINQ technology for reading from file.
+/// </summary>
 {
     public class MapReader
     {
