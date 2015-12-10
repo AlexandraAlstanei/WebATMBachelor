@@ -8,6 +8,8 @@ namespace WebATM.Models
 /// <summary>
 /// The Flights are being read from file in this class.
 /// The class uses LINQ technology for reading from file.
+/// The class has been used for reading the flights from XML. 
+/// Currently, the class is not used.
 /// </summary>
 {
     public class XmlReader

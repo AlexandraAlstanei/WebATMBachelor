@@ -1,47 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using WebATM.Models;
 using System.Net;
-using System.Net.Sockets;
 using AsterixExtractor.model;
-using System.IO;
 using AsterixExtractor.categories.CAT062;
 using AsterixExtractor.geoCalculations;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace WebATM.Controllers
 {
     /// <summary>
-    /// The business logic of the application will be placed in this class.
-    /// It was created as a singleton because we only need one instance. 
+    /// The business logic of the application will be placed in this class. 
     /// </summary>
     public class AtmController
     {
-        private static AtmController atmControllerInstance;
+        //This variable holds the list of flights.
         private static List<Flight> flightList = new List<Flight>();
+        //This variable holds the list of CAT62Data.
         public static List<CAT62Data> bufferList = new List<CAT62Data>();
+        //The flag holds the state of the system. 
         public static Boolean systemStarted = false;
 
-        private AtmController()
-        {
-
-        }
-        public static AtmController Instance
-        {
-            get
-            {
-                if (atmControllerInstance == null)
-                {
-                    atmControllerInstance = new AtmController();
-                }
-                return atmControllerInstance;
-            }
-
-        }
-
+        /*
+        * Starts the data broadcast when the system is started.
+        * and sets the flag to true.
+        * */
         public static void startMethod()
         {
             if (!systemStarted)
@@ -52,6 +34,10 @@ namespace WebATM.Controllers
             }
         }
 
+        /*
+        * Iterates through the CAT62Data elements and creates the list of flights.
+        * If the flights receive updates, it also creates the history of plots.
+        * */
         public static List<Flight> GetAllFlights()
         {
             List<CAT62Data> list = new List<CAT62Data>();
@@ -129,42 +115,5 @@ namespace WebATM.Controllers
             }
             return flightList;
         }
-
-
-        //private static bool isTrackId(CAT62Data item, int v)
-        //{
-        //    foreach (var element in item.CAT62DataItems)
-        //    {
-        //        if (element.ID == "040")
-        //        {
-        //            if (element.value != null)
-        //            {
-        //                return v == Convert.ToInt32(element.value);
-        //            }
-        //        }
-        //    }
-        //    return false;
-        //}
-
-        //public static IEnumerable<Flight> GetAllFlights()
-        //{
-        //    XmlReader s_XmlReader = new XmlReader();
-        //    var flights = s_XmlReader.ReadFromFile();
-        //    return flights;
-        //}
-
-        //public static List<CAT62Data> GetExtractedDataFromBroadCast()
-        //{
-        //    UdpClient receiver = new UdpClient(2222);
-        //    IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("192.168.87.101"), 2222);
-        //    //   IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse("10.52.230.63"), 2222);
-
-        //    byte[] data = null;
-        //    data = receiver.Receive(ref endPoint);
-        //    receiver.Close();
-
-        //    AsterixExtractor.model.AsterixExtractor extractor = new AsterixExtractor.model.AsterixExtractor();
-        //    return extractor.ExtractAndDecodeDataBlock(data);
-        //}
     }
 }

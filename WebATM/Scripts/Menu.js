@@ -1,4 +1,9 @@
-﻿(function (window) {
+﻿/// <summary>
+/// The class contains the definitions for the slide left menu. 
+/// More information about the class can be found here:
+/// http://callmenick.com/post/slide-and-push-menus-with-css3-transitions
+/// </summary>
+(function (window) {
 
     'use strict';
 

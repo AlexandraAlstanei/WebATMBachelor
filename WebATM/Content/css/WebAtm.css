@@ -72,8 +72,6 @@ html, body {
 /**
  * Body states.
  *
- * When a menu is active, we want to hide the overflows on the body to prevent
- * awkward document scrolling.
  */
 body.has-active-menu {
   overflow: hidden;
@@ -210,7 +208,6 @@ body.has-active-menu {
 }
 
 /*Styles for the information window*/
-
 #iw-container {
     width: 220px;
 }

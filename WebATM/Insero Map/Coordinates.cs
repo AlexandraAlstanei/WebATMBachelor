@@ -1,5 +1,8 @@
 ﻿
 namespace WebATM.Insero_Map
+/// <summary>
+/// The Coordinates are defined in this class
+/// </summary>
 {
     public class Coordinates
     {

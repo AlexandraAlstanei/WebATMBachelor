@@ -1,4 +1,8 @@
-﻿var map;
+﻿/// <summary>
+/// In this class the UI elements are created.
+/// </summary>
+
+var map;
 var currentlyDisplayedMarkers = [];
 var aviationMode = false;
 var planeMode = true;
@@ -21,7 +25,7 @@ function initMap() {
         mapTypeControl: true,
         mapTypeControlOptions: {
             style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-            position: google.maps.ControlPosition.LEFT_BOTTOM,
+            position: google.maps.ControlPosition.RIGHT_BOTTOM,
             mapTypeIds: [
               google.maps.MapTypeId.ROADMAP,
               google.maps.MapTypeId.TERRAIN,
@@ -297,39 +301,6 @@ function createMarker(markerLatLng, info) {
 
 }
 
-function createPath(pastPositions) {
-    var pathPositions = [];
-    for (var m = 0; m < pastPositions.length; m++) {
-        var coord = { lat: pastPositions[m].Latitude, lng: pastPositions[m].Longitude };
-        pathPositions.push(coord);
-    }
-    //var lineSymbol = {
-    //    path: 'M 0,-1 0,1',
-    //    strokeOpacity: 1,
-    //    scale: 4
-    //};
-    //var line = new google.maps.Polyline({
-    //    path: pathPositions,
-    //    strokeColor: '#FF0000',
-    //    strokeOpacity: 1.0,
-    //    strokeWeight: 2,
-    //    icons: [{
-    //        icon: lineSymbol,
-    //        offset: '0',
-    //        repeat: '20px'
-    //    }],
-    //    map: map
-    //});
-    var polyline = new google.maps.Polyline({
-        path: pathPositions,
-        geodesic: true,
-        map: map,
-        strokeColor: '#FF0000',
-        strokeOpacity: 1.0,
-        strokeWeight: 2
-    });
-}
-
 //Generate coordinates for testing purposes
 function generateCoordinate(coordinate) {
     var u = Math.random();
@@ -462,186 +433,6 @@ function validate11() {
     }
 }
 
-function validate12() {
-    var AREA = document.getElementById('AREA');
-    if (AREA.checked) {
-        drawMap('\n         AREA\n      ', '\n         EKSP\n      ', 12);
-    } else {
-        removeShape(12);
-    }
-}
-
-function validate13() {
-    var Anholt = document.getElementById('Anholt');
-    if (Anholt.checked) {
-        drawMap('\n         Anholt\n      ', '\n         Flyvepladser\n      ', 13);
-    } else {
-        removeShape(13);
-    }
-}
-
-function validate14() {
-    var Thisted = document.getElementById('Thisted');
-    if (Thisted.checked) {
-        drawMap('\n         Thisted\n      ', '\n         Flyvepladser\n      ', 14);
-    } else {
-        removeShape(14);
-    }
-}
-
-function validate15() {
-    var Endelave = document.getElementById('Endelave');
-    if (Endelave.checked) {
-        drawMap('\n         Endelave\n      ', '\n         Flyvepladser\n      ', 15);
-    } else {
-        removeShape(15);
-    }
-}
-
-function validate16() {
-    var Freerslev = document.getElementById('Freerslev');
-    if (Freerslev.checked) {
-        drawMap('\n         Freerslev\n      ', '\n         Flyvepladser\n      ', 16);
-    } else {
-        removeShape(16);
-    }
-}
-
-function validate17() {
-    var Læsø = document.getElementById('Læsø');
-    if (Læsø.checked) {
-        drawMap('\n         Læsø\n      ', '\n         Flyvepladser\n      ', 17);
-    } else {
-        removeShape(17);
-    }
-}
-
-function validate18() {
-    var Vamdrup = document.getElementById('Vamdrup');
-    if (Vamdrup.checked) {
-        drawMap('\n         Vamdrup\n      ', '\n         Flyvepladser\n      ', 18);
-    } else {
-        removeShape(18);
-    }
-}
-
-function validate19() {
-    var True = document.getElementById('True');
-    if (True.checked) {
-        drawMap('\n         True\n      ', '\n         Flyvepladser\n      ', 19);
-    } else {
-        removeShape(19);
-    }
-}
-
-function validate20() {
-    var Grønholt = document.getElementById('Grønholt');
-    if (Grønholt.checked) {
-        drawMap('\n         Grønholt\n      ', '\n         Flyvepladser\n      ', 20);
-    } else {
-        removeShape(20);
-    }
-}
-
-function validate21() {
-    var Haderslev = document.getElementById('Haderslev');
-    if (Haderslev.checked) {
-        drawMap('\n         Haderslev\n      ', '\n         Flyvepladser\n      ', 21);
-    } else {
-        removeShape(21);
-    }
-}
-
-function validate22() {
-    var Hadsund = document.getElementById('Hadsund');
-    if (Hadsund.checked) {
-        drawMap('\n         Hadsund\n      ', '\n         Flyvepladser\n      ', 22);
-    } else {
-        removeShape(22);
-    }
-}
-
-function validate23() {
-    var Varde = document.getElementById('Varde');
-    if (Varde.checked) {
-        drawMap('\n         Varde\n      ', '\n         Flyvepladser\n      ', 23);
-    } else {
-        removeShape(23);
-    }
-}
-
-function validate24() {
-    var Viborg = document.getElementById('Viborg');
-    if (Viborg.checked) {
-        drawMap('\n         Viborg\n      ', '\n         Flyvepladser\n      ', 24);
-    } else {
-        removeShape(24);
-    }
-}
-
-function validate25() {
-    var Holsted = document.getElementById('Holsted');
-    if (Holsted.checked) {
-        drawMap('\n         Holsted\n      ', '\n         Flyvepladser\n      ', 25);
-    } else {
-        removeShape(25);
-    }
-}
-
-function validate26() {
-    var Stauning = document.getElementById('Stauning');
-    if (Stauning.checked) {
-        drawMap('\n         Stauning\n      ', '\n         Flyvepladser\n      ', 26);
-    } else {
-        removeShape(26);
-    }
-}
-
-function validate27() {
-    var Grenaa = document.getElementById('Grenaa');
-    if (Grenaa.checked) {
-        drawMap('\n         Grenaa\n      ', '\n         Flyvepladser\n      ', 27);
-    } else {
-        removeShape(27);
-    }
-}
-
-function validate28() {
-    var Aars = document.getElementById('Aars');
-    if (Aars.checked) {
-        drawMap('\n         Aars\n      ', '\n         Flyvepladser\n      ', 28);
-    } else {
-        removeShape(28);
-    }
-}
-
-function validate29() {
-    var Samsø = document.getElementById('Samsø');
-    if (Samsø.checked) {
-        drawMap('\n         Samsø\n      ', '\n         Flyvepladser\n      ', 29);
-    } else {
-        removeShape(29);
-    }
-}
-
-function validate30() {
-    var Gørlev = document.getElementById('Gørlev');
-    if (Gørlev.checked) {
-        drawMap('\n         Gørlev\n      ', '\n         Flyvepladser\n      ', 30);
-    } else {
-        removeShape(30);
-    }
-}
-
-function validate31() {
-    var Skive = document.getElementById('Skive');
-    if (Skive.checked) {
-        drawMap('\n         Skive\n      ', '\n         Flyvepladser\n      ', 31);
-    } else {
-        removeShape(31);
-    }
-}
-
 function validate32() {
     var Vestkraft = document.getElementById('Vestkraft');
     if (Vestkraft.checked) {
@@ -678,86 +469,6 @@ function validate35() {
     }
 }
 
-function validate36() {
-    var AAL = document.getElementById('AAL');
-    if (AAL.checked) {
-        drawMap('\n         AAL\n      ', '\n         NAV AIDS\n      ', 36);
-    } else {
-        removeShape(36);
-    }
-}
-
-function validate37() {
-    var AMRAM = document.getElementById('AMRAM');
-    if (AMRAM.checked) {
-        drawMap('\n         AMRAM\n      ', '\n         RNAV\n      ', 37);
-    } else {
-        removeShape(37);
-    }
-}
-
-function validate38() {
-    var TEMP_FALCB = document.getElementById('TEMP-FALCB');
-    if (TEMP_FALCB.checked) {
-        drawMap('\n         TEMP-FALCB\n      ', '\n         RNAV\n      ', 38);
-    } else {
-        removeShape(38);
-    }
-}
-
-function validate39() {
-    var TEMP_FALCA = document.getElementById('TEMP-FALCA');
-    if (TEMP_FALCA.checked) {
-        drawMap('\n         TEMP-FALCA\n      ', '\n         RNAV\n      ', 39);
-    } else {
-        removeShape(39);
-    }
-}
-
-function validate40() {
-    var NEBUM = document.getElementById('NEBUM');
-    if (NEBUM.checked) {
-        drawMap('\n         NEBUM\n      ', '\n         RNAV\n      ', 40);
-    } else {
-        removeShape(40);
-    }
-}
-
-function validate41() {
-    var Temp_NORTH = document.getElementById('Temp - NORTH');
-    if (Temp_NORTH.checked) {
-        drawMap('\n         Temp - NORTH\n      ', '\n         RNAV\n      ', 41);
-    } else {
-        removeShape(41);
-    }
-}
-
-function validate42() {
-    var REXW = document.getElementById('REXW');
-    if (REXW.checked) {
-        drawMap('\n         REXW\n      ', '\n         RNAV\n      ', 42);
-    } else {
-        removeShape(42);
-    }
-}
-
-function validate43() {
-    var EPILO = document.getElementById('EPILO');
-    if (EPILO.checked) {
-        drawMap('\n         EPILO\n      ', '\n         RNAV\n      ', 43);
-    } else {
-        removeShape(43);
-    }
-}
-
-function validate44() {
-    var TEMP_BLAAV = document.getElementById('TEMP-BLAAV');
-    if (TEMP_BLAAV.checked) {
-        drawMap('\n         TEMP-BLAAV\n      ', '\n         RNAV\n      ', 44);
-    } else {
-        removeShape(44);
-    }
-}
 
 function validate45() {
     var DETOP = document.getElementById('DETOP');
@@ -768,37 +479,10 @@ function validate45() {
     }
 }
 
-function validate46() {
-    var DRONE = document.getElementById('DRONE');
-    if (DRONE.checked) {
-        drawMap('\n         DRONE\n      ', '\n         RNAV\n      ', 46);
-    } else {
-        removeShape(46);
-    }
-}
-
-function validate47() {
-    var NEBSA = document.getElementById('NEBSA');
-    if (NEBSA.checked) {
-        drawMap('\n         NEBSA\n      ', '\n         RNAV\n      ', 47);
-    } else {
-        removeShape(47);
-    }
-}
-
-function validate48() {
-    var TEMP_FALCC = document.getElementById('TEMP-FALCC');
-    if (TEMP_FALCC.checked) {
-        drawMap('\n         TEMP-FALCC\n      ', '\n         RNAV\n      ', 48);
-    } else {
-        removeShape(48);
-    }
-}
-
 function validate49() {
     var EK_D380_KALLESMÆRSK_ØST = document.getElementById('EK D380 KALLESMÆRSK ØST');
     if (EK_D380_KALLESMÆRSK_ØST.checked) {
-        drawMap('\n         EK D380 KALLESMÆRSK ØST\n      ', '\n         Skydeområder\n      ', 49);
+        drawMap('\n         EK D380 KALLESMÃ\u0086RSK Ã\u0098ST\n      ', '\n         SkydeomrÃ¥der\n      ', 49);
     } else {
         removeShape(49);
     }
@@ -807,7 +491,7 @@ function validate49() {
 function validate50() {
     var EK_D301_Fanoe_TSA = document.getElementById('EK D301 Fanoe-TSA');
     if (EK_D301_Fanoe_TSA.checked) {
-        drawMap('\n         EK D301 Fanoe-TSA\n      ', '\n         Skydeområder\n      ', 50);
+        drawMap('\n         EK D301 Fanoe-TSA\n      ', '\n         SkydeomrÃ¥der\n      ', 50);
     } else {
         removeShape(50);
     }
@@ -816,7 +500,7 @@ function validate50() {
 function validate51() {
     var Temp_UAV_corridor = document.getElementById('Temp - UAV corridor');
     if (Temp_UAV_corridor.checked) {
-        drawMap('\n         Temp - UAV corridor\n      ', '\n         Skydeområder\n      ', 51);
+        drawMap('\n         Temp - UAV corridor\n      ', '\n         SkydeomrÃ¥der\n      ', 51);
     } else {
         removeShape(51);
     }
@@ -825,16 +509,16 @@ function validate51() {
 function validate52() {
     var EK_D381_KALLESMÆSKT_VEST = document.getElementById('EK D381 KALLESMÆSKT VEST');
     if (EK_D381_KALLESMÆSKT_VEST.checked) {
-        drawMap('\n         EK D381 KALLESMÆSKT VEST\n      ', '\n         Skydeområder\n      ', 52);
+        drawMap('\n         EK D381 KALLESMÃ\u0086SKT VEST\n      ', '\n         SkydeomrÃ¥der\n      ', 52);
     } else {
         removeShape(52);
     }
 }
 
 function validate53() {
-    var EK_D373_RØMØ_VEST = document.getElementById('EK D373 RØMØ VEST');
-    if (EK_D373_RØMØ_VEST.checked) {
-        drawMap('\n         EK D373 RØMØ VEST\n      ', '\n         Skydeområder\n      ', 53);
+    var Skallingen = document.getElementById('Skallingen');
+    if (Skallingen.checked) {
+        drawMap('\n         Skallingen\n      ', '\n         SkydeomrÃ¥der\n      ', 53);
     } else {
         removeShape(53);
     }
@@ -843,7 +527,7 @@ function validate53() {
 function validate54() {
     var Temp_Falcon_Transit_Corridor = document.getElementById('Temp - Falcon Transit Corridor');
     if (Temp_Falcon_Transit_Corridor.checked) {
-        drawMap('\n         Temp - Falcon Transit Corridor\n     ', '\n         Skydeområder\n      ', 54);
+        drawMap('\n         Temp - Falcon Transit Corridor\n     ', '\n         SkydeomrÃ¥der\n      ', 54);
     } else {
         removeShape(54);
     }
@@ -852,7 +536,7 @@ function validate54() {
 function validate55() {
     var TEMP_UAS_Hemmet = document.getElementById('TEMP-UAS Hemmet');
     if (TEMP_UAS_Hemmet.checked) {
-        drawMap('\n         TEMP- UAS Hemmet\n      ', '\n         Skydeområder\n      ', 55);
+        drawMap('\n         TEMP- UAS Hemmet\n      ', '\n         SkydeomrÃ¥der\n      ', 55);
     } else {
         removeShape(55);
     }
@@ -861,7 +545,7 @@ function validate55() {
 function validate56() {
     var EK_R33_VEJERS = document.getElementById('EK R33 VEJERS');
     if (EK_R33_VEJERS.checked) {
-        drawMap('\n         EK R33 VEJERS\n      ', '\n         Skydeområder\n      ', 56);
+        drawMap('\n         EK R33 VEJERS\n      ', '\n         SkydeomrÃ¥der\n      ', 56);
     } else {
         removeShape(56);
     }
@@ -870,7 +554,7 @@ function validate56() {
 function validate57() {
     var EK_R38_RØMØ_ØST = document.getElementById('EK R38 RØMØ ØST');
     if (EK_R38_RØMØ_ØST.checked) {
-        drawMap('\n         EK R38 RØMØ ØST\n      ', '\n         Skydeområder\n      ', 57);
+        drawMap('\n         EK R38 RÃ\u0098MÃ\u0098 Ã\u0098ST\n      ', '\n         SkydeomrÃ¥der\n      ', 57);
     } else {
         removeShape(57);
     }
@@ -879,7 +563,7 @@ function validate57() {
 function validate58() {
     var Temp_Falcon_Live_Aim_Area = document.getElementById('Temp - Falcon Live Aim Area');
     if (Temp_Falcon_Live_Aim_Area.checked) {
-        drawMap('\n         Temp - Falcon Live Aim Area\n      ', '\n         Skydeområder\n      ', 58);
+        drawMap('\n         Temp - Falcon Live Aim Area\n      ', '\n         SkydeomrÃ¥der\n      ', 58);
     } else {
         removeShape(58);
     }
@@ -888,7 +572,7 @@ function validate58() {
 function validate59() {
     var UAS_VARDE = document.getElementById('UAS VARDE');
     if (UAS_VARDE.checked) {
-        drawMap('\n         UAS VARDE\n      ', '\n         Skydeområder\n      ', 59);
+        drawMap('\n         UAS VARDE\n      ', '\n         SkydeomrÃ¥der\n      ', 59);
     } else {
         removeShape(59);
     }
@@ -897,7 +581,7 @@ function validate59() {
 function validate60() {
     var LILLE_RØMØ_TEMP = document.getElementById('LILLE RØMØ - TEMP');
     if (LILLE_RØMØ_TEMP.checked) {
-        drawMap('\n         LILLE RØMØ - TEMP\n      ', '\n         Skydeområder\n      ', 60);
+        drawMap('\n         LILLE RÃ\u0098MÃ\u0098 - TEMP\n      ', '\n         SkydeomrÃ¥der\n      ', 60);
     } else {
         removeShape(60);
     }
@@ -906,7 +590,7 @@ function validate60() {
 function validate61() {
     var EK_R34_BORDRUP = document.getElementById('EK R34 BORDRUP');
     if (EK_R34_BORDRUP.checked) {
-        drawMap('\n         EK R34 BORDRUP\n      ', '\n         Skydeområder\n      ', 61);
+        drawMap('\n         EK R34 BORDRUP\n      ', '\n         SkydeomrÃ¥der\n      ', 61);
     } else {
         removeShape(61);
     }
@@ -915,7 +599,7 @@ function validate61() {
 function validate62() {
     var Temp_Nymindegab_vest = document.getElementById('Temp - Nymindegab vest');
     if (Temp_Nymindegab_vest.checked) {
-        drawMap('\n         Temp - Nymindegab vest\n      ', '\n         Skydeområder\n      ', 62);
+        drawMap('\n         Temp - Nymindegab vest\n      ', '\n         SkydeomrÃ¥der\n      ', 62);
     } else {
         removeShape(62);
     }
@@ -924,7 +608,7 @@ function validate62() {
 function validate63() {
     var Corridor_Fanoe = document.getElementById('Corridor Fanoe');
     if (Corridor_Fanoe.checked) {
-        drawMap('\n         Corridor Fanoe\n      ', '\n         Skydeområder\n      ', 63);
+        drawMap('\n         Corridor Fanoe\n      ', '\n         SkydeomrÃ¥der\n      ', 63);
     } else {
         removeShape(63);
     }
@@ -933,7 +617,7 @@ function validate63() {
 function validate64() {
     var Temp_REX_Live_Aim = document.getElementById('Temp - REX Live Aim');
     if (Temp_REX_Live_Aim.checked) {
-        drawMap('\n         Temp - REX Live Aim\n      ', '\n         Skydeområder\n      ', 64);
+        drawMap('\n         Temp - REX Live Aim\n      ', '\n         SkydeomrÃ¥der\n      ', 64);
     } else {
         removeShape(64);
     }
@@ -942,7 +626,7 @@ function validate64() {
 function validate65() {
     var EK_R32_OKSBY = document.getElementById('EK R32 OKSBY');
     if (EK_R32_OKSBY.checked) {
-        drawMap('\n         EK R32 OKSBY\n      ', '\n         Skydeområder\n      ', 65);
+        drawMap('\n         EK R32 OKSBY\n      ', '\n         SkydeomrÃ¥der\n      ', 65);
     } else {
         removeShape(65);
     }
@@ -951,7 +635,7 @@ function validate65() {
 function validate66() {
     var EK_D379_NYMINDEGAB_ØST = document.getElementById('EK D379 NYMINDEGAB ØST');
     if (EK_D379_NYMINDEGAB_ØST.checked) {
-        drawMap('\n         EK D379 NYMINDEGAB ØST\n      ', '\n         Skydeområder\n      ', 66);
+        drawMap('\n         EK D379 NYMINDEGAB Ã\u0098ST\n      ', '\n         SkydeomrÃ¥der\n      ', 66);
     } else {
         removeShape(66);
     }
@@ -960,7 +644,7 @@ function validate66() {
 function validate67() {
     var Temp_drone = document.getElementById('Temp - drone');
     if (Temp_drone.checked) {
-        drawMap('\n         Temp - drone\n      ', '\n         Skydeområder\n      ', 67);
+        drawMap('\n         Temp - drone\n      ', '\n         SkydeomrÃ¥der\n      ', 67);
     } else {
         removeShape(67);
     }
@@ -969,7 +653,7 @@ function validate67() {
 function validate68() {
     var EK_R35_HENNE = document.getElementById('EK R35 HENNE');
     if (EK_R35_HENNE.checked) {
-        drawMap('\n         EK R35 HENNE\n      ', '\n         Skydeområder\n      ', 68);
+        drawMap('\n         EK R35 HENNE\n      ', '\n         SkydeomrÃ¥der\n      ', 68);
     } else {
         removeShape(68);
     }
@@ -1005,7 +689,7 @@ function validate72() {
 function validate73() {
     var BOLHEDE_WEST = document.getElementById('BOLHEDE WEST');
     if (BOLHEDE_WEST.checked) {
-        drawMap('\n         BOLHEDE WEST\n      ', '\n         Svæveflyve områder\n      ', 73);
+        drawMap('\n         BOLHEDE WEST\n      ', '\n         SvÃ¦veflyve omrÃ¥der\n      ', 73);
     } else {
         removeShape(73);
     }
@@ -1014,7 +698,7 @@ function validate73() {
 function validate74() {
     var BOLHEDE = document.getElementById('BOLHEDE');
     if (BOLHEDE.checked) {
-        drawMap('\n         BOLHEDE\n      ', '\n         Svæveflyve områder\n      ', 74);
+        drawMap('\n         BOLHEDE\n      ', '\n         SvÃ¦veflyve omrÃ¥der\n      ', 74);
     } else {
         removeShape(74);
     }
@@ -1023,7 +707,7 @@ function validate74() {
 function validate75() {
     var VORBASSE = document.getElementById('VORBASSE');
     if (VORBASSE.checked) {
-        drawMap('\n         VORBASSE\n      ', '\n         Svæveflyve områder\n      ', 75);
+        drawMap('\n         VORBASSE\n      ', '\n         SvÃ¦veflyve omrÃ¥der\n      ', 75);
     } else {
         removeShape(75);
     }
@@ -1032,7 +716,7 @@ function validate75() {
 function validate76() {
     var GESTEN = document.getElementById('GESTEN');
     if (GESTEN.checked) {
-        drawMap('\n         GESTEN\n      ', '\n         Svæveflyve områder\n      ', 76);
+        drawMap('\n         GESTEN\n      ', '\n         SvÃ¦veflyve omrÃ¥der\n      ', 76);
     } else {
         removeShape(76);
     }
@@ -1041,7 +725,7 @@ function validate76() {
 function validate77() {
     var Horns_Rev_A = document.getElementById('Horns Rev A');
     if (Horns_Rev_A.checked) {
-        drawMap('\n         Horns Rev A\n      ', '\n         Vindmølleparker\n      ', 77);
+        drawMap('\n         Horns Rev A\n      ', '\n         VindmÃ¸lleparker\n      ', 77);
     } else {
         removeShape(77);
     }
@@ -1050,7 +734,7 @@ function validate77() {
 function validate78() {
     var Horns_Rev_B = document.getElementById('Horns Rev B');
     if (Horns_Rev_B.checked) {
-        drawMap('\n         Horns Rev B\n     ', '\n         Vindmølleparker\n      ', 78);
+        drawMap('\n         Horns Rev B\n     ', '\n         VindmÃ¸lleparker\n      ', 78);
     } else {
         removeShape(78);
     }
@@ -1059,7 +743,7 @@ function validate78() {
 function validate79() {
     var EHHG_H7 = document.getElementById('EHHG H7');
     if (EHHG_H7.checked) {
-        drawMap('\n         EHHG H7\n      ', '\n         Vindmølleparker\n      ', 79);
+        drawMap('\n         EHHG H7\n      ', '\n         VindmÃ¸lleparker\n      ', 79);
     } else {
         removeShape(79);
     }

@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Web;
 
 namespace WebATM.Insero_Map
+/// <summary>
+/// The image string is split and decoded in this class. 
+/// </summary>
 {
     public class ImageAdapter
     {
+        /*
+        * The method takes a string and splits it according to what attributes have to be decoded. 
+        */
         public static List<Shape> ConvertToShape(string image)
         {
             ColorConverter colorConverter = new ColorConverter();
@@ -388,7 +392,7 @@ namespace WebATM.Insero_Map
 
                         isPolyline = false;
                     }
-                    else if (line.StartsWith("CIR")) //Start of circle
+                    else if (line.StartsWith("CIR"))
                     {
                         var circle = new Circle();
                         circle.Color = color;
